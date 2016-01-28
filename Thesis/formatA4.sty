@@ -1,0 +1,33 @@
+% A4 Page is 297mm x 210mm 
+% Margins are 35mm at binding and 15mm on outside with 18mm above and below
+
+%\parindent  0mm
+%\parskip    4mm
+
+\parindent  8mm
+\parskip    1mm
+
+\textwidth  159mm    % was 160 but 159 seem correct 14/12
+\textheight 265mm	%was 261, add 4 at top	% top 18mm, bottom 18mm
+                        % 265 seems correct 14/12
+\addtolength{\textheight}{-\headheight}
+\addtolength{\textheight}{-\headsep}
+\addtolength{\textheight}{-\footskip}
+\topmargin -9mm			% -5 gives 20mm  actually should be 15mm
+\marginparwidth 1.5cm
+% two sided margins
+\if@twoside{    % two sided margins
+	\oddsidemargin  +10mm	% 35 mm  was +10 !! was +11  
+  	                       % +10 seems correct 14/12
+	\evensidemargin -7mm	% 15 mm  was -10 was -9
+\else 		% two sided margins
+	\oddsidemargin   +10mm % +10mm	% 35 mm
+	\evensidemargin  -7mm  % +10mm	% 35 mm   ???? 
+\fi
+% For examination
+\newcommand{\doublespaced}{\setlength{\baselineskip}{20pt}}
+\newcommand{\normalspaced}{\setlength{\baselineskip}{15pt}}
+
+% For final submission
+%\newcommand{\doublespaced}{\setlength{\baselineskip}{18pt}}
+%\newcommand{\normalspaced}{\setlength{\baselineskip}{15pt}}

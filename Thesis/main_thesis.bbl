@@ -1,0 +1,441 @@
+\begin{thebibliography}{10}
+
+\bibitem{Xiao_multistage_crt_2014}
+Li~Xiao, Xiang-Gen Xia, and Wenjie Wang,
+\newblock ``Multi-stage robust {C}hinese {R}emainder {T}heorem,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 62, no. 18, pp. 4772--4785,
+  Sept 2014.
+
+\bibitem{Falaggis_excess_fractions_2011}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Method of excess fractions with application to absolute distance
+  metrology: theoretical analysis,''
+\newblock {\em Appl. Opt.}, vol. 50, no. 28, pp. 5484--5498, Oct 2011.
+
+\bibitem{Falaggis_algebraic_solution_2014}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Algebraic solution for phase unwrapping problems in multiwavelength
+  interferometry,''
+\newblock {\em Appl. Opt.}, vol. 53, no. 17, pp. 3737--3747, Jun 2014.
+
+\bibitem{Teunissen_GPS_LAMBDA_2006}
+P.~J.~G. Teunissen,
+\newblock ``The {LAMBDA} method for the {GNSS} compass,''
+\newblock {\em Artificial Satellites}, vol. 41, no. 3, pp. 89--103, 2006.
+
+\bibitem{Teunissen_GPS_1995}
+P.~J.~G. Teunissen,
+\newblock ``The least-squares ambiguity decorrelation adjustment: a method for
+  fast {GPS} integer ambiguity estimation,''
+\newblock {\em Journal of Geodesy}, vol. 70, pp. 65--82, 1995.
+
+\bibitem{Jacobs_ambiguity_resolution_interferometery_1981}
+E.~Jacobs and E.~W. Ralston,
+\newblock ``Ambiguity resolution in interferometry,''
+\newblock {\em IEEE Trans. Aerospace Elec. Systems}, vol. 17, no. 6, pp.
+  766--780, Nov. 1981.
+
+\bibitem{anderson1998surveying}
+J.~M.~M. Anderson, J.~M. Anderson, and E.~M. Mikhail,
+\newblock {\em Surveying, theory and practice},
+\newblock WCB/McGraw-Hill, 1998.
+
+\bibitem{time_of_flight_cam_continuous_wave_2009}
+M.~Frank, M.~Plaue, H.~Rapp, U.~Koethe, B.~Jähne, and F.~A. Hamprecht,
+\newblock ``Theoretical and experimental error analysis of continuous-wave
+  time-of-flight range cameras,''
+\newblock {\em Optical Engineering}, vol. 48, no. 1, Jan. 2009.
+
+\bibitem{Arrigo_patent_2014}
+A.~Benedetti,
+\newblock ``Methods and systems for geometric phase unwrapping in time of
+  flight systems,''
+\newblock {United States} patent, 0049767 A1, Feb. 2014.
+
+\bibitem{Fisher1993}
+N.~I. Fisher,
+\newblock {\em {Statistical analysis of circular data}},
+\newblock Cambridge University Press, 1993.
+
+\bibitem{Towers_frequency_selection_interferometry_2003}
+C.~E. Towers, D.~P. Towers, and J.~D.~C. Jones,
+\newblock ``Optimum frequency selection in multifrequency interferometry,''
+\newblock {\em Optics Letters}, vol. 28, pp. 887--889, 2003.
+
+\bibitem{Towers:04_generalised_frequency_selection}
+Catherine~E. Towers, David~P. Towers, and Julian D.~C. Jones,
+\newblock ``Generalized frequency selection in multifrequency interferometry,''
+\newblock {\em Opt. Lett.}, vol. 29, no. 12, pp. 1348--1350, Jun 2004.
+
+\bibitem{Falaggis_excess_fractions_2012}
+K.~Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Method of excess fractions with application to absolute distance
+  metrology: Wavelength selection and the effects of common error sources,''
+\newblock {\em Appl. Opt.}, vol. 51, no. 27, pp. 6471--6479, Sep 2012.
+
+\bibitem{Falaggis_excess_fractions_2013}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Method of excess fractions with application to absolute distance
+  metrology: analytical solution,''
+\newblock {\em Appl. Opt.}, vol. 52, no. 23, pp. 5758--5765, Aug 2013.
+
+\bibitem{Oystein_Ore_general_chinese_Remainder_1952}
+O.~Ore,
+\newblock ``The general {Chinese} remainder theorem,''
+\newblock {\em The American Mathematical Monthly}, vol. 59, pp. 365--370, 1952.
+
+\bibitem{Oded_Chinese_remaindering_with_errors_2000}
+O.~Goldreich, D.~Ron, and M.~Sudan,
+\newblock ``Chinese remaindering with errors,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 46, no. 4, pp. 1330--1338, Jul
+  2000.
+
+\bibitem{Xia_generalised_CRT_2005}
+X.~G. Xia and K.~Liu,
+\newblock ``A generalized {C}hinese {R}emainder {T}heorem for residue sets with
+  errors and its application in frequency determination from multiple sensors
+  with low sampling rates,''
+\newblock {\em IEEE Signal Process. Letters}, vol. 12, no. 11, pp. 768--771,
+  Nov 2005.
+
+\bibitem{Xia2007}
+X.~G. Xia and G.~Y. Wang,
+\newblock ``Phase unwrapping and a robust {C}hinese {R}emainder {T}heorem,''
+\newblock {\em IEEE Signal Process. Letters}, vol. 14, no. 4, pp. 247--250,
+  April 2007.
+
+\bibitem{XWLi2008}
+X.~W. Li and X.~G. Xia,
+\newblock ``A fast robust \textsc{C}hinese \textsc{R}emainder \textsc{T}heorem
+  based phase unwrapping algorithm,''
+\newblock {\em IEEE Signal Process. Letters}, vol. 15, pp. 665--668, 2008.
+
+\bibitem{W.Wang_closed_form_crt_2010}
+W.~Wang and X.~G. Xia,
+\newblock ``A closed-form robust {C}hinese {R}emainder {T}heorem and its
+  performance analysis,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 58, no. 11, pp. 5655--5666, Nov
+  2010.
+
+\bibitem{YangBin_range_estimation_with_CRT_2014}
+B.~Yang, W.~Wang, X.~G. Xia, and Q.~Y. Yin,
+\newblock ``Phase detection based range estimation with a dual-band robust
+  {C}hinese {R}emainder {T}heorem,''
+\newblock {\em Science China Information Sciences}, vol. 57, no. 2, pp. 1--9,
+  2014.
+
+\bibitem{Hassibi_GPS_1998}
+A.~Hassibi and S.~P. Boyd,
+\newblock ``Integer parameter estimation in linear models with applications to
+  {GPS},''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 46, no. 11, pp. 2938--2952, Nov
+  1998.
+
+\bibitem{Li_distance_est_wrapped_phase}
+W.~Li, X.~Wang, X.~Wang, and B.~Moran,
+\newblock ``Distance estimation using wrapped phase measurements in noise,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 61, no. 7, pp. 1676--1688,
+  2013.
+
+\bibitem{Akhlaq_basis_construction_range_est_2015}
+A.~Akhlaq, R.~McKilliam, and R.~Subramanian,
+\newblock ``Basis construction for range estimation by phase unwrapping,''
+\newblock {\em Signal Processing Letters, IEEE}, vol. PP, no. 99, pp. 1--1,
+  2015.
+
+\bibitem{Agrell2002}
+E.~Agrell, T.~Eriksson, A.~Vardy, and K.~Zeger,
+\newblock ``Closest point search in lattices,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 48, no. 8, pp. 2201--2214,
+  Aug. 2002.
+
+\bibitem{SPLAG}
+J.~H. Conway and N.~J.~A. Sloane,
+\newblock {\em Sphere packings, lattices and groups},
+\newblock Springer, New York, 3rd edition, 1998.
+
+\bibitem{Martinet2003}
+J.~Martinet,
+\newblock {\em Perfect lattices in {Euclidean} spaces},
+\newblock Springer, 2003.
+
+\bibitem{McKilliam2009CoxeterLattices}
+R.~G. McKilliam, W.~D. Smith, and I.~V.~L. Clarkson,
+\newblock ``Linear-time nearest point algorithms for {Coxeter} lattices,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 56, no. 3, pp. 1015--1022,
+  Mar. 2010.
+
+\bibitem{MicciancioVoulgaris_deterministic_jv_2013}
+D.~Micciancio and P.~Voulgaris,
+\newblock ``A deterministic single exponential time algorithm for most lattice
+  problems based on {Voronoi} cell computations,''
+\newblock {\em SIAM Journal on Computing}, vol. 42, no. 3, pp. 1364--1391,
+  2013.
+
+\bibitem{McKilliam_closest_point_lattice_first_kind_2014}
+R.~McKilliam, A.~Grant, and I.~Clarkson,
+\newblock ``Finding a closest point in a lattice of {Voronoi's} first kind,''
+\newblock {\em {SIAM} Journal on Discrete Mathematics}, vol. 28, no. 3, pp.
+  1405--1422, 2014.
+
+\bibitem{Conway1983VoronoiCodes}
+J.~H. Conway and N.~J.~A. Sloane,
+\newblock ``A fast encoding method for lattice codes and quantizers,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 29, no. 6, pp. 820--824, Nov
+  1983.
+
+\bibitem{Conway1982VoronoiRegions}
+J.~H. Conway and N.~J.~A. Sloane,
+\newblock ``Voronoi regions of lattices, second moments of polytopes, and
+  quantization,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 28, no. 2, pp. 211--226, Mar
+  1982.
+
+\bibitem{Conway1982FastQuantDec}
+J.~H. Conway and N.~J.~A. Sloane,
+\newblock ``Fast quantizing and decoding and algorithms for lattice quantizers
+  and codes,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 28, no. 2, pp. 227--232, Mar.
+  1982.
+
+\bibitem{Erex2004_lattice_decoding}
+U.~Erez and R.~Zamir,
+\newblock ``Achieving {$1/2 \log(1+SNR)$} on the {AWGN} channel with lattice
+  encoding and decoding,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 50, no. 10, pp. 2293--2314,
+  Oct. 2004.
+
+\bibitem{Erez2005}
+U.~Erez, S.~Litsyn, and R.~Zamir,
+\newblock ``Lattices which are good for (almost) everything,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 51, no. 10, pp. 3401--3416,
+  Oct 2005.
+
+\bibitem{Ryan2008}
+D.~J. Ryan, I.~V.~L. Clarkson, I.~B. Collings, and R.~W. {Heath Jr.},
+\newblock ``Performance of vector perturbation multiuser {MIMO} systems with
+  limited feedback,''
+\newblock Accepted for \emph{IEEE Trans. Commun.}, September 2008.
+
+\bibitem{Wubben_2011}
+D.~Wubben, D.~Seethaler, J.~Jalden, and G.~Matz,
+\newblock ``Lattice reduction,''
+\newblock {\em IEEE Signal Processing Magazine}, vol. 28, no. 3, pp. 70--91,
+  2011.
+
+\bibitem{McKilliam_mean_dir_est_sq_arc_length2010}
+R.~G. McKilliam, B.~G. Quinn, and I.~V.~L. Clarkson,
+\newblock ``Direction estimation by minimum squared arc length,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 60, no. 5, pp. 2115--2124, May
+  2012.
+
+\bibitem{McKilliamFrequencyEstimationByPhaseUnwrapping2009}
+R.~G. McKilliam, B.~G. Quinn, I.~V.~L. Clarkson, and B.~Moran,
+\newblock ``Frequency estimation by phase unwrapping,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 58, no. 6, pp. 2953--2963, June
+  2010.
+
+\bibitem{McKilliam2007}
+R.~G. McKilliam and I.~V.~L. Clarkson,
+\newblock ``Maximum-likelihood period estimation from sparse, noisy timing
+  data,''
+\newblock in {\em Proc. Internat. Conf. Acoust. Spe. Sig. Process.}, Las Vegas,
+  USA, Mar. 2008, pp. 3697--3700, IEEE.
+
+\bibitem{Clarkson2007}
+I.~V.~L. Clarkson,
+\newblock ``Approximate maximum-likelihood period estimation from sparse, noisy
+  timing data,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 56, no. 5, pp. 1779--1787, May
+  2008.
+
+\bibitem{McKilliam2009IndentifiabliltyAliasingPolyphase}
+R.~G. McKilliam and I.~V.~L. Clarkson,
+\newblock ``Identifiability and aliasing in polynomial-phase signals,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 57, no. 11, pp. 4554--4557,
+  Nov. 2009.
+
+\bibitem{Quinn_sparse_noisy_SSP_2012}
+B.~G. Quinn, I.~V.~L. Clarkson, and R.~G. McKilliam,
+\newblock ``Estimating period from sparse, noisy timing data,''
+\newblock in {\em {IEEE} Statistical Signal Processing Workshop {(SSP)}}, Aug.
+  2012, pp. 193--196.
+
+\bibitem{micciancio_hardness_2001}
+D.~Micciancio,
+\newblock ``The hardness of the closest vector problem with preprocessing,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 47, no. 3, pp. 1212--1215,
+  2001.
+
+\bibitem{Dinur2003_approximating_CVP_NP_hard}
+I.~Dinur, G.~Kindler, and S.~Safras,
+\newblock ``Approximating {CVP} to within almost-polynomial factors in
+  {NP}-hard,''
+\newblock {\em Combinatorica}, vol. 23, pp. 205--243, 2003.
+
+\bibitem{Jalden2005_sphere_decoding_complexity}
+J.~Jalden and B.~Ottersten,
+\newblock ``On the complexity of sphere decoding in digital communications,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 53, no. 4, pp. 1474--1484,
+  April 2005.
+
+\bibitem{Pohst_sphere_decoder_1981}
+M.~Pohst,
+\newblock ``On the computation of lattice vectors of minimal length, successive
+  minima and reduced bases with applications,''
+\newblock {\em SIGSAM Bull.}, vol. 15, no. 1, pp. 37--44, 1981.
+
+\bibitem{Kannan1987_fast_general_np}
+R.~Kannan,
+\newblock ``Minkowski's convex body theorem and integer programming,''
+\newblock {\em Math. Operations Research}, vol. 12, no. 3, pp. 415--440, 1987.
+
+\bibitem{Viterbo_sphere_decoder_1999}
+E.~Viterbo and J.~Boutros,
+\newblock ``A universal lattice code decoder for fading channels,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 45, no. 5, pp. 1639--1642,
+  Jul. 1999.
+
+\bibitem{Micciancio09adeterministic}
+D.~Micciancio and P.~Voulgaris,
+\newblock ``A deterministic single exponential time algorithm for most lattice
+  problems based on {Voronoi} cell computations (extended abstract),''
+\newblock {\em 42nd {ACM} Symposium on Theory of Computing}, 2009.
+
+\bibitem{schnorr_euchner_sd_1994}
+C.~P. Schnorr and M.~Euchner,
+\newblock ``Lattice basis reduction: Improved practical algorithms and solving
+  subset sum problems,''
+\newblock {\em Math. Programming}, vol. 66, pp. 181--191, 1994.
+
+\bibitem{Conway1986SoftDecLeechGolay}
+J.~H. Conway and N.~J.~A. Sloane,
+\newblock ``Soft decoding techniques for codes and lattices, including the
+  {Golay} code and the {Leech} lattice,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 32, no. 1, pp. 41--50, Jan.
+  1986.
+
+\bibitem{Chitte_RSS_Estimation2009}
+S.~D. Chitte, S.~Dasgupta, and D.~Zhi,
+\newblock ``Distance estimation from received signal strength under log-normal
+  shadowing: Bias and variance,''
+\newblock {\em IEEE Signal Process. Letters}, vol. 16, no. 3, pp. 216--218,
+  March 2009.
+
+\bibitem{HingCheung_RSSbasedRangeEstimation2012}
+H.-C. So and L.~Lin,
+\newblock ``Linear least squares approach for accurate received signal strength
+  based source localization.,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 59, no. 8, pp. 4035--4040,
+  2011.
+
+\bibitem{XinrongLi_TOA_range_estimation2004}
+X.~Li and K.~Pahlavan,
+\newblock ``Super-resolution {TOA} estimation with diversity for indoor
+  geolocation,''
+\newblock {\em IEEE Trans. Wireless Commun.}, vol. 3, no. 1, pp. 224--234, Jan
+  2004.
+
+\bibitem{Lanzisera_TOA_range_estimation2011}
+S.~Lanzisera, D.~Zats, and K.S.J. Pister,
+\newblock ``Radio frequency time-of-flight distance measurement for low-cost
+  wireless sensor localization,''
+\newblock {\em IEEE Sensors Journal}, vol. 11, no. 3, pp. 837--845, March 2011.
+
+\bibitem{Falaggis-generalized-th-of-PU-2012}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Generalized theory of phase unwrapping: approaches and optimal
+  wavelength selection strategies for multiwavelength interferometric
+  techniques,'' 2012.
+
+\bibitem{Wyant:71}
+J.~C. Wyant,
+\newblock ``Testing aspherics using two-wavelength holography,''
+\newblock {\em Appl. Opt.}, vol. 10, no. 9, pp. 2113--2118, Sep 1971.
+
+\bibitem{Falaggis:09}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Multiwavelength interferometry: extended range metrology,''
+\newblock {\em Opt. Lett.}, vol. 34, no. 7, pp. 950--952, Apr 2009.
+
+\bibitem{deGroot_94}
+Peter~J. de~Groot,
+\newblock ``Extending the unambiguous range of two-color interferometers,''
+\newblock {\em Appl. Opt.}, vol. 33, no. 25, pp. 5948--5953, Sep 1994.
+
+\bibitem{Towers2011}
+Catherine~E. Towers, David~P. Towers, and K.~Falaggis,
+\newblock ``Extended range metrology: an age old problem,'' 2011.
+
+\bibitem{Xiaowei_Li_robust_CRT_2009}
+X.~Li, H.~Liang, and X.~G. Xia,
+\newblock ``A robust {Chinese Remainder Theorem} with its applications in
+  frequency estimation from under sampled waveforms,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 57, no. 11, pp. 4314--4322, Nov
+  2009.
+
+\bibitem{XiaoweiLi2010}
+Xiaowei Li, Xiang-Gen Xia, and Hong Liang,
+\newblock ``A robust chinese remainder theorem with its applications in moving
+  target doppler estimation,''
+\newblock in {\em Radar Conference, 2010 IEEE}, May 2010, pp. 1289--1294.
+
+\bibitem{Mardia_directional_statistics}
+K.~V. Mardia and P.~Jupp,
+\newblock {\em Directional Statistics},
+\newblock John Wiley \& Sons, 2nd edition, 2000.
+
+\bibitem{McKilliam2010thesis}
+R.~G. McKilliam,
+\newblock {\em Lattice theory, circular statistics and polynomial phase
+  signals},
+\newblock Ph.D. thesis, University of Queensland, Australia, December 2010.
+
+\bibitem{Tretter1985}
+S.~A. Tretter,
+\newblock ``Estimating the frequency of a noisy sinusoid by linear
+  regression,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 31, no. 6, pp. 832--835,
+  November 1985.
+
+\bibitem{Vrana1993}
+I.~Vrana,
+\newblock ``Optimum statistical estimates in conditions of ambiguity,''
+\newblock {\em IEEE Trans. Inform. Theory}, vol. 39, no. 3, pp. 1023--1030, May
+  1993.
+
+\bibitem{Quinn2009_dasp_phase_only_information_loss}
+B.~G. Quinn,
+\newblock ``Phase-only information loss,''
+\newblock {\em Proc. Internat. Conf. Acoust. Spe. Sig. Process.}, pp.
+  3982--3985, Mar. 2010.
+
+\bibitem{Hassibi98}
+Arash Hassibi and Stephen Boyd,
+\newblock ``Integer parameter estimation in linear models with applications to
+  \textsc{GPS},''
+\newblock {\em ieeetsp}, vol. 46, no. 11, pp. 2938--2952, Nov. 1998.
+
+\bibitem{McKilliam_pps_unwrapping_tsp_2014}
+R.~G. McKilliam, B.~G. Quinn, I.~V.~L. Clarkson, B.~Moran, and B.~N. Vellambi,
+\newblock ``Polynomial phase estimation by least squares phase unwrapping,''
+\newblock {\em IEEE Transactions on Signal Processing}, vol. 62, no. 8, pp.
+  1962--1975, April 2014.
+
+\bibitem{Pohst_modified_LLL_reduced_rank_1987}
+M.~Pohst,
+\newblock ``A modification of the {LLL} reduction algorithm,''
+\newblock {\em J. Symbolic Computation}, , no. 4, pp. 123--127, 1987.
+
+\bibitem{cohen1993compnumtheory}
+H.~Cohen,
+\newblock {\em {A course in computational algebraic number theory}},
+\newblock Springer Verlag, 1993.
+
+\bibitem{robustness_least_squares_ausctw_2016}
+A.~Pollok A.~Akhlaq, R. G.~McKilliam,
+\newblock ``Robustness of the least squares range estimator,''
+\newblock accepted to the Australian Communications Theory Workshop (AusCTW),
+  2016.
+
+\end{thebibliography}

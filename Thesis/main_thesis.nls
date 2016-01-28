@@ -1,0 +1,12 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\psi$}]\begingroup Incidence Angle\nomeqref {0}
+		\nompageref{1}
+  \item [{$\sigma^2_{I_R}$}]\begingroup Variance of PD Current\nomeqref {0}
+		\nompageref{1}
+  \item [{$V_{in}$}]\begingroup Applied Voltage\nomeqref {0}
+		\nompageref{1}
+
+\end{thenomenclature}

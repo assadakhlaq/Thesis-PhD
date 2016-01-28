@@ -1,0 +1,325 @@
+
+\documentclass[12pt,a4paper,doublesided,openright]{book}
+
+\usepackage{formatA4}       % margins and page size
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+% odd pages
+\fancyhead[OR]{\footnotesize{\textbf{\nouppercase\leftmark \quad\qquad \thepage}}} % right header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% even pages
+\fancyhead[EL]{\footnotesize{\textbf{\thepage \quad\qquad \nouppercase\leftmark}}} % left header
+\fancyhfoffset[OL]{0pt}
+\fancyhfoffset[EL]{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyhead[EL]{\footnotesize{\textbf{\thepage}}} % left header
+\fancyhead[OR]{\footnotesize{\textbf{\thepage}}} % right header
+    }
+
+\usepackage{setspace}   % reduces or increases the line spacing locally
+\makeatletter
+\renewcommand{\onehalfspacing}{%
+  \setstretch{1.5}%  default
+  \ifcase \@ptsize \relax % 10pt
+    \setstretch{1.5}%
+  \or % 11pt
+    \setstretch{1.5}%
+  \or % 12pt
+    \setstretch{1.5}%
+  \fi
+}
+
+%%% fonts & special characters %%%
+\usepackage[intlimits,tbtags]{amsmath}
+    \allowdisplaybreaks[1]  % the lower the number in squared brackets the more hesitant LaTeX will be to allow breaks
+\usepackage{nccmath}        % provides \medmath{} for medium sized math symbols
+\usepackage{amsfonts,amssymb}
+
+%%% figures & tables %%%
+\usepackage{caption} % modifying captions for figures & tables
+\usepackage[nottoc]{tocbibind}      % automatically includes entries for ToC, LoF, LoT in the ToC
+%\usepackage[font=footnotesize]{subfigure}
+\usepackage{booktabs}                                  % provides \[top,mid,bottom]rule
+
+%%% structure of the document %%%
+\usepackage{varioref}                                   % Provides \labelformat, which changes how \ref references look
+    % add round brackets around the equation number:
+    \labelformat{equation}{{(#1)}}
+
+\usepackage[pdftex,hypertexnames=false,pdfstartview=FitH]{hyperref}
+    % provides HTML links in the PDF-file created from the headlines
+    % setup is done in file 'hyperref.cfg'
+\let\orgautoref\autoref
+\providecommand{\Autoref}
+        {\def\equationautorefname{Equation}%
+         \def\figureautorefname{Figure}%
+         \def\subfigureautorefname{Figure}%
+         \def\chapterautorefname{Chapter}%
+         \def\sectionautorefname{Section}%
+         \def\subsectionautorefname{Section}%
+         \def\subsubsectionautorefname{Section}%
+         \def\Itemautorefname{Item}%
+         \def\tableautorefname{Table}%
+         \orgautoref}
+
+% \Autorefs is plural for the beginning of the sentence
+\providecommand{\Autorefs}
+        {\def\equationautorefname{Equations}%
+         \def\figureautorefname{Figures}%
+         \def\subfigureautorefname{Figures}%
+         \def\chapterautorefname{Chapters}%
+         \def\sectionautorefname{Sections}%
+         \def\subsectionautorefname{Sections}%
+         \def\subsubsectionautorefname{Sections}%
+         \def\Itemautorefname{Items}%
+         \def\tableautorefname{Tables}%
+         \orgautoref}
+
+% \autoref is used inside a sentence
+% (this is a renew of the standard)
+\renewcommand{\autoref}
+        {\def\equationautorefname{Eq.}%
+         \def\figureautorefname{Fig.}%
+         \def\subfigureautorefname{Fig.}%
+         \def\chapterautorefname{Chapter}%
+         \def\sectionautorefname{Section}%
+         \def\subsectionautorefname{Section}%
+         \def\subsubsectionautorefname{Section}%
+         \def\Itemautorefname{item}%
+         \def\tableautorefname{Table}%
+         \orgautoref}
+
+% \autorefs is plural for inside a sentence
+\providecommand{\autorefs}
+        {\def\equationautorefname{Eqs.}%
+         \def\figureautorefname{Figs.}%
+         \def\subfigureautorefname{Figs.}%
+         \def\chapterautorefname{Chapters}%
+         \def\subsectionautorefname{Sects.}%
+         \def\subsubsectionautorefname{Sects.}%
+         \def\Itemautorefname{items}%
+         \def\tableautorefname{Tables}%
+         \orgautoref}
+
+\usepackage[top=2cm,bottom=2cm,left=3.5cm,right=2cm,includehead,includefoot]{geometry}
+    % UniSA guidelines: Margins should be not less than 3.5cm on the left-hand side of the page to allow for binding and between 1.5cm and 2cm on the other three sides.
+\parskip 1ex
+%\parindent 0pt
+\widowpenalty 10000
+\clubpenalty 10000
+\interfootnotelinepenalty 10000 % penalty for spreading footnotes over several pages
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+%%% miscellaneous %%%
+\usepackage{ifthen}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\hyphenation{}
+
+%%%%% TABLE and FIGURE PACKAGE %%%%%
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{subfig}
+\usepackage{subfigure} %%%%%%% Added by me as an alternative to subfig package %%%%%%%%%%%%%%%
+\usepackage{amsmath,amsthm}
+\usepackage{footnote}
+\usepackage{supertabular}
+\usepackage{mathtools}
+\usepackage{amssymb}
+%\usepackage[ruled,vlined]{algorithm2e} % for pseudocode typing
+\usepackage{longtable}
+\usepackage{nomencl}
+\usepackage[nonumberlist,acronym]{glossaries}
+\usepackage{algorithmic}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{enumerate}
+\usepackage{datatool}
+%\usepackage{glossaries}
+%\usepackage{minitoc} %%%%%% Added by me in order to have mini table of contents for each chapter (useful in reviewing each chapter)
+\usepackage{cite}
+\usepackage[usenames,dvipsnames]{xcolor} %%%%%%%% added by me for colorful fonts %%%%%%%%%%%%%
+
+\newtheorem{definition}{Definition}%[section]
+\newtheorem{theorem}{Theorem}%[section]
+\newtheorem{proposition}{Proposition}%[section]
+\newtheorem{result}{Result}%[section]
+%\newtheorem{lemma}{Lemma}%[section]
+\newtheorem{myLemma}{Lemma} %%%%%%% My definition of a lemma %%%%%%%%%%
+\newtheorem{remark}{Remark}%[section]
+\newtheorem{corollary}{Corollary}%[section]
+\newtheorem{conjecture}{Conjecture}%[section]
+
+\DeclareMathOperator*{\maxi}{maximize} %%%%%%%%% Operators used for optimization problems %%%%%%%%%
+\DeclareMathOperator*{\mini}{minimize} %%%%%%%%% Operators used for optimization problems %%%%%%%%%
+
+%\input{texfiles/macros.tex}
+%\input{texfiles/Glossary_v1.tex}
+
+\makeglossaries
+\makenomenclature
+
+%%%%%%%%% Acronyms %%%%%%%%%%%%%%%%%%%
+\newacronym{mems}{MEMS}{Micro Electronic Mechanical Systems}
+\newacronym{wsns}{WSNs}{Wireless Sensor Networks}
+\newacronym{qos}{QoS}{Quality of Service}
+\newacronym{sosus}{SOSUS}{Sound Surveillance System}
+\newacronym{dsn}{DSN}{Distributed Sensor Network}
+\newacronym{darpa}{DARPA}{Defence Advanced Research Project Agency}
+\newacronym{dft}{DFT}{Discrete Fourier Transform}
+\newacronym{eed}{EED}{Expected End-to-end Delay}
+\newacronym{edr}{EDR}{Expected Delivery Ratio}
+\newacronym{slem}{SLEM}{Second Largest Eigenvalue Modulus}
+
+
+%\includeonly{front/title,texfiles/6_Resiliency_v4}
+\raggedbottom %%%%%%%%% Added by me to overcome the unwanted spaces between paragraphs and sub headings
+
+\begin{document}
+\normalspaced % control sequences defined in formatA4.sty
+                 %\doublespaced
+\thispagestyle{empty}
+\include{front/title}
+\thispagestyle{empty}
+\include{front/copyright}
+\thispagestyle{empty}
+\cleardoublepage
+\pagestyle{plain} % put page numbers at bottom in middle of footer - no title in header
+\setcounter{page}{1}
+\pagenumbering{roman}
+%\dominitoc
+\tableofcontents
+
+\renewcommand{\acronymname}{List of Acronyms}
+\glossarystyle{long}
+\renewcommand*{\glsgroupskip}{}
+\setlength{\glsdescwidth}{0.95\linewidth}
+\glsaddall
+\renewcommand*{\arraystretch}{1.7}
+\printglossaries
+\renewcommand*{\arraystretch}{1}
+\addcontentsline{toc}{chapter}{\acronymname}
+
+\newpage
+\renewcommand{\nomname}{List of Symbols}
+\markboth{\nomname}{\nomname}
+\printnomenclature[30mm]
+\addcontentsline{toc}{chapter}{\nomname}
+\newpage
+
+%\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\newpage
+
+%\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\newpage
+
+\chapter*{Summary}% for the actual unnumbered heading
+%\input{texfiles/Summary_v3}
+\addcontentsline{toc}{chapter}{Summary}
+\newpage
+
+\chapter*{Publications}% for the actual unnumbered heading
+%\addcontentsline{toc}{chapter}{Publications}
+%\input{texfiles/Publications_v1}
+\newpage
+
+\chapter*{Declaration}% for the actual unnumbered heading
+%\input{texfiles/Declaration_v1}
+\addcontentsline{toc}{chapter}{Declaration}
+\newpage
+
+\chapter*{Acknowledgements}% for the actual unnumbered heading
+%\input{texfiles/Acknowledgements_v1}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\newpage
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%% Chapter 1 - Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+%\setcounter{mtc}{9}
+\chapter{Introduction}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap1/}}
+\input{1_Introduction_v6}
+
+%%%%%%%%%%%%%%%%%%%% Chapter 2 - Background Overview %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{mtc}{10}
+\chapter{Background Overview}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap2/}}
+%\input{texfiles/2_Literature_v7}
+
+%%%%%%%%%%%%%%%%%%%% Chapter 3 - Network and Routing Models %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{mtc}{11}
+\chapter{Network and Routing Models}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap3/}}
+%\input{texfiles/3_Models_v8}
+
+%%%%%%%%%%%%%%%%%%%% Chapter 4 - Fast Convergence rate Routing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{mtc}{12}
+\chapter{Fast Convergence Rate Routing}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap4/}}
+%\input{texfiles/4_Convergence_v9}
+
+%%%%%%%%%%%%%%%%%%%% Chapter 5 - Distributed Delay Minimization %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{mtc}{13}
+
+\chapter{Distributed Delay Minimization}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap5/}}
+%\input{texfiles/5_Delay_v9}
+
+%%%%%%%%%%%%%%%%%%%% Chapter 6 - Resilient Routing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{mtc}{14}
+\chapter{Resilient Routing}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap6/}}
+%\input{texfiles/6_Resiliency_v10}
+
+%%%%%%%%%%%%%%%%%%%% Chapter 7 - Conclusions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{mtc}{15}
+\chapter{Conclusion and Future Work}
+%\minitoc
+%\newpage
+\graphicspath{{./}{figs/Chap7/}}
+%\input{texfiles/7_Conclusion_v6}
+
+%%%%%%%%%%%%%%%%%%%% Appendices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\chapter{Proof of Lemma 1}
+%\input{texfiles/Appendix_A_v3}
+
+\chapter{Proof of Lemma 2}
+%\input{texfiles/Appendix_B_v3}
+
+\chapter{Proof of Concept for Torus Networks}
+%\input{texfiles/Appendix_C_v3}
+
+\chapter{Global Delay for Torus Networks}
+%\input{texfiles/Appendix_D_v3}
+
+\normalspaced
+
+\bibliographystyle{IEEEtran}
+\begin{footnotesize}
+    \bibliography{Udara_Bib}
+\end{footnotesize}
+
+\end{document}

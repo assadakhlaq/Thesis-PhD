@@ -1,0 +1,35 @@
+\newcommand{\doctitle}{Stochastic Routing in Wireless Sensor Networks}
+
+\begin{center}
+
+
+  \huge{~\\~\\}
+
+  \huge{\bf\doctitle}\\
+
+  \vspace{15mm}
+
+  {\huge{Udara Sadathana Wijetunge}}\\
+{\Large BSc. Eng. (Honours)}
+
+  \vspace{20mm}
+  \Large{Thesis submitted for the degree of\\
+    Doctor of Philosophy\\ in \\Telecommunications}
+\vspace{20 mm}
+%  \Large{The University of South Australia}
+  \Large{~\\}
+
+  \begin{figure} [h]
+    \centering
+      \includegraphics[width=0.80\columnwidth]{figs/InstTelecomRsch_01.pdf}
+  \end{figure}
+
+  %\large{\textsf{Institute for Telecommunications Research\\University of South Australia}}
+
+  %\textsf{Still to be updated}
+  \vspace{20mm}
+
+  \Large{\today}  % For submission
+
+\end{center}
+

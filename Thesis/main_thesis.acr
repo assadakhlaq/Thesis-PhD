@@ -1,0 +1,29 @@
+%\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+%\begin{theglossary}\glossaryheader
+%\glsgroupheading{D}\relax \glsresetentrylist %
+%\glossentry{darpa}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}%
+%\glossentry{dft}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}%
+%\glossentry{dsn}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}\glsgroupskip
+%\glsgroupheading{E}\relax \glsresetentrylist %
+%\glossentry{edr}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}%
+%\glossentry{eed}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}\glsgroupskip
+%\glsgroupheading{M}\relax \glsresetentrylist %
+%\glossentry{mems}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}\glsgroupskip
+%\glsgroupheading{Q}\relax \glsresetentrylist %
+%\glossentry{qos}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}\glsgroupskip
+%\glsgroupheading{S}\relax \glsresetentrylist %
+%\glossentry{slem}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}%
+%\glossentry{sosus}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}\glsgroupskip
+%\glsgroupheading{W}\relax \glsresetentrylist %
+%\glossentry{wsns}{\glossaryentrynumbers{\relax 
+%		\setentrycounter[]{page}\glsnumberformat{ii}}}%
+%\end{theglossary}\glossarypostamble
