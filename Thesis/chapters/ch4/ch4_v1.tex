@@ -115,10 +115,10 @@ Xiao~et~al.~\cite{Xiao_multistage_crt_2014} derived an upper bound
 such that if the absolute values of the phase noise are less than $\taucrt$, then the CRT estimator is guaranteed to correctly estimate the wrapping variables.  That is, if  $\abs{\Phi_n} < \taucrt$ for all $n = 1, \dots, N$, then $\Qbf \hat{\zetabf} = \Qbf\zetabf$.  The value $\lambda_{\text{max}} = \max_n \lambda_n$ is the maximum wavelength and $c$ is a positive real number such the scaled wavelengths $c \lambda_1, \dots, c \lambda_N$ are all integers.  The existance of $c$ is guaranteed by the fact that the wavelengths are assumed to be rationally related, that is, $\lambda_n/\lambda_k$ is rational for all $n$ and $k$.
 
 In the next section we will find a similar upper bound $\tauls$ for the least squares range estimator.  It is shown in \Sec{ch3:sec:range-estim-clos-1}, that the least squares estimator $\hat{\zetabf} \in \ints^N$ of the wrapping variables minimises the quadratic form
-\begin{equation}\label{eq:hatz}
+\begin{equation}\label{ch4:eq:hatz}
 \| \Qbf\ybf - \Qbf\zbf \|^2 \qquad \text{over $\zbf \in \ints^N$},
 \end{equation}
-where $\|\cdot\|$ indicates the Euclidean norm of a vector.  Given $\hat{\zetabf}$, the least square range estimator $\hat{r}$ is then given by~\ref{ch4:eq:rhatlinreg}.  It is shown in \Sec{ch3:sec:range-estim-clos-1} how the quadratic form~\ref{ch3:eq:hatz} can be minimised over $\ints^N$ by computing a closest point in a \emph{lattice}.  We will derive the bound $\tauls$ by using a property of this lattice from \Sec{sec:ch2-lattice-theory} called the \emph{inradius}. 
+where $\|\cdot\|$ indicates the Euclidean norm of a vector.  Given $\hat{\zetabf}$, the least square range estimator $\hat{r}$ is then given by~\ref{ch4:eq:rhatlinreg}.  It is shown in \Sec{ch3:sec:range-estim-clos-1} how the quadratic form~\ref{ch4:eq:hatz} can be minimised over $\ints^N$ by computing a closest point in a \emph{lattice}.  We will derive the bound $\tauls$ by using a property of this lattice from \Sec{sec:ch2-lattice-theory} called the \emph{inradius}. 
 
 %It is shown in~\cite{Akhlaq_basis_construction_range_est_2015}, that the least squares estimate $\hat{\zetabf} \in \ints^N$ of the wrapping variables minimises the quadratic form
 %\begin{equation}\label{eq:hatz}
@@ -235,7 +235,7 @@ We have found that the least squares estimate $\hat{\zetabf}$ of the wrapping va
 \implies &\|\Qbf\Phibf\| < \rho \\
 \implies &\Qbf \hat{\zetabf} = \Qbf \zetabf,
 \end{align*}
-that is, the least squares estimate $\hat{\zetabf}$ of the wrapping variables is correct whenever the Euclidean norm of the phase noise is less than the inradius $\rho$ of the lattice $\Lambda^*$.  The inradius $\rho$ depends upon the lattice $\Lambda^*$ which in turn depends upon the wavelengths.  This naturally leads to the question of whether it is possible to select wavelengths that maximise the inradius.  This is an interesting and nontrivial problem that we intend to investigate in future research.
+that is, the least squares estimate $\hat{\zetabf}$ of the wrapping variables is correct whenever the Euclidean norm of the phase noise is less than the inradius $\rho$ of the lattice $\Lambda^*$.  The inradius $\rho$ depends upon the lattice $\Lambda^*$ which in turn depends upon the wavelengths.  This naturally leads to the question of whether it is possible to select wavelengths that maximise the inradius.  This is an interesting and nontrivial problem that we investigate in~\Chap{Chapter5}.
 
 
 % For the least squares estimator we say that the wrapping variable $\hat{\zetabf}$ are correct if $\Qbf \zetabf = \Qbf \hat{\zetabf}$.  To see why this definition is valid, observe that $\hat{\zetabf} = \zetabf + a \wbf$ where $a$ is such that $a\wbf \in \ints^{N}$.  Because the least common multiple $P$ is the smallest positive number such that $P\wbf$ contains only integers, it follows that $a = kP$ for some integer $k$.  Now, the regression estimator of the range satisfies

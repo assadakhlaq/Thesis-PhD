@@ -32,7 +32,7 @@
 \contentsline {section}{\numberline {4.3}Bound for the least squares range estimator}{49}{section.90}
 \contentsline {section}{\numberline {4.4}Numerical Results}{51}{section.92}
 \contentsline {section}{\numberline {4.5}Summary}{56}{section.97}
-\contentsline {chapter}{\numberline {5}Wavelength Selection for Least Squares Estimation of Range}{59}{chapter.98}
+\contentsline {chapter}{\numberline {5}Selecting Wavelengths for Least Squares Estimation of Range}{59}{chapter.98}
 \contentsline {section}{\numberline {5.1}Introduction}{59}{section.99}
 \contentsline {section}{\numberline {5.2}Bound on the Correctness of Wrapping Variables}{61}{section.100}
 \contentsline {section}{\numberline {5.3}Approximating range error}{64}{section.106}
@@ -40,5 +40,6 @@
 \contentsline {section}{\numberline {5.5}Numerical Results}{74}{section.145}
 \contentsline {section}{\numberline {5.6}Conclusion}{79}{section.150}
 \contentsline {chapter}{\numberline {6}Conclusion and Future Work}{81}{chapter.151}
-\contentsline {section}{\numberline {6.1}Introduction}{81}{section.152}
-\contentsline {chapter}{Bibliography}{85}{chapter*.153}
+\contentsline {section}{\numberline {6.1}Conclusions}{81}{section.152}
+\contentsline {section}{\numberline {6.2}Future Work}{83}{section.153}
+\contentsline {chapter}{Bibliography}{87}{chapter*.158}

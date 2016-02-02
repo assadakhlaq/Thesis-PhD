@@ -4,54 +4,52 @@ The top-level auxiliary file: main_thesis.aux
 The style file: IEEEbib.bst
 A level-1 auxiliary file: title.aux
 A level-1 auxiliary file: copyright.aux
-Illegal, another \bibstyle command---line 387 of file main_thesis.aux
+Illegal, another \bibstyle command---line 380 of file main_thesis.aux
  : \bibstyle
  :          {IEEEtran}
 I'm skipping whatever remains of this command
 Database file #1: bib.bib
-Warning--entry type for "Falaggis-generalized-th-of-PU-2012" isn't style-file defined
---line 6360 of file bib.bib
-Warning--entry type for "Towers2011" isn't style-file defined
---line 6390 of file bib.bib
-You've used 73 entries,
+Warning--empty booktitle in Falaggis-generalized-th-of-PU-2012
+Warning--empty booktitle in Towers2011
+You've used 76 entries,
             1838 wiz_defined-function locations,
-            1080 strings with 18309 characters,
-and the built_in function-call counts, 16773 in all, are:
-= -- 1528
-> -- 634
-< -- 4
-+ -- 242
-- -- 169
-* -- 1548
-:= -- 2651
-add.period$ -- 73
-call.type$ -- 73
-change.case$ -- 68
+            1100 strings with 18970 characters,
+and the built_in function-call counts, 18497 in all, are:
+= -- 1710
+> -- 657
+< -- 11
++ -- 251
+- -- 175
+* -- 1675
+:= -- 2846
+add.period$ -- 77
+call.type$ -- 76
+change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 73
-duplicate$ -- 629
-empty$ -- 1672
-format.name$ -- 169
-if$ -- 3754
+cite$ -- 78
+duplicate$ -- 722
+empty$ -- 1839
+format.name$ -- 175
+if$ -- 4193
 int.to.chr$ -- 0
-int.to.str$ -- 73
-missing$ -- 73
-newline$ -- 366
-num.names$ -- 73
-pop$ -- 132
+int.to.str$ -- 76
+missing$ -- 78
+newline$ -- 383
+num.names$ -- 76
+pop$ -- 141
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 183
+skip$ -- 261
 stack$ -- 0
-substring$ -- 1452
-swap$ -- 114
-text.length$ -- 4
+substring$ -- 1672
+swap$ -- 171
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 144
-width$ -- 75
-write$ -- 796
+warning$ -- 2
+while$ -- 156
+width$ -- 78
+write$ -- 835
 (There was 1 error message)

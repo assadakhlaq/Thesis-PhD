@@ -1,7 +1,7 @@
  \label{Chapter2}
  \setstretch{1.5}
 
-This thesis employs some important concepts from lattice theory to address the problem of the range (or distance) estimation. In this chapter we first introduce these important concepts from lattice theory and then describe some existing techniques used in the literature for range estimation. We also describe some existing wavelengths selection methods devised for different range estimation techniques. This discussion will lay down foundations for the remainder of the thesis. This chapter is structured as follows. In Section~\ref{sec:ch2-lattice-theory} we describe some introductory concepts from lattice theory that are required for better understanding of the rest of the thesis. Some important techniques for the range estimation are discussed in Section~\ref{sec:ch2-range-estimation-techniques}. Section~\ref{ch2:wavelength-selection-methods} presents wavelengths selection strategies available in the literature for different range estimation techniques.
+This thesis employs some important concepts from lattice theory to address the problem of the range (or distance) estimation. In this chapter we first introduce these important concepts from lattice theory and then describe some existing techniques used in the literature for range estimation. We also describe some existing wavelengths selection methods devised for different range estimation techniques. This discussion will lay down foundations for the remainder of the thesis. This chapter is structured as follows. In Section~\ref{sec:ch2-lattice-theory} we describe some introductory concepts from lattice theory that are required for better understanding of the rest of the thesis. Some important techniques for range estimation are discussed in Section~\ref{sec:ch2-range-estimation-techniques}. Section~\ref{ch2:wavelength-selection-methods} presents wavelengths selection strategies available in the literature for different range estimation techniques.
 
 \section{Lattice Theory}\label{sec:ch2-lattice-theory}
 Historical foundations of this field were laid down by investigations of some famous mathematicians such as Gauss and Lagrange in the late 18th century and later by Minkowski. Lattices have now become a hot research topic due to its applications in wide range of problems such as cryptography and cryptanalysis, image processing, signal processing for MIMO communications, frequency estimation, and range estimation etc. In the following we provide an overview of some important concepts from lattice theory.
@@ -241,7 +241,7 @@ A fundamental parallelepiped has $n$-dimensional volume $\sqrt{\Abf} = \sqrt{\de
 
 %\textbf{Voronoi Cell:}
 
-The (closed) \textbf{Voronoi cell}, denoted $\vor\Lambda$, of an $n$-dimensional lattice $\Lambda$ in $\reals^m$ is the subset of $\reals^m$ containing all points nearer or of equal distance (here with respect to the Euclidean norm) to the lattice point at the origin than to any other lattice point. If the lattice is full rank so that $n=m$ then the volume of the Voronoi cell is equal to the volume of a fundamental parallelepiped, that is, $\det\Lambda$.  Otherwise, if the $m > n$ the Voronoi cell is unbounded in those directions orthogonal to the subspace spanned by the basis vectors $\bbf_1,\dots,\bbf_n$.  In this case the intersection of the Voronoi cell with this subspace has $n$-dimensional volume equal to $\det\Lambda$. 
+The (closed) \textbf{Voronoi cell}, denoted $\vor\Lambda$, of an $n$-dimensional lattice $\Lambda$ in $\reals^m$ is the subset of $\reals^m$ containing all points nearer or of equal distance (here with respect to the Euclidean norm) to the lattice point at the origin than to any other lattice point. If the lattice is full rank so that $n=m$ then the volume of the Voronoi cell is equal to the volume of a fundamental parallelepiped, that is, $\det\Lambda$.  Otherwise, if the $m > n$ the Voronoi cell is unbounded in those directions orthogonal to the subspace spanned by the basis vectors $\bbf_1,\dots,\bbf_n$.  Specifically, if $\xbf$ is contained in this orthogonal subspace, then $\ybf \in \vor\Lambda$ if and only if $\ybf + s \xbf \in \vor\Lambda$ for all $s \in \reals$.   In this case, the intersection of the Voronoi cell with the subspace spanned by $\bbf_1,\dots,\bbf_n$ has $n$-dimensional volume equal to $\det\Lambda$.  
 
 The Voronoi cell $\vor\Lambda$ tessellates $\reals^N$ in the sense that
 \[
@@ -272,6 +272,12 @@ The probability $P_r(\Lambda, \sigma^2)$ that an independent and identically dis
 P_r(\Lambda, \sigma^2) \leq F_n \left( \frac{ \left (  \Gamma(n/2 + 1)  \text{det}\Lambda  \right)^{2/n} } {\pi \sigma^2} \right)
 \end{equation}
 where $F_n(x)$ is the chi-square cumulative distribution function with $n$ degrees of freedom,  $\Gamma(x)$ is the gamma function.
+
+A \textbf{short vector} in a lattice $\Lambda$ is a lattice point of minimum nonzero Euclidean length, that is, a lattice point of length
+\[
+\dmin =  \min_{\xbf \in \Lambda \backslash \{ \zerobf \} } \| \xbf \|^2.
+\]   
+The length $\dmin$ of a short vector is the smallest distance between any two lattice points. 
 
 The \textbf{inradius} or \textbf{packing radius} $\rho = \dmin/2$ is the length of a point on the boundary of the Voronoi cell that is closest to the origin (Figure~\ref{fig:bound_dmin}).  Equivalently, the inradius is the radius of the largest sphere that fits inside the Voronoi cell.  It is also the radius of the largest sphere that can be centered at each lattice point such that no two spheres intersect.  Such an arrangement of spheres is called a \textbf{sphere packing} (Figure~\ref{fig:bound_dmin}).
 
@@ -342,13 +348,6 @@ Given a vector $\ybf \in \reals^m$, a problem of interest is to find a lattice p
 is minimised.  This is called the \textbf{closest lattice point problem} (or \textbf{closest vector problem}) and a solution is called a \textbf{closest lattice point} (or simply \textbf{closest point}) to $\ybf$ \cite{Agrell2002,McKilliam2009CoxeterLattices,MicciancioVoulgaris_deterministic_jv_2013,McKilliam_closest_point_lattice_first_kind_2014}.  The closest lattice point problem and the Voronoi cell are related in that $\xbf\in\Lambda$ is a closest point to $\ybf$ if and only if $\ybf - \xbf \in \vor\Lambda$.  
 
 %\textbf{Short vector}
-
-A \textbf{short vector} in a lattice $\Lambda$ is a lattice point of minimum nonzero Euclidean length, that is, a lattice point of length
-\[
-\dmin =  \min_{\xbf \in \Lambda \backslash \{ \zerobf \} } \| \xbf \|^2.
-\]   
-The length $\dmin$ of a short vector is the smallest distance between any two lattice points. 
-
 %The closest lattice point problem has numerous engineering applications. For example, the closest lattice point corresponds to the minimum distortion point when a lattice is used as a quantiser and it is called lattice decoding when a lattice is used to construct codes~\cite{Conway1983VoronoiCodes,Erex2004_lattice_decoding}. The problem also occurs in communications systems involving multiple antennas~\cite{Wubben_2011} and has also found applications to circular statistics~\cite{McKilliam_mean_dir_est_sq_arc_length2010}, single frequency estimation~\cite{McKilliamFrequencyEstimationByPhaseUnwrapping2009}, and related signal processing problems~\cite{Clarkson2007,McKilliam2009IndentifiabliltyAliasingPolyphase,McKilliam_pps_unwrapping_tsp_2014,McKilliam_fast_sparse_period_est_2015}. In the context of range estimation from phase observations, the closest lattice point problem has been applied by Teunissen~\cite{Teunissen_GPS_1995}, Hassibi and Boyd~\cite{Hassibi_GPS_1998} and more recently Li~et.~al.~\cite{Li_distance_est_wrapped_phase, Li_coloured_range_est_case}.
 %
 %The closest lattice point problem is known to be NP-hard under certain conditions when the lattice itself, or rather a basis thereof, is considered as an additional input parameter~\cite{micciancio_hardness_2001, Dinur2003_approximating_CVP_NP_hard, Jalden2005_sphere_decoding_complexity}. Nevertheless, algorithms exist that can compute a closest lattice point in reasonable time if the dimension is small (less that about 60)~\cite{Agrell2002,MicciancioVoulgaris_deterministic_jv_2013}.  %Since the paper of Viterbo and Boutros~\cite{Viterbo_sphere_decoder_1999}, these algorithms have gone by the name ``sphere decoders'' in the communications engineering and signal processing literature. 
@@ -393,7 +392,7 @@ Although the problem is NP-hard in general, fast algorithms are known for specif
 \section{Range Estimation Techniques}\label{sec:ch2-range-estimation-techniques}
 %*********************************************************************************************************************************************************************************
 %Common range estimators are based upon received signal strength~\cite{Chitte_RSS_Estimation2009, HingCheung_RSSbasedRangeEstimation2012}, time of flight (or time of arrival)~\cite{XinrongLi_TOA_range_estimation2004, Lanzisera_TOA_range_estimation2011}, and phase of arrival~\cite{Jacobs_ambiguity_resolution_interferometery_1981,Towers_frequency_selection_interferometry_2003,Li_distance_est_wrapped_phase}. This thesis focuses on the least squares estimation of range based on the phase of arrival method that will be discussed in Chapter~\ref{Chapter3}. 
-In this section we describe some important range estimators that employ multiple phase observations to estimate the unknown range.  A good understanding of these methods will be helpful for comparison with the least squares range estimator in the later chapters. These range estimators are based upon: (i) the beat wavelength method, (ii) the method of excess fractions, and (iii) the CRT based method. %We first briefly describe the notation used in this work. 
+In this section we describe some important range estimators that employ multiple phase observations to estimate the unknown range.  A good understanding of these methods will be helpful for comparison with the least squares range estimator in later chapters. These range estimators are based upon: (i) the beat wavelength method, (ii) the method of excess fractions, and (iii) the CRT based method. %We first briefly describe the notation used in this work. 
 %Suppose that a multi-wavelength interferometer (MWI) with $N$  measurement wavelengths $\lambda_1, \ldots, \lambda_N$ is used to measure an unknown distance $r_0$. Let $\theta_1,\ldots,\theta_N$ be the corresponding estimated values of the interferometer phases. These phase values lie in the interval $[-\pi, \pi]$. The estimated interferometer phase $\theta_n$ corresponding to the wavelengths $\lambda_n$ can also be related to a so called \emph{fractional fringe value} $e_n$ defined as
 %\[
 %\eta_n = \theta_n/2\pi
@@ -519,11 +518,11 @@ where $sf$ is so called scaling factor given as
 \]
 %The coefficients $\alpha_n$ and \emph{sf} are introduced to simplify and generalise the problem without referring to the wavelengths. Several sets of wavelengths may generate the same values of $\alpha_n$ and \emph{sf}. In the presence of noise, the actual values of the coefficients $\alpha_n$ and \emph{sf} determine the measurement reliability of the multi-wavelength interferometer. The coefficients $\alpha_n$ and \emph{sf} can be adjusted to choose an optimised set of wavelengths for an optimised performance of the interferometer. Hierarchical approaches~\cite{Wagner2000, Nadeborn1996, Towers:04_generalised_frequency_selection, Huntley1997131, Burke2002} are one class of optimum wavelengths selection for multiple beat wavelength interferometry. 
 
-The length of the beat wavelength is inversely proportional to the wavelength separation, and hence to measure a longer distance the two measurement wavelengths must be very close to each other. For example, a wavelength separation of approximately 2 pico meters generates a beat wavelength of 1 meter in $C$ band~\cite{Falaggis:09}. This small separation represents a limitation for practical systems and hence the beat wavelength method is not applicable to long range metrology. Hence, extended beat wavelength methods~\cite{deGroot_94, Falaggis:09, Towers2011} have been developed to increase the unambiguous measurement range. 
+The length of the beat wavelength is inversely proportional to the wavelength separation, and hence to measure a longer distance the two measurement wavelengths must be very close to each other. For example, a wavelength separation of approximately 2 pico meters generates a beat wavelength of 1 meter in $C$ band~\cite{Falaggis:09}. This small separation represents a limitation for practical systems and hence the beat wavelength method is not applicable to long range metrology. Therefore, extended beat wavelength methods~\cite{deGroot_94, Falaggis:09, Towers2011} have been developed to increase the unambiguous measurement range. 
 
 
 \subsection{The Method of Excess Fractions}
-Another popular method to estimate the wrapping variables is the Michelson-Benoit's method of Excess Fractions (EF)~\cite{Falaggis_excess_fractions_2011}. It consists of a comparison of the measured phases at each wavelength to estimate the unknown distance $r_0$. The relation between the unknown wrapping variables $z_n$, the fractional fringe value $e_n$ and the unknown range $r_0$ is given by~\ref{eq:r0-zn-yn}. The wrapping variable at the smallest wavelength $z_1$ must lie within the interval $[0, m_{1\text{max}}]$, with $m_{1\text{max}} = \round{\text{UMR}/\lambda_1 -1}$. It is possible to represent~\ref{eq:r0-zn-yn} as
+Another popular method to estimate the wrapping variables, and hence the range, is the Michelson-Benoit's method of Excess Fractions (EF)~\cite{Falaggis_excess_fractions_2011}. It consists of a comparison of the measured phases at each wavelength to estimate the unknown distance $r_0$. The relation between the unknown wrapping variables $z_n$, the fractional fringe value $e_n$ and the unknown range $r_0$ is given by~\ref{eq:r0-zn-yn}. The wrapping variable at the smallest wavelength $z_1$ must lie within the interval $[0, m_{1\text{max}}]$, with $m_{1\text{max}} = \round{\text{UMR}/\lambda_1 -1}$. It is possible to represent~\ref{eq:r0-zn-yn} as
 \[
 r_0 = (Z_{1n} + E_{1n})\Lambda_{1n},
 \]
@@ -531,7 +530,7 @@ where $Z_{1n} = z_1 - z_n$, $E_{1n}=e_{1} -e_{n}$ and $\Lambda_{1n}$ is called t
 \[
 \Lambda_{1n} = \dfrac{\Lambda_n\Lambda_1}{\Lambda_n - \Lambda_1}
 \]
-In EF, a residual error corresponding to the smallest measurement wavelength $\lambda_1$ is defined in order to find the correct wrapping variable $z_1$. To do this, the wrapping variable at the $n$th wavelength $z_n$ is first calculated using~\cite{Falaggis_excess_fractions_2011}
+In excess fractions method, a residual error corresponding to the smallest measurement wavelength $\lambda_1$ is defined in order to find the correct wrapping variable $z_1$. To do this, the wrapping variable at the $n$th wavelength $z_n$ is first calculated using~\cite{Falaggis_excess_fractions_2011}
 \[
 z_n = (z_1 + e_1)\dfrac{\lambda_1}{\lambda_n} - e_n.
 \]
@@ -656,9 +655,9 @@ In two-frequency interferometry with two wavelengths $\lambda_1$ and $\lambda_2$
 \]
 The phase difference between $\theta_1$ and $\theta_2$ is, therefore,
 \[
-E_{12} = \theta_1 - \theta_2 = 2\pi r_0 \left(  \frac{\lambda_2 - \lambda_1}{\lambda_2\lambda_1}   \right)= \frac{2\pi r_0}{\Lambda_{12}}
+\Theta_{12} = \theta_1 - \theta_2 = 2\pi r_0 \left(  \frac{\lambda_2 - \lambda_1}{\lambda_2\lambda_1}   \right)= \frac{2\pi r_0}{\Lambda_{12}}
 \]
-where $\Lambda_{12}$ is the synthetic or beat wavelength generated, $\lambda_1 < \lambda_2 <\Lambda_{12}$, and $L \leq \Lambda_{12}$. It should be noted that the measurement sensitivity is reduced when one considers measurement at the beat wavelength $\Lambda_{12}$ compared with that on $\lambda_1$. Therefore, the \emph{dynamic range} can be maximised by combining unambiguous range given by $\Lambda_{12}$ with the increased sensitivity gained at $\lambda_1$. The ratio $\Lambda_{12}/\lambda_1$ defines a normalised unambiguous range. The upper limit for this ratio is determined by the standard deviation noise, $\sqrt{2}\sigma_{\theta}$, present in $E_{12}$, where $\sigma_{\theta}$ represents the standard deviation of the phase noise in each value of the wrapped phase. In order to determine the wrapping variables (or interference order) with $6\sigma$ reliability, the normalised unambiguous range is limited by~\cite{Towers_frequency_selection_interferometry_2003}
+where $\Lambda_{12}$ is the synthetic or beat wavelength generated, $\lambda_1 < \lambda_2 <\Lambda_{12}$, and $L \leq \Lambda_{12}$. It should be noted that the measurement sensitivity is reduced when one considers measurement at the beat wavelength $\Lambda_{12}$ compared with that on $\lambda_1$. Therefore, the \emph{dynamic range} can be maximised by combining unambiguous range given by $\Lambda_{12}$ with the increased sensitivity gained at $\lambda_1$. The ratio $\Lambda_{12}/\lambda_1$ defines a normalised unambiguous range. The upper limit for this ratio is determined by the standard deviation noise, $\sqrt{2}\sigma_{\theta}$, present in $\Theta_{12}$, where $\sigma_{\theta}$ represents the standard deviation of the phase noise in each value of the wrapped phase. In order to determine the wrapping variables (or interference order) with $6\sigma$ reliability, the normalised unambiguous range is limited by~\cite{Towers_frequency_selection_interferometry_2003}
 \begin{equation}\label{norml-range-2-freq}
 \frac{\Lambda_{12}}{\lambda_2} \leq \dfrac{2 \pi}{6\sqrt{2}\sigma_{\theta}}.
 \end{equation}

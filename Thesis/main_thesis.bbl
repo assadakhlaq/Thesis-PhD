@@ -1,23 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Xiao_multistage_crt_2014}
-Li~Xiao, Xiang-Gen Xia, and Wenjie Wang,
-\newblock ``Multi-stage robust {C}hinese {R}emainder {T}heorem,''
-\newblock {\em IEEE Trans. Sig. Process.}, vol. 62, no. 18, pp. 4772--4785,
-  Sept 2014.
-
-\bibitem{Falaggis_excess_fractions_2011}
-Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
-\newblock ``Method of excess fractions with application to absolute distance
-  metrology: theoretical analysis,''
-\newblock {\em Appl. Opt.}, vol. 50, no. 28, pp. 5484--5498, Oct 2011.
-
-\bibitem{Falaggis_algebraic_solution_2014}
-Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
-\newblock ``Algebraic solution for phase unwrapping problems in multiwavelength
-  interferometry,''
-\newblock {\em Appl. Opt.}, vol. 53, no. 17, pp. 3737--3747, Jun 2014.
-
 \bibitem{Teunissen_GPS_LAMBDA_2006}
 P.~J.~G. Teunissen,
 \newblock ``The {LAMBDA} method for the {GNSS} compass,''
@@ -52,6 +34,47 @@ A.~Benedetti,
   flight systems,''
 \newblock {United States} patent, 0049767 A1, Feb. 2014.
 
+\bibitem{Chitte_RSS_Estimation2009}
+S.~D. Chitte, S.~Dasgupta, and D.~Zhi,
+\newblock ``Distance estimation from received signal strength under log-normal
+  shadowing: Bias and variance,''
+\newblock {\em IEEE Signal Process. Letters}, vol. 16, no. 3, pp. 216--218,
+  March 2009.
+
+\bibitem{HingCheung_RSSbasedRangeEstimation2012}
+H.-C. So and L.~Lin,
+\newblock ``Linear least squares approach for accurate received signal strength
+  based source localization.,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 59, no. 8, pp. 4035--4040,
+  2011.
+
+\bibitem{XinrongLi_TOA_range_estimation2004}
+X.~Li and K.~Pahlavan,
+\newblock ``Super-resolution {TOA} estimation with diversity for indoor
+  geolocation,''
+\newblock {\em IEEE Trans. Wireless Commun.}, vol. 3, no. 1, pp. 224--234, Jan
+  2004.
+
+\bibitem{Lanzisera_TOA_range_estimation2011}
+S.~Lanzisera, D.~Zats, and K.S.J. Pister,
+\newblock ``Radio frequency time-of-flight distance measurement for low-cost
+  wireless sensor localization,''
+\newblock {\em IEEE Sensors Journal}, vol. 11, no. 3, pp. 837--845, March 2011.
+
+\bibitem{Fauzia_POA_range_estimation2007}
+Fauzia Ahmad, Moeness~G. Amin, and Paul~D. Zemany,
+\newblock ``Performance analysis of dual-frequency {CW} radars for motion
+  detection and ranging in urban sensing applications,''
+\newblock {\em Proc. SPIE 6547, Radar Sensor Technology XI}, vol. 6547, pp.
+  65470K--65470K--8, May 2007.
+
+\bibitem{Povalac_POA_rangeestimation2011}
+A.~Povalac and J.~Sebesta,
+\newblock ``Phase difference of arrival distance estimation for {RFID} tags in
+  frequency domain,''
+\newblock in {\em RFID-Technologies and Applications (RFID-TA), 2011 IEEE
+  International Conference on}, Sept 2011, pp. 188--193.
+
 \bibitem{Fisher1993}
 N.~I. Fisher,
 \newblock {\em {Statistical analysis of circular data}},
@@ -67,6 +90,12 @@ Catherine~E. Towers, David~P. Towers, and Julian D.~C. Jones,
 \newblock ``Generalized frequency selection in multifrequency interferometry,''
 \newblock {\em Opt. Lett.}, vol. 29, no. 12, pp. 1348--1350, Jun 2004.
 
+\bibitem{Falaggis_excess_fractions_2011}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Method of excess fractions with application to absolute distance
+  metrology: theoretical analysis,''
+\newblock {\em Appl. Opt.}, vol. 50, no. 28, pp. 5484--5498, Oct 2011.
+
 \bibitem{Falaggis_excess_fractions_2012}
 K.~Falaggis, David~P. Towers, and Catherine~E. Towers,
 \newblock ``Method of excess fractions with application to absolute distance
@@ -78,6 +107,12 @@ Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
 \newblock ``Method of excess fractions with application to absolute distance
   metrology: analytical solution,''
 \newblock {\em Appl. Opt.}, vol. 52, no. 23, pp. 5758--5765, Aug 2013.
+
+\bibitem{Falaggis_algebraic_solution_2014}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Algebraic solution for phase unwrapping problems in multiwavelength
+  interferometry,''
+\newblock {\em Appl. Opt.}, vol. 53, no. 17, pp. 3737--3747, Jun 2014.
 
 \bibitem{Oystein_Ore_general_chinese_Remainder_1952}
 O.~Ore,
@@ -123,6 +158,12 @@ B.~Yang, W.~Wang, X.~G. Xia, and Q.~Y. Yin,
   {C}hinese {R}emainder {T}heorem,''
 \newblock {\em Science China Information Sciences}, vol. 57, no. 2, pp. 1--9,
   2014.
+
+\bibitem{Xiao_multistage_crt_2014}
+Li~Xiao, Xiang-Gen Xia, and Wenjie Wang,
+\newblock ``Multi-stage robust {C}hinese {R}emainder {T}heorem,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 62, no. 18, pp. 4772--4785,
+  Sept 2014.
 
 \bibitem{Hassibi_GPS_1998}
 A.~Hassibi and S.~P. Boyd,
@@ -315,38 +356,12 @@ J.~H. Conway and N.~J.~A. Sloane,
 \newblock {\em IEEE Trans. Inform. Theory}, vol. 32, no. 1, pp. 41--50, Jan.
   1986.
 
-\bibitem{Chitte_RSS_Estimation2009}
-S.~D. Chitte, S.~Dasgupta, and D.~Zhi,
-\newblock ``Distance estimation from received signal strength under log-normal
-  shadowing: Bias and variance,''
-\newblock {\em IEEE Signal Process. Letters}, vol. 16, no. 3, pp. 216--218,
-  March 2009.
-
-\bibitem{HingCheung_RSSbasedRangeEstimation2012}
-H.-C. So and L.~Lin,
-\newblock ``Linear least squares approach for accurate received signal strength
-  based source localization.,''
-\newblock {\em IEEE Trans. Sig. Process.}, vol. 59, no. 8, pp. 4035--4040,
-  2011.
-
-\bibitem{XinrongLi_TOA_range_estimation2004}
-X.~Li and K.~Pahlavan,
-\newblock ``Super-resolution {TOA} estimation with diversity for indoor
-  geolocation,''
-\newblock {\em IEEE Trans. Wireless Commun.}, vol. 3, no. 1, pp. 224--234, Jan
-  2004.
-
-\bibitem{Lanzisera_TOA_range_estimation2011}
-S.~Lanzisera, D.~Zats, and K.S.J. Pister,
-\newblock ``Radio frequency time-of-flight distance measurement for low-cost
-  wireless sensor localization,''
-\newblock {\em IEEE Sensors Journal}, vol. 11, no. 3, pp. 837--845, March 2011.
-
 \bibitem{Falaggis-generalized-th-of-PU-2012}
 Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
 \newblock ``Generalized theory of phase unwrapping: approaches and optimal
   wavelength selection strategies for multiwavelength interferometric
-  techniques,'' 2012.
+  techniques,''
+\newblock 2012, vol. 8493, pp. 84930O--84930O--11.
 
 \bibitem{Wyant:71}
 J.~C. Wyant,
@@ -365,7 +380,8 @@ Peter~J. de~Groot,
 
 \bibitem{Towers2011}
 Catherine~E. Towers, David~P. Towers, and K.~Falaggis,
-\newblock ``Extended range metrology: an age old problem,'' 2011.
+\newblock ``Extended range metrology: an age old problem,''
+\newblock 2011, vol. 8082, pp. 80821P--80821P--9.
 
 \bibitem{Xiaowei_Li_robust_CRT_2009}
 X.~Li, H.~Liang, and X.~G. Xia,
@@ -437,5 +453,11 @@ A.~Pollok A.~Akhlaq, R. G.~McKilliam,
 \newblock ``Robustness of the least squares range estimator,''
 \newblock accepted to the Australian Communications Theory Workshop (AusCTW),
   2016.
+
+\bibitem{Ludwig2011}
+Christoph Ludwig,
+\newblock ``A faster lattice reduction method using quantum search.,''
+\newblock in {\em ISAAC}. 2003, vol. 2906 of {\em Lecture Notes in Computer
+  Science}, pp. 199--208, Springer.
 
 \end{thebibliography}
