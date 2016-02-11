@@ -1,45 +1,44 @@
-\BOOKMARK [0][-]{chapter*.2}{List of Acronyms}{}% 1
-\BOOKMARK [0][-]{chapter*.3}{List of Symbols}{}% 2
-\BOOKMARK [0][-]{chapter*.4}{List of Figures}{}% 3
-\BOOKMARK [0][-]{chapter*.5}{List of Tables}{}% 4
-\BOOKMARK [0][-]{chapter*.6}{Summary}{}% 5
-\BOOKMARK [0][-]{chapter*.7}{Publications}{}% 6
-\BOOKMARK [0][-]{chapter*.8}{Declaration}{}% 7
-\BOOKMARK [0][-]{chapter*.9}{Acknowledgements}{}% 8
-\BOOKMARK [0][-]{chapter.10}{Introduction}{}% 9
-\BOOKMARK [1][-]{section.11}{Introduction}{chapter.10}% 10
-\BOOKMARK [1][-]{section.13}{Thesis Outline and Contributions}{chapter.10}% 11
-\BOOKMARK [0][-]{chapter.19}{Background Overview}{}% 12
-\BOOKMARK [1][-]{section.20}{Lattice Theory}{chapter.19}% 13
-\BOOKMARK [1][-]{section.32}{Range Estimation Techniques}{chapter.19}% 14
-\BOOKMARK [2][-]{subsection.33}{The Beat Wavelength Method}{section.32}% 15
-\BOOKMARK [2][-]{subsection.35}{The Method of Excess Fractions}{section.32}% 16
-\BOOKMARK [2][-]{subsection.40}{The CRT Based Method}{section.32}% 17
-\BOOKMARK [1][-]{section.41}{Optimal Wavelengths Selection for Range Estimators}{chapter.19}% 18
-\BOOKMARK [2][-]{subsection.42}{Wavelengths Selection for the Beat Wavelength Method}{section.41}% 19
-\BOOKMARK [2][-]{subsection.47}{Wavelengths Selection for the Excess Fractions Method}{section.41}% 20
-\BOOKMARK [1][-]{section.54}{Summary}{chapter.19}% 21
-\BOOKMARK [0][-]{chapter.55}{Basis Construction for the Least Square Range Estimator}{}% 22
-\BOOKMARK [1][-]{section.56}{Introduction}{chapter.55}% 23
-\BOOKMARK [1][-]{section.57}{System Model}{chapter.55}% 24
-\BOOKMARK [1][-]{section.71}{Range estimation and the closest lattice point problem}{chapter.55}% 25
-\BOOKMARK [1][-]{section.73}{Basis Construction Method}{chapter.55}% 26
-\BOOKMARK [1][-]{section.79}{Numerical Results}{chapter.55}% 27
-\BOOKMARK [1][-]{section.81}{Summary}{chapter.55}% 28
-\BOOKMARK [0][-]{chapter.82}{Robustness of the Least Squares Range Estimator}{}% 29
-\BOOKMARK [1][-]{section.83}{Introduction}{chapter.82}% 30
-\BOOKMARK [1][-]{section.84}{Concept of Correct Wrapping Variables}{chapter.82}% 31
-\BOOKMARK [1][-]{section.90}{Bound for the least squares range estimator}{chapter.82}% 32
-\BOOKMARK [1][-]{section.92}{Numerical Results}{chapter.82}% 33
-\BOOKMARK [1][-]{section.97}{Summary}{chapter.82}% 34
-\BOOKMARK [0][-]{chapter.98}{Selecting Wavelengths for Least Squares Estimation of Range}{}% 35
-\BOOKMARK [1][-]{section.99}{Introduction}{chapter.98}% 36
-\BOOKMARK [1][-]{section.100}{Bound on the Correctness of Wrapping Variables}{chapter.98}% 37
-\BOOKMARK [1][-]{section.106}{Approximating range error}{chapter.98}% 38
-\BOOKMARK [1][-]{section.109}{Selecting wavelengths for range estimation}{chapter.98}% 39
-\BOOKMARK [1][-]{section.145}{Numerical Results}{chapter.98}% 40
-\BOOKMARK [1][-]{section.150}{Conclusion}{chapter.98}% 41
-\BOOKMARK [0][-]{chapter.151}{Conclusion and Future Work}{}% 42
-\BOOKMARK [1][-]{section.152}{Conclusions}{chapter.151}% 43
-\BOOKMARK [1][-]{section.153}{Future Work}{chapter.151}% 44
-\BOOKMARK [0][-]{chapter*.158}{Bibliography}{}% 45
+\BOOKMARK [0][-]{table.5}{List of Acronyms}{}% 1
+\BOOKMARK [0][-]{chapter*.6}{List of Symbols}{}% 2
+\BOOKMARK [0][-]{chapter*.7}{List of Figures}{}% 3
+\BOOKMARK [0][-]{chapter*.8}{Summary}{}% 4
+\BOOKMARK [0][-]{chapter*.9}{Publications}{}% 5
+\BOOKMARK [0][-]{chapter*.10}{Declaration}{}% 6
+\BOOKMARK [0][-]{chapter*.11}{Acknowledgements}{}% 7
+\BOOKMARK [0][-]{chapter.12}{Introduction}{}% 8
+\BOOKMARK [1][-]{section.13}{Introduction}{chapter.12}% 9
+\BOOKMARK [1][-]{section.15}{Thesis Outline and Contributions}{chapter.12}% 10
+\BOOKMARK [0][-]{chapter.21}{Background Overview}{}% 11
+\BOOKMARK [1][-]{section.22}{Lattice Theory}{chapter.21}% 12
+\BOOKMARK [1][-]{section.34}{Range Estimation Techniques}{chapter.21}% 13
+\BOOKMARK [2][-]{subsection.35}{Beat Wavelength Method}{section.34}% 14
+\BOOKMARK [2][-]{subsection.37}{Method of Excess Fractions}{section.34}% 15
+\BOOKMARK [2][-]{subsection.42}{The CRT Based Method}{section.34}% 16
+\BOOKMARK [1][-]{section.43}{Optimal Wavelengths Selection for Range Estimators}{chapter.21}% 17
+\BOOKMARK [2][-]{subsection.44}{Wavelengths Selection for the Beat Wavelength Method}{section.43}% 18
+\BOOKMARK [2][-]{subsection.49}{Wavelengths Selection for the Excess Fractions Method}{section.43}% 19
+\BOOKMARK [1][-]{section.56}{Summary}{chapter.21}% 20
+\BOOKMARK [0][-]{chapter.57}{Basis Construction for the Least Square Range Estimator}{}% 21
+\BOOKMARK [1][-]{section.58}{Introduction}{chapter.57}% 22
+\BOOKMARK [1][-]{section.59}{System Model}{chapter.57}% 23
+\BOOKMARK [1][-]{section.73}{Range estimation and the closest lattice point problem}{chapter.57}% 24
+\BOOKMARK [1][-]{section.75}{Basis Construction Method}{chapter.57}% 25
+\BOOKMARK [1][-]{section.81}{Numerical Results}{chapter.57}% 26
+\BOOKMARK [1][-]{section.83}{Summary}{chapter.57}% 27
+\BOOKMARK [0][-]{chapter.84}{Robustness of the Least Squares Range Estimator}{}% 28
+\BOOKMARK [1][-]{section.85}{Introduction}{chapter.84}% 29
+\BOOKMARK [1][-]{section.86}{Concept of Correct Wrapping Variables}{chapter.84}% 30
+\BOOKMARK [1][-]{section.92}{Bound for the least squares range estimator}{chapter.84}% 31
+\BOOKMARK [1][-]{section.94}{Numerical Results}{chapter.84}% 32
+\BOOKMARK [1][-]{section.99}{Summary}{chapter.84}% 33
+\BOOKMARK [0][-]{chapter.100}{Selecting Wavelengths for Least Squares Estimation of Range}{}% 34
+\BOOKMARK [1][-]{section.101}{Introduction}{chapter.100}% 35
+\BOOKMARK [1][-]{section.102}{Bound on the Correctness of Wrapping Variables}{chapter.100}% 36
+\BOOKMARK [1][-]{section.108}{Approximating range error}{chapter.100}% 37
+\BOOKMARK [1][-]{section.111}{Selecting wavelengths for range estimation}{chapter.100}% 38
+\BOOKMARK [1][-]{section.155}{Numerical Results}{chapter.100}% 39
+\BOOKMARK [1][-]{section.160}{Conclusion}{chapter.100}% 40
+\BOOKMARK [0][-]{chapter.161}{Conclusion and Future Work}{}% 41
+\BOOKMARK [1][-]{section.162}{Conclusions}{chapter.161}% 42
+\BOOKMARK [1][-]{section.163}{Future Work}{chapter.161}% 43
+\BOOKMARK [0][-]{chapter*.168}{Bibliography}{}% 44

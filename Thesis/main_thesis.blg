@@ -4,7 +4,7 @@ The top-level auxiliary file: main_thesis.aux
 The style file: IEEEbib.bst
 A level-1 auxiliary file: title.aux
 A level-1 auxiliary file: copyright.aux
-Illegal, another \bibstyle command---line 380 of file main_thesis.aux
+Illegal, another \bibstyle command---line 405 of file main_thesis.aux
  : \bibstyle
  :          {IEEEtran}
 I'm skipping whatever remains of this command
@@ -13,15 +13,15 @@ Warning--empty booktitle in Falaggis-generalized-th-of-PU-2012
 Warning--empty booktitle in Towers2011
 You've used 76 entries,
             1838 wiz_defined-function locations,
-            1100 strings with 18970 characters,
-and the built_in function-call counts, 18497 in all, are:
-= -- 1710
-> -- 657
+            1100 strings with 19015 characters,
+and the built_in function-call counts, 18541 in all, are:
+= -- 1711
+> -- 667
 < -- 11
-+ -- 251
-- -- 175
-* -- 1675
-:= -- 2846
++ -- 254
+- -- 178
+* -- 1682
+:= -- 2855
 add.period$ -- 77
 call.type$ -- 76
 change.case$ -- 71
@@ -29,8 +29,8 @@ chr.to.int$ -- 0
 cite$ -- 78
 duplicate$ -- 722
 empty$ -- 1839
-format.name$ -- 175
-if$ -- 4193
+format.name$ -- 178
+if$ -- 4201
 int.to.chr$ -- 0
 int.to.str$ -- 76
 missing$ -- 78

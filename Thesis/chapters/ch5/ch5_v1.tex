@@ -4,7 +4,6 @@
 %**************************************************************************************************************************************************************
 %		Section I :  Introduction
 %**************************************************************************************************************************************************************
-
 \section{Introduction}
 %\newcommand*{\Resize}[2]{\resizebox{#1}{!}{$#2$}}%
 
@@ -14,7 +13,7 @@
 %A difficulty with phase of arrival is that only the principal component of the phase can be observed.  This limits the range that can be unambiguously estimated.  This is sometimes referred to as the problem of \emph{phase ambiguity} and it is related to what has been called the \emph{notorious wrapping problem} in the circular statistics and meteorology literature~\cite{Fisher1993}.  One approach to address this problem is to utilise signals of multiple different wavelengths and observe the phase at each.  The range can then be measured within an interval of length equal to the least common multiple of the wavelengths.  Range estimators from such observations have been studied by numerous authors.  Techniques include the beat wavelength method of Towers~et~al.~\cite{Towers_frequency_selection_interferometry_2003,Towers:04_generalised_frequency_selection}, the method of excess fractions~\cite{Falaggis_excess_fractions_2011,Falaggis_excess_fractions_2012,Falaggis_excess_fractions_2013,Falaggis_algebraic_solution_2014}, and methods based on the Chinese Remainder Theorem (CRT)~\cite{Oystein_Ore_general_chinese_Remainder_1952, Oded_Chinese_remaindering_with_errors_2000, Xia_generalised_CRT_2005, Xia2007, XWLi2008, W.Wang_closed_form_crt_2010, YangBin_range_estimation_with_CRT_2014, Xiao_multistage_crt_2014}.  Least squares/maximum likelihood and maximum a posteriori estimators of range have been studied by Teunissen~\cite{Teunissen_GPS_1995}, Hassibi and Boyd~\cite{Hassibi_GPS_1998}, and more recently by Li~et~al.~\cite{Li_distance_est_wrapped_phase} and Akhlaq~et~al.~\cite{Akhlaq_basis_construction_range_est_2015}.  A key realisation is that the least squares estimator can be efficiently computed by solving a well known integer programming problem, that of computing a \emph{closest point} in a \emph{lattice}~\cite{Agrell2002}.    Teunissen~\cite{Teunissen_GPS_1995} appears to have been the first to have realised this connection. 
 We observed in previous chapters that the accuracy of the least squares range estimator is dependent upon the values of measurement wavelengths. However, the relationship between wavelengths and range estimation accuracy is nontrivial and this complicates wavelengths selection procedures. In this chapter, we develop an algorithm to automatically select wavelengths for use with the least square range estimator from~\Chap{Chapter3}~\cite{Akhlaq_basis_construction_range_est_2015}.
 %In the previous chapter, we provided an upper bound on phase measurement errors for the least squares range estimator. This bound is based on the inradius of the lattice. We observed that this bound depends upon the measurement wavelengths. This naturally leads to the problem of selecting wavelengths that maximise this bound and hence the accuracy of the least squares range estimator. 
-The wavelengths selection procedure is typically subject to practical constraints such as minimum and maximum wavelength (i.e. bandwidth constraints) and constraints on the maximum identifiable range. Procedures have been described for the beat wavelength method~\cite{Towers_frequency_selection_interferometry_2003} and for the method of excess fractions~\cite{Falaggis_excess_fractions_2012}.  Some of these methods are heuristic and require a non-negligible amount of experimentation.  Procedures for selecting wavelengths for the CRT and least squares range estimators have not yet been developed.
+The wavelengths selection procedure is typically subject to practical constraints such as minimum and maximum wavelength (i.e. bandwidth constraints) and constraints on the maximum identifiable range. Procedures have been described for the beat wavelength~\cite{Towers_frequency_selection_interferometry_2003} and the excess fractions~\cite{Falaggis_excess_fractions_2012} methods.  Some of these methods are heuristic and require a non-negligible amount of experimentation.  Procedures for selecting wavelengths for the CRT and least squares range estimators have not yet been developed.
 
 For the least squares estimator one possible approach for wavelength selection is to utilise the inradius of the lattice. However, the relation between the measurement wavelengths and the inradius is also nontrivial. Therefore, in this chapter, we use the relation between the wavelengths, the determinant of the lattice and its Voronoi cell to select wavelengths that maximise the accuracy of the estimator. We will notice that finding the determinant of a lattice using Corollary~\ref{cor:intlatticedim1} is simple in our case that simplifies the wavelengths selection procedure for the least squares range estimator. 
 
@@ -66,7 +65,7 @@ The interesting properties of a particular class of lattices constructed by inte
 %\] 
 %be the least common multiple of the wavelengths.  The least common multiple is the smallest positive integer such that $P/\lambda_1, \dots, P/\lambda_N$ are all integers.  Observe that the ranges $r_0$ and $r_0 + kP$ for any integer $k$ result in the same phase differences $Y_1,\dots,Y_N$ and so $r_0$ can be uniquely identified only within an interval of length $P$.  A natural choice is the interval $[0,P)$.  The least common multiple $P$ is typically much larger than any individual wavelength and so the identifiable range can be considerably enlarged by the use of multiple wavelengths.   If $\lambda_n/\lambda_m$ is irrational for any $n$ and $m$ then the least common multiple $P$ does not exist.  In this paper we assume this is not the case and that a finite least common multiple $P$ does exist.  This is a common assumption in the literature and in practice.  %In what follows we will call the ranges $r_0$ and $r_0 + kP$ as 
 
-In this section we utilise the concepts introduced in~\Sec{ch4:sec:phase-and-range-relation}. To motivate our wavelength selection procedure we make the assumption that the phase noise $\Phi_1,\dots,\Phi_n$ in~\ref{ch4:eq:Yndefn_vecform} are zero mean, independent and identically distributed (i.i.d.) wrapped normal random variables~\cite[p.~50]{Mardia_directional_statistics}\cite[p.~76]{McKilliam2010thesis}\cite[p.~47]{Fisher1993}.  In this case, 
+In this section we utilise the concept of correct wrapping variables introduced in~\Sec{ch4:sec:phase-and-range-relation}. To motivate our wavelength selection procedure we make the assumption that the phase noise $\Phi_1,\dots,\Phi_n$ in~\ref{ch4:eq:Yndefn_vecform} are zero mean, independent and identically distributed (i.i.d.) wrapped normal random variables~\cite[p.~50]{Mardia_directional_statistics}\cite[p.~76]{McKilliam2010thesis}\cite[p.~47]{Fisher1993}.  In this case, 
 \[
 \Phi_n = \fracpart{\epsilon_n} \qquad n = 1, \dots, N
 \]
@@ -165,7 +164,7 @@ It is shown in \Sec{ch3:sec:range-estim-clos-1}, that the least squares estimato
 %\[
 %F(\zetabf) = \| \Qbf\ybf - \Qbf\zetabf \|^2
 %\]
-where $\|\cdot\|$ indicates the Euclidean norm of a vector.  Given $\hat{\zetabf}$, the least square range estimator $\hat{r}$ is then given by~\ref{ch4:eq:rhatlinreg}.  It is shown in \Sec{ch3:sec:range-estim-clos-1} how the quadratic form~\ref{eq:hatz} can be minimised over $\ints^N$ by computing a closest point in a \emph{lattice}.  We will use the properties of this lattice from \Sec{sec:ch2-lattice-theory}  to develop our wavelength selection procedure.
+where $\|\cdot\|$ indicates the Euclidean norm of a vector.  Given $\hat{\zetabf}$, the least square range estimator $\hat{r}$ is then given by~\ref{ch4:eq:rhatlinreg}.  It is shown in \Sec{ch3:sec:range-estim-clos-1} how the quadratic form~\ref{eq:hatz} can be minimised over $\ints^N$ by computing a closest point in a \emph{lattice}.  We will use the properties of this lattice from \Sec{sec:ch2-lattice-theory}  to develop our wavelengths selection procedure.
 
 %\begin{figure}[t] 
 %	\centering      
@@ -271,12 +270,12 @@ This probability can be upper bounded by the probability that an $n$-variate nor
 \begin{equation}\label{upperBoundUsingSphere}
 P(\Lambda, \sigma^2) \leq F_n \left ( \frac{\Gamma(n/2 + 1)^{2/n} (\text{det}\Lambda)^{2/n}}{\pi \sigma^2} \right)
 \end{equation}
-where $F_n$ is the chi-square cumulative distribution function with $n$ degrees of freedom and $\Gamma$ is the gamma function.  This upper bound will be involved in the construction of our wavelength optimisation criterion in Section~\ref{sec:optim-freq-range}.
+where $F_n$ is the chi-square cumulative distribution function with $n$ degrees of freedom and $\Gamma$ is the gamma function.  This upper bound will be involved in the construction of our wavelengths optimisation criterion in Section~\ref{sec:optim-freq-range}.
 The probability $P(\Lambda, \sigma^2)$ can be lower bounded by the probability that an $n$-variate normal random variable lies within a sphere of radius equal to the inradius $\rho$ of the lattice, i.e., 
 \begin{equation}\label{lowerboundinradius}
 P(\Lambda, \sigma^2) \geq F_n(\rho/\sigma^2).
 \end{equation}
-It may be possible to build an alternative wavelength optimisation criterion using this lower bound rather than~\ref{upperBoundUsingSphere}.  However, the relationship between the wavelengths and the inradius $\rho$ is nontrivial and so we have not attempted this here. 
+It may be possible to build an alternative wavelengths optimisation criterion using this lower bound rather than~\ref{upperBoundUsingSphere}.  However, the relationship between the wavelengths and the inradius $\rho$ is nontrivial and so we have not attempted this here. 
 
 %Given a lattice $\Lambda$ in $\reals^m$ and a vector $\ybf \in \reals^m$, a problem of interest is to find a lattice point $\xbf \in \Lambda$ such that the squared Euclidean norm
 %\[
@@ -341,7 +340,7 @@ and so
 \[
 \Qbf \epsilonbf - \Qbf(\hat{\zetabf} - \zetabf) \in \vor\Lambda^*.
 \]
-We see that $\Qbf(\zetabf - \hat{\zetabf})$ is a closest lattice point to the projection of the noise variables $\Qbf \epsilonbf$.  If $\Qbf \epsilonbf$ lies in the interior of the $\vor\Lambda^*$ then the unique closest lattice point is the origin $\zerobf$, that is, $\Qbf(\zetabf - \hat{\zetabf}) = \zerobf$ or equivalently $\Qbf\zetabf = \Qbf\hat{\zetabf}$.  We have found that the least square estimator $\hat{\zetabf}$ of the unwrapping variables is correct if the projection $\Qbf\epsilonbf$ of the noise variables lies within the interior of the Voronoi cell.  The estimator $\hat{\zetabf}$ can similarly be shown to be incorrect if $\Qbf\epsilonbf \notin \vor\Lambda^*$.  Because the boundary of the Voronoi cell has zero $n$-volume, it follows that the probability the unwrapping variables are correct is the same as the probability that $\Qbf\epsilonbf$ lies in $\vor\Lambda^*$
+We see that $\Qbf(\zetabf - \hat{\zetabf})$ is a closest lattice point to the projection of the noise variables $\Qbf \epsilonbf$.  If $\Qbf \epsilonbf$ lies in the interior of the $\vor\Lambda^*$ then the unique closest lattice point is the origin $\zerobf$, that is, $\Qbf(\zetabf - \hat{\zetabf}) = \zerobf$ or equivalently $\Qbf\zetabf = \Qbf\hat{\zetabf}$.  We have found that the least square estimator $\hat{\zetabf}$ of the unwrapping variables is correct if the projection $\Qbf\epsilonbf$ of the noise variables lies within the interior of the Voronoi cell.  The estimator $\hat{\zetabf}$ can similarly be shown to be incorrect if $\Qbf\epsilonbf \notin \vor\Lambda^*$.  Because the boundary of the Voronoi cell has zero $n$-volume, it follows that the probability that unwrapping variables are correct is the same as the probability that $\Qbf\epsilonbf$ lies in $\vor\Lambda^*$
 
 A further simplification can be made.  The $N-1$ dimensional lattice $\Lambda^*$ lies in the subspace orthogonal to $\wbf$ and so $\vor\Lambda^*$ is unbounded in the direction of $\wbf$.  Specifically, $\Qbf\epsilonbf \in \vor\Lambda^*$ if and only if $\Qbf \epsilonbf + s\wbf \in \vor\Lambda^*$ for all $s \in \reals$.  Because $\epsilonbf = \Qbf \epsilonbf + s \wbf$ for some $s$, it follows that $\Qbf \epsilonbf \in \vor\Lambda^*$ if and only if $\Qbf \epsilonbf + s\wbf = \epsilonbf \in \vor\Lambda^*$, that is,
 \[
@@ -518,10 +517,9 @@ Given $\hat{p}_n$ upper and lower bounds on $\hat{q}_n$ derive from the bandwidt
  \begin{equation}\label{eq:qkbound}
  \hat{p}_n \leq \hat{q}_n \leq \frac{\lambdamax}{\lambdamin} \hat{p}_n \qquad n = 2,\dots,N.
  \end{equation}
-data
-To find minimisers of $L_2$, it suffices to check only those integer vectors $\hat{\pbf}$ and $\hat{\qbf}$ with elements satisfying the above two inequalities \ref{eq:pkbound} and \ref{eq:qkbound}.  Because the number of integer vectors satisfying these inequalities is finite this procedure will terminate in finite time.  The number of candidate solutions that need to be checked can be reduced by incorporating the property $\gcd(\hat{p}_n, \hat{q}_n) = 1$ into the search.  The number of candidates is further reduced by noting that the objective function $L_1$ is unchanged by permutation of the wavelengths $\lambda_2,\dots,\lambda_N$.  Equivalently, $L_2(\pbf,\qbf)$ is unchanged if both arguments $\pbf$ and $\qbf$ undergo the same permutation.  For this reason it is sufficient to suppose that the elements of $\hat{\pbf}$ are in, say, ascending order, that is, $\hat{p}_2 \leq \hat{p}_3 \leq \cdots \leq \hat{p}_N$. 
+To find minimisers of $L_2$, it suffices to check only those integer vectors $\hat{\pbf}$ and $\hat{\qbf}$ with elements satisfying the above two inequalities \ref{eq:pkbound} and \ref{eq:qkbound}.  Because the number of integer vectors satisfying these inequalities are finite this procedure will terminate in finite time.  The number of candidate solutions that need to be checked can be reduced by incorporating the property $\gcd(\hat{p}_n, \hat{q}_n) = 1$ into the search.  The number of candidates is further reduced by noting that the objective function $L_1$ is unchanged by permutation of the wavelengths $\lambda_2,\dots,\lambda_N$.  Equivalently, $L_2(\pbf,\qbf)$ is unchanged if both arguments $\pbf$ and $\qbf$ undergo the same permutation.  For this reason it is sufficient to suppose that the elements of $\hat{\pbf}$ are in, say, ascending order, that is, $\hat{p}_2 \leq \hat{p}_3 \leq \cdots \leq \hat{p}_N$. 
 
-Psuedocode describing the search procedure is given in Algorithm~\ref{alg:main}. The algorithm makes use of two functions $\operatorname{psearch}$ and $\operatorname{qsearch}$ that are called recursively.  The integer variables $N$, $p_2,\dots,p_N$, $q_2,\dots,q_N$, and the real variables $\widetilde{L}, \gamma, B$ are assumed to be globally accessible to both functions $\operatorname{psearch}$ and $\operatorname{qsearch}$.  The while loop on line~\ref{alg:psearch:whilepn} of $\operatorname{psearch}$ iterates over those $p_n$ satisfying~\ref{eq:pkbound}. The while loop on line~\ref{alg:qsearch:whileqn} of $\operatorname{qsearch}$ iterates over those $q_n$ satisfying~\ref{eq:qkbound}.  The condition on line~\ref{alg:qsearch:ifgcd} of $\operatorname{qsearch}$ ensures that only those relatively prime $p_n, q_n$ are included in the search. Lines~\ref{alg:updateif} to~\ref{alg:updatewavelengths} update the minimum found value of the objective function $\tilde{L}$ and the corresponding wavelengths whenever a new minimiser of the objective function $L_2$ is found.
+Psuedocode describing the search procedure is given in Algorithm 1. The algorithm makes use of two functions $\operatorname{psearch}$ and $\operatorname{qsearch}$ that are called recursively.  The integer variables $N$, $p_2,\dots,p_N$, $q_2,\dots,q_N$, and the real variables $\widetilde{L}, \gamma, B$ are assumed to be globally accessible to both functions $\operatorname{psearch}$ and $\operatorname{qsearch}$.  The while loop on line~\ref{alg:psearch:whilepn} of $\operatorname{psearch}$ iterates over those $p_n$ satisfying~\ref{eq:pkbound}. The while loop on line~\ref{alg:qsearch:whileqn} of $\operatorname{qsearch}$ iterates over those $q_n$ satisfying~\ref{eq:qkbound}.  The condition on line~\ref{alg:qsearch:ifgcd} of $\operatorname{qsearch}$ ensures that only those relatively prime $p_n, q_n$ are included in the search. Lines~\ref{alg:updateif} to~\ref{alg:updatewavelengths} update the minimum found value of the objective function $\tilde{L}$ and the corresponding wavelengths whenever a new minimiser of the objective function $L_2$ is found.
 
 This depth first search becomes computationally expensive if the number of wavelengths is not small or the minimum range $\rmax$ is large when compared with the maximum wavelength $\lambdamax$.  For this reason we now suggest some methods that accelerate the search at the expense of not necessarily guaranteeing that the true minimisers of $L$ are found.  The first method simply terminates the search after a specified amount of time and takes the best wavelengths found to that point.  This approach is simple, but can be highly effective because the minimisers of $L$ are regularly found well before the search completes.
 
@@ -531,9 +529,7 @@ The second method places a more restrictive upper bound on $\hat{p}_2,\dots,\hat
 \]
 Recall that the wavelengths take the form $\hat{\lambda}_n = \hat{p}_n \lambdamax/\hat{q}_n$ and so this new bound limits the resolution of the wavelengths searched by the optimiser.  Specifically, the wavelengths are restricted to the form $\lambdamax p/q$ where $p \leq q$ and $q$ is smaller than $\kappa\lambdamax/\lambdamin$.
 
-In practice we cannot generate sinusoidal signals with arbitrarily precise wavelengths.  For example, optical interferometric experiments are limited by uncertainties in the refractive index of the medium through which the signal propagates~\cite[Sec.~5.B]{Falaggis_algebraic_solution_2014}.  Audio and radio frequency devices are limited by the stability of oscillators used to generate signals.  For these reasons, restricting the wavelength optimisation to a finite resolution is likely to be of little practical consequence.  It might even be necessary for some applications.  In practice, one might select $\kappa$ so that $\kappa\lambdamax/\lambdamin$ is related to the precision with which a sinusoidal signal can be generated. 
-
-\begin{algorithm}
+\begin{algorithm} \label{alg:main}
 \SetAlCapFnt{\small} 
 \SetAlTitleFnt{}
 \DontPrintSemicolon
@@ -546,7 +542,6 @@ $p_2 = 1$ \;
 $\operatorname{psearch}(2)$ \;
 \KwRet{$(\lambdamax , \hat{\lambda}_2, \dots, \hat{\lambda}_N)$}  
 \caption{Computes wavelengths optimised for the least squares range estimator.}
-\label{alg:main}
 \end{algorithm}
 
 \begin{function} \label{alg:psearch}
@@ -583,18 +578,26 @@ $q_n = q_n + 1 $
 \caption{qsearch($n$)}
 \end{function}
 
+In practice we cannot generate sinusoidal signals with arbitrarily precise wavelengths.  For example, optical interferometric experiments are limited by uncertainties in the refractive index of the medium through which the signal propagates~\cite[Sec.~5.B]{Falaggis_algebraic_solution_2014}.  Audio and radio frequency devices are limited by the stability of oscillators used to generate signals.  For these reasons, restricting the wavelength optimisation to a finite resolution is likely to be of little practical consequence.  It might even be necessary for some applications.  In practice, one might select $\kappa$ so that $\kappa\lambdamax/\lambdamin$ is related to the precision with which a sinusoidal signal can be generated. 
+
 
 \section{Numerical Results}\label{sec:sim-results}
-We present the results of Monte-Carlo simulations with the least squares range estimator, the excess fractions estimator~\cite{Falaggis_excess_fractions_2011},  the algebraic method of Falaggis~et~al.~\cite{Falaggis_algebraic_solution_2014}, and range estimators based on the single-stage and multi-stage CRT algorithms of Xiao~et~al.~\cite{Xiao_multistage_crt_2014}. %the least squares range estimator, the range estimator based on the method of excess fractions~\cite{Falaggis_excess_fractions_2011} and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014}. 
+We present the results of Monte-Carlo simulations with the least squares range estimator, the excess fractions estimator~\cite{Falaggis_excess_fractions_2011},  the algebraic method of Falaggis~et~al.~\cite{Falaggis_algebraic_solution_2014}, the beat wavelength method of~Towers~et~al.~\cite{Towers_frequency_selection_interferometry_2003}, and range estimators based on the single-stage and multi-stage CRT algorithms of Xiao~et~al.~\cite{Xiao_multistage_crt_2014}. %the least squares range estimator, the range estimator based on the method of excess fractions~\cite{Falaggis_excess_fractions_2011} and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014}. 
 In each simulation the phase noise variables $\Phi_1,\dots,\Phi_N$ are wrapped normally distributed, that is, $\Phi_n = \fracpart{\epsilon_n}$ where $\epsilon_1,\dots,\epsilon_N$ are independent and normally distributed with zero mean and variance $\sigma^2$.  The number of Monte-Carlo trials used for each value of $\sigma^2$ is $10^5$. 
 
-\fig{fig:leastsquares_EF_CRT_N3} shows the sample mean square error of these estimators for $N=3$ wavelengths. In each simulation the true range is $r_0 = 6\pi$ and we consider two different sets of wavelengths
+\fig{fig:leastsquares_EF_CRT_N3} shows the sample mean square error of these estimators for $N=3$ wavelengths. In each simulation the true range is $r_0 = 6\pi$ and we consider three different sets of wavelengths
 \[
-A = \{ 2 , 3, 5\}, \qquad B = \{  \tfrac{30}{13}, \tfrac{15}{4}, 5\}.
+A = \{ 2 , 3, 5\},
 \]
-The wavelengths from both sets are contained in the interval $[2, 5]$ and the identifiable range is $\lcm(A)=\lcm(B)=30$. The wavelengths $A$ are used in the simulations of Li et. al.~\cite{Li_distance_est_wrapped_phase} and $B$ are optimised wavelengths given by Algorithm~\ref{alg:main}.  When the noise variance is small the probability that the wrapping variables are correct is large and so we expect the mean square error to be similar to~(\ref{eq:approxwhenwrappingiscorrect}).  This predicted mean square error is shown by the solid line for wavelengths $A$ and by the dashed line for wavelengths $B$.  Observed from~\fig{fig:leastsquares_EF_CRT_N3} that these predictions accurately model the behaviour of the least squares estimator when $\sigma^2$ is small.  
+\[ 
+B = \{  \tfrac{30}{13}, \tfrac{15}{4}, 5\},
+\]
+\[
+C = \{  2,   \tfrac{2142857142857143}{10^{12}},   \tfrac{2696140478029631}{10^{15}} \}.
+\]
+The wavelengths from all the sets are contained in the interval $[2, 5]$ and the identifiable range is $\lcm(A)=\lcm(B)=30$. The wavelengths $A$ are used in the simulations of Li et. al.~\cite{Li_distance_est_wrapped_phase} and $B$ are optimised wavelengths given by Algorithm 1. Wavelengths $C$ are obtained using optimal wavelengths selection for the beat wavelength method of~Towers~et~al.~\cite{Towers_frequency_selection_interferometry_2003} to measure the same distance of $\rmax=30$. The maximum range of the beat wavelength method is equal to the largest synthetic/beat wavelength generated. When the noise variance is small the probability that the wrapping variables are correct is large and so we expect the mean square error of the least squares estimator to be similar to~\ref{eq:approxwhenwrappingiscorrect}.  This predicted mean square error is shown by the solid line for wavelengths $A$ and by the dashed line for wavelengths $B$.  Observed from~\fig{fig:leastsquares_EF_CRT_N3} that these predictions accurately model the behaviour of the least squares estimator when $\sigma^2$ is small.  
 
-Wavelengths $A$ result in slightly reduced sample mean square error compared with $B$ when $\sigma^2$ is small.  As $\sigma^2$ increases the sample mean square error exhibits a `threshold' effect and increases suddenly. The threshold occurs at $\sigma^2 \approx 5 \times 10^{-4}$ with wavelengths $A$ and $\sigma^2 \approx 9 \times 10^{-4}$ with wavelength $B$ for the least squares estimator. Wavelengths $B$ are more accurate than $A$ when $\sigma^2$ is greater than approximately $5 \times 10^{-4}$. The threshold for the CRT and excess fractions based range estimators occurs at approximately the same value of $\sigma^2$ with wavelengths $A$. The CRT estimator performs poorly with wavelengths $B$. The threshold for the excess fractions estimator is similar to that of the least squares estimator with wavelength $B$.  However, the mean square error of the excess fraction estimator is larger than that of the least squares estimator when the noise variance is small. 
+Wavelengths $A$ result in slightly reduced sample mean square error compared with $B$ when $\sigma^2$ is small.  As $\sigma^2$ increases the sample mean square error exhibits a `threshold' effect and increases suddenly. The threshold occurs at $\sigma^2 \approx 5 \times 10^{-4}$ with wavelengths $A$ and $\sigma^2 \approx 9 \times 10^{-4}$ with wavelength $B$ for the least squares estimator. Wavelengths $B$ are more accurate than $A$ when $\sigma^2$ is greater than approximately $5 \times 10^{-4}$. The threshold for the CRT and excess fractions based range estimators occurs at approximately the same value of $\sigma^2$ with wavelengths $A$. The CRT estimator performs poorly with wavelengths $B$. The threshold for the excess fractions estimator is similar to that of the least squares estimator with wavelength $B$.  However, the mean square error of the excess fraction estimator is larger than that of the least squares estimator when the noise variance is small. The beat wavelength estimator with wavelengths $C$ performs poorly compared with the least squares and the excess fractions estimators with wavelengths $A$ and $B$. The threshold for the beat wavelength method with wavelengths $C$ occurs at $\sigma^2 \approx 3 \times 10^{-4}$. 
 
 \begin{figure}[t]
   \centering 
@@ -607,24 +610,28 @@ Wavelengths $A$ result in slightly reduced sample mean square error compared wit
 	\addplot[mark=square, only marks,mark options={fill=black , scale=  1}]table {chapters/ch5/data/CRTB};
 	\addplot[densely dashdotted]table {chapters/ch5/data/ExcessFractionsA};
 	\addplot[densely dotted]table {chapters/ch5/data/ExcessFractionsB};
+	\addplot[mark=square,mark options={solid}]table {chapters/ch5/data/TowersC};
         \addplot[solid ,domain=4e-5:7e-2] {x/( 1/2/2 + 1/3/3+ 1/5/5 )};
 	\addplot[loosely dashed ,domain=4e-5:7e-2] {x/( 13/30*13/30 + 4/15*4/15 + 1/5*1/5 )};
         %\addplot[mark=o,only marks,mark options={scale= 0.5}] table {chapters/ch5/data/LeastSquaresD};
         
-	\legend{Least squares $A$, Least squares $B$, CRT $A$, CRT $B$, EF $A$, EF $B$, MSE $A$ using \ref{eq:approxwhenwrappingiscorrect}, MSE $B$ using \ref{eq:approxwhenwrappingiscorrect},}
+	\legend{Least squares $A$, Least squares $B$, CRT $A$, CRT $B$, EF $A$, EF $B$, Beat wavelength $C$, MSE $A$ using \ref{eq:approxwhenwrappingiscorrect}, MSE $B$ using \ref{eq:approxwhenwrappingiscorrect},}
    \end{axis}  
   \end{tikzpicture}    
- \caption{Sample mean square error of the least squares range estimator, the excess fraction based range estimator~\cite{Falaggis_excess_fractions_2011} and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=3$ wavelenths.}
+ \caption{Sample mean square error of the least squares range estimator, the excess fraction based range estimator~\cite{Falaggis_excess_fractions_2011}, the beat wavelength method~\cite{Towers_frequency_selection_interferometry_2003}, and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=3$ wavelenths.}
   \label{fig:leastsquares_EF_CRT_N3}   
 \end{figure} 
 
 \fig{fig:leastsquares_EF_CRT_N4_1} displays the simulations results when there are $N=4$ wavelengths from the sets
 \[
-C = \{ \tfrac{101039}{66}, \tfrac{1076285}{682}, \tfrac{198036440}{125389}, \tfrac{17572}{11} \},
+D = \{ \tfrac{101039}{66}, \tfrac{1076285}{682}, \tfrac{198036440}{125389}, \tfrac{17572}{11} \},
 \]
 \[
 %B  = \{  1528,   \tfrac{26309}{17}, \tfrac{20404}{13}, \tfrac{17572}{11}  \}.
-D  = \{  1528,   \tfrac{3868970284693}{25\times 10^8}, \tfrac{156953786407767}{10^{11}}, \tfrac{17572}{11}  \}.
+E  = \{  1528,   \tfrac{3868970284693}{25\times 10^8}, \tfrac{156953786407767}{10^{11}}, \tfrac{17572}{11}  \}.
+\]
+\[
+F = \{1528,   \tfrac{1528064857863967}{10^{12}},   \tfrac{1529861512776706}{10^{12}},   \tfrac{1583226826910749}{10^{12}}\}
 \]
 %\[
 %C = \{1539, 1540, 1595, 1596 \}
@@ -634,17 +641,17 @@ D  = \{  1528,   \tfrac{3868970284693}{25\times 10^8}, \tfrac{156953786407767}{1
 %\]
 \normalsize 
 
-The wavelengths from both sets are contained in the interval $[1528 , \tfrac{17572}{11}]$.  Wavelengths $D$ are those selected for the excess fractions estimator using the procedure described in~\cite{Falaggis_excess_fractions_2012}.  These wavelengths are measured in nanometers in~\cite{Falaggis_excess_fractions_2012}.  The least common multiple of $D$ is greater than $2 \times 10^{22}$ meters.  However, the maximum range of the excess fractions estimator is not the least common multiple, but is instead what is called the \emph{unambiguous measurement range} (UMR)~\cite{Falaggis_excess_fractions_2012} and is $1.8\times10^7\si{\nano\meter} = \SI{0.018}{\meter}$ in this case.  Wavelengths $C$ are optimised for the least squares estimator using Algorithm \ref{alg:main} with $\rmax = 1.8\times 10^7$ equal to the UMR.  To speed up the search we put $\kappa = 1000$ as described in Section~\ref{sec:optim-freq-range}.  The identifiable range with wavelengths $C$ is 
+The wavelengths from all the sets are contained in the interval $[1528 , \tfrac{17572}{11}]$.  Wavelengths $E$ are those selected for the excess fractions estimator using the procedure described in~\cite{Falaggis_excess_fractions_2012}.  These wavelengths are measured in nanometers in~\cite{Falaggis_excess_fractions_2012}.  The least common multiple of $E$ is greater than $2 \times 10^{22}$ meters.  However, the maximum range of the excess fractions estimator is not the least common multiple, but is instead what is called the \emph{unambiguous measurement range} (UMR)~\cite{Falaggis_excess_fractions_2012} and is $1.8\times10^7\si{\nano\meter} = \SI{0.018}{\meter}$ in this case. Wavelengths $F$ are optimal wavelengths for the beat wavelength method and are obtained using optimal wavelength selection method of~Towers~et~al~\cite{Towers_frequency_selection_interferometry_2003} to measure the same distance of $1.8\times10^7\si{\nano\meter} = \SI{0.018}{\meter}$. Wavelengths $D$ are optimised for the least squares estimator using Algorithm 1 with $\rmax = 1.8\times 10^7$ equal to the UMR.  To speed up the search we put $\kappa = 1000$ as described in Section~\ref{sec:optim-freq-range}.  The identifiable range with wavelengths $D$ is 
 \[
-\lcm(C) =  198036440/11 \approx 18003312 > 1.8\times 10^7.
+\lcm(D) =  198036440/11 \approx 18003312 > 1.8\times 10^7.
 \]  
 
-In each simulation the true range $r_0 = 4000000\pi \approx 0.7 \rmax$.  It can be observed from this figure that the single and multi-stage CRT estimators~\cite{Xiao_multistage_crt_2014} and the algebraic method of Falaggis~et~al.~\cite{Falaggis_algebraic_solution_2014} perform very poorly when compared with the excess fractions~\cite{Falaggis_excess_fractions_2011} and the least squares estimator. 
+In each simulation the true range $r_0 = 4000000\pi \approx 0.7 \rmax$.  It can be observed from this figure that the single and multi-stage CRT estimators~\cite{Xiao_multistage_crt_2014} and the algebraic method of Falaggis~et~al.~\cite{Falaggis_algebraic_solution_2014} perform very poorly when compared with the beat wavelength, the excess fractions~\cite{Falaggis_excess_fractions_2011} and the least squares estimator. 
 %When $\sigma^2$ is less than $ \approx 5\times 10^{-11}$ the single and multi-stage CRT estimators perform similar to the least squares estimator. When $\sigma^2$ is less than $ \approx 9\times 10^{-8}$ the modified excess fractions based estimator performs slightly poor than the least squares estimator. 
-When $\sigma^2$ is less than $ \approx 8\times10^{-6}$ the least squares estimator is slightly more accurate than the excess fractions estimator. %However, when $\sigma^2$ is greater than $ \approx 2\times 10^{-7}$ the least squares and the CRT estimators outperform the modified excess fractions based estimator.
+When $\sigma^2$ is less than $ \approx 8\times10^{-6}$ the least squares estimator is slightly more accurate than the beat wavelength and the excess fractions estimator. %However, when $\sigma^2$ is greater than $ \approx 2\times 10^{-7}$ the least squares and the CRT estimators outperform the modified excess fractions based estimator.
 %As $\sigma^2$ increases the sample mean square error exhibits a threshold' effect and increases suddenly.
 %The threshold for the least squares estimator occurs at $ \approx 10^{-4.8}$ whereas the threshold for the single and multi-stage CRT, the modified excess fractions, and the excess fractions based estimators occur at $ \approx 4\times 10^{-11}$, $ \approx 8\times 10^{-8}$, and $ 10^{-5}$ respectively.
-The thresholds for the excess fractions and the least squares estimators occur at approximately $8 \times 10^{-6}$ and  $1.5 \times 10^{-5}$ respectively. The least squares estimator is the most accurate among the estimators. It can also be observed that \eqref{eq:approxwhenwrappingiscorrect} provides a very good approximation for the MSE of the least squares estimator.
+The thresholds for the beat wavelength, the excess fractions and the least squares estimators occur at approximately $7 \times 10^{-6}$, $10^{-5}$ and  $2 \times 10^{-5}$ respectively. The least squares estimator is the most accurate among the estimators. It can also be observed that \ref{eq:approxwhenwrappingiscorrect} provides a very good approximation for the MSE of the least squares estimator.
 
 
 %The performance of the classical excess fractions based estimator is similar for the wavelengths $A$ and $B$ respectively. When the noise variance $\sigma^2$ is small the least squares estimator exhibits smaller mean square error with wavelengths $A$ as compared to that of excess fractions based range estimator with wavelengths $B$. As $\sigma^2$ increases the sample mean square error exhibits a ‘threshold’ effect and increases suddenly. Single stage estimator with wavelengths $C$ performs poorly compared to the least squares and excess fractions range estimators with wavelengths $A$ and $B$ respectively. A large improvement is gained by use of the multi-stage CRT estimator by splitting the wavelengths from $C$ into two sets $\{ 1596, 1539 \}$ and $\{ 1595, 1540\}$. Simulations indicate that this is the best splitting of the wavelengths for the multi-stage CRT estimator in this case. Two stage CRT estimator performs similar to the least squares range estimator with wavelengths $A$ and slightly better than the excess fractions range estimator with wavelengths $B$ when the noise variance $\sigma^2$ is less than $ \approx 4\times 10^{-6}$. Least sqaures range estimator with wavelengths $D$ performs very poorly as compared to least squares, excess fractions and CRT estimators with wavelengths $A$, $B$ and $C$ respectively as indicated in the simulation results.
@@ -654,18 +661,19 @@ The thresholds for the excess fractions and the least squares estimators occur a
   \begin{tikzpicture}
     \selectcolormodel{gray}
     \begin{axis}[font=\footnotesize,xmode=log,ymode=log,height=10cm,width=12cm,ylabel={MSE},ylabel style={at={(-0.1,0.5)}},xlabel style={at={(0.53,-0.05)}}, legend style={draw=none, fill=none, at={(1,1)}, legend pos=south east,cells={anchor=west}, inner xsep = 1pt, inner ysep = 1pt, nodes = {inner sep=0.05pt, text depth = 0.05cm}},xmin=1e-6,xmax=3e-4,ymin=1e-6,ymax=1e15,xlabel={$\sigma^2$}]
-	\addplot[mark=o,only marks,mark options={scale= 1}] table {chapters/ch5/data/LeastSquaresC};
-	\addplot[densely dashdotted] table {chapters/ch5/data/ExcessFractionsD};
-	\addplot[dotted]table {chapters/ch5/data/ExcessFractionsAlgebraicD};
-	\addplot[solid, mark=diamond,only marks,mark options={fill=black , scale=  1}]table {chapters/ch5/data/CRTC};
-	\addplot[solid, mark=square,only marks,mark options={fill=black , scale=  1}]table {chapters/ch5/data/TwoStageCRTC};
+	\addplot[mark=o,only marks,mark options={scale= 1}] table {chapters/ch5/data/LeastSquaresD};
+	\addplot[densely dashdotted] table {chapters/ch5/data/ExcessFractionsE};
+	\addplot[dotted]table {chapters/ch5/data/ExcessFractionsAlgebraicE};
+	\addplot[solid, mark=diamond,only marks,mark options={fill=black , scale=  1}]table {chapters/ch5/data/CRTD};
+	\addplot[solid, mark=square,only marks,mark options={fill=black , scale=  1}]table {chapters/ch5/data/TwoStageCRTD};
+	\addplot[mark=square,mark options={solid}]table {chapters/ch5/data/TowersF};
 	\addplot[loosely dashed ,domain=1e-6:7e-2] {x/( 66/101039*66/101039 + 682/1076285*682/1076285 + 125389/198036440*125389/198036440 + 11/17572*11/17572 )};
         %\addplot[mark=o,only marks,mark options={scale= 0.5}] table {chapters/ch5/data/LeastSquaresD};
         
-	\legend{Least squares C, EF method D, Algebraic method D, 1-stage CRT C, 2-stage CRT C, MSE C using \ref{eq:approxwhenwrappingiscorrect} }
+	\legend{Least squares D, EF method E, Algebraic method E,  1-stage CRT D, 2-stage CRT D, Beat wavelength F, MSE D using \ref{eq:approxwhenwrappingiscorrect} }
    \end{axis}  
   \end{tikzpicture}    
- \caption{Sample mean square error of the least squares range estimator, the excess fraction based range estimator~\cite{Falaggis_excess_fractions_2011}, the algebraic method of Falaggis~et~al.~\cite{Falaggis_algebraic_solution_2014} and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=4$ wavelenths.}
+ \caption{Sample mean square error of the least squares range estimator, the excess fraction based range estimator~\cite{Falaggis_excess_fractions_2011}, the algebraic method of Falaggis~et~al.~\cite{Falaggis_algebraic_solution_2014}, the beat wavelength method~\cite{Towers_frequency_selection_interferometry_2003}, and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=4$ wavelenths.}
   \label{fig:leastsquares_EF_CRT_N4_1}   
 \end{figure} 
 
@@ -708,11 +716,17 @@ The thresholds for the excess fractions and the least squares estimators occur a
 %  \label{fig:leastsquares_EF_CRT_N4_1} 
 %\end{figure} 
 
-In another simulation in Figure~\ref{fig:leastsquares_EF_CRT_N5_1} we compare the sample mean square error of the least squares range estimator, the excess fractions~\cite{Falaggis_excess_fractions_2011} and the single stage and multi-stage CRT based estimators of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=5$ wavelengths. In each simulation the true range $r_0 = 300\pi$. Two different sets of wavelengths are considered,
+In another simulation in Figure~\ref{fig:leastsquares_EF_CRT_N5_1} we compare the sample mean square error of the least squares range estimator, the excess fractions~\cite{Falaggis_excess_fractions_2011}, the beat wavelength method~\cite{Towers_frequency_selection_interferometry_2003} and the single stage and multi-stage CRT based estimators of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=5$ wavelengths. In each simulation the true range $r_0 = 300\pi$. Three different sets of wavelengths are considered,
 \[
-E = \{2, 3, 5, 7, 11\}, \;\;\; F = \{\tfrac{22}{3}, \tfrac{66}{17}, \tfrac{77}{18}, \tfrac{110}{31}, 11\}.
+G = \{2, 3, 5, 7, 11\},
 \]
-The wavelengths from both sets are contained in the interval $[2,11]$ and $P = \lcm(E) = \lcm(F) = 2310$ so that the identifiable range is the same. Wavelengths $E$ are relatively prime integers and are used in~\cite{Li_distance_est_wrapped_phase}. Wavelengths $F$ are obtained using Algorithm~\ref{alg:main} with $\kappa=15$. %Algorithm~\ref{alg:main} becomes computationally expensive as the number of wavelengths are increased. However, by setting $p_1=p_2=\ldots=p_N=P$ it terminates in reasonable time and still provides a set of wavelengths that works well. Wavelengths $D$ are obtained by setting $p_1=p_2=\ldots=p_5=P$ in Algorithm~\ref{alg:main}.%The first set $E$ contains pairwise relatively prime integers and so is suitable for the basis of Li~et.~al.~\cite{Li_distance_est_wrapped_phase}, our basis, and the excess fractions and CRT based estimators.  This set $E$ was used in the simulations in~\cite{Li_distance_est_wrapped_phase}. The second set $F$ is obtained using Algorithm~\ref{alg:main} and is not suitable for the basis of Li~et.~al.~\cite{Li_distance_est_wrapped_phase} because its elements can not be scaled to pairwise relatively prime integers.  To see this, observe that the smallest positive number by which we can multiply the elements of $F$ to obtain integers is $c = \tfrac{5924555610077}{2310}$.  Multiplying the elements by $c$ we obtain the set
+\[
+H = \{\tfrac{110}{31},  \tfrac{66}{17}, \tfrac{77}{18}, \tfrac{22}{3}, 11\},
+\]
+\[
+I = \{ 2,   \tfrac{2001733102253033}{10^{15}},   \tfrac{2010145912086660}{10^{15}},  \tfrac{2060633086544078}{10^{15}}, \tfrac{2414105213128363}{10^{15}}\}.
+\]
+The wavelengths from all sets are contained in the interval $[2,11]$ and $P = \lcm(G) = \lcm(H) = 2310$ so that the identifiable range is the same. Wavelengths $G$ are relatively prime integers and are used in~\cite{Li_distance_est_wrapped_phase}. Wavelengths $H$ are obtained using Algorithm 1 with $\kappa=15$. Wavelengths $I$ are optimal wavelengths for the beat wavelength method and are obtained using optimal wavelength selection method of~Towers~et~al.~\cite{Towers_frequency_selection_interferometry_2003} to measure the same distance of $2310$.%Algorithm 1 becomes computationally expensive as the number of wavelengths are increased. However, by setting $p_1=p_2=\ldots=p_N=P$ it terminates in reasonable time and still provides a set of wavelengths that works well. Wavelengths $D$ are obtained by setting $p_1=p_2=\ldots=p_5=P$ in Algorithm 1.%The first set $E$ contains pairwise relatively prime integers and so is suitable for the basis of Li~et.~al.~\cite{Li_distance_est_wrapped_phase}, our basis, and the excess fractions and CRT based estimators.  This set $E$ was used in the simulations in~\cite{Li_distance_est_wrapped_phase}. The second set $F$ is obtained using Algorithm 1 and is not suitable for the basis of Li~et.~al.~\cite{Li_distance_est_wrapped_phase} because its elements can not be scaled to pairwise relatively prime integers.  To see this, observe that the smallest positive number by which we can multiply the elements of $F$ to obtain integers is $c = \tfrac{5924555610077}{2310}$.  Multiplying the elements by $c$ we obtain the set
 %\small
 %\begin{equation}
 %\begin{split}
@@ -729,23 +743,24 @@ The wavelengths from both sets are contained in the interval $[2,11]$ and $P = \
   \centering 
   \begin{tikzpicture}
     \selectcolormodel{gray} 
-    \begin{axis}[font=\footnotesize,xmode=log,ymode=log,height=10cm,width=12cm,ylabel={MSE},ylabel style={at={(-0.09,0.55)}},xlabel style={at={(0.53,-0.05)}}, legend style={draw=none, fill=none, at={(1,1)}, legend pos=south east,cells={anchor=west}, inner xsep = 1pt, inner ysep = 1pt, nodes = {inner sep=0.05pt, text depth = 0.05cm}},xmin=7e-6,xmax=1e-2,ymin = 1e-8, ymax = 3e6, xlabel={$\sigma^2$}]
+    \begin{axis}[font=\footnotesize,xmode=log,ymode=log,height=10cm,width=12cm,ylabel={MSE},ylabel style={at={(-0.09,0.55)}},xlabel style={at={(0.53,-0.05)}}, legend style={draw=none, fill=none, at={(1,1)}, legend pos=south east,cells={anchor=west}, inner xsep = 1pt, inner ysep = 1pt, nodes = {inner sep=0.05pt, text depth = 0.05cm}},xmin=7e-6,xmax=1e-2,ymin = 1e-10, ymax = 1e8, xlabel={$\sigma^2$}]
 	% \addplot[dashed] table {chapters/ch5/data/LeastSquaresA};
-	\addplot[mark=*,only marks,mark options={scale= 1}] table {chapters/ch5/data/LeastSquaresE};
-        \addplot[mark=o,only marks,mark options={scale= 1}] table {chapters/ch5/data/LeastSquaresF};
-	\addplot[mark=diamond,only marks,mark options={scale= 1}] table {chapters/ch5/data/CRTE}; 
-	\addplot[mark=square,only marks,mark options={scale= 1}] table {chapters/ch5/data/CRTF};
-	\addplot[mark=triangle,only marks,mark options={scale= 1}] table {chapters/ch5/data/TwoStageCRTF};
-	\addplot[densely dashdotted] table {chapters/ch5/data/ExcessFractionsE};
-	\addplot[densely dotted] table {chapters/ch5/data/ExcessFractionsE};
-	\addplot[solid ,domain=4e-5:7e-2] {x/( 1/2/2 + 1/3/3+ 1/5/5 + 1/7/7 + 1/11/11)};
+	\addplot[mark=*,only marks,mark options={scale= 1}] table {chapters/ch5/data/LeastSquaresG};
+        \addplot[mark=o,only marks,mark options={scale= 1}] table {chapters/ch5/data/LeastSquaresH};
+	\addplot[mark=diamond,only marks,mark options={scale= 1}] table {chapters/ch5/data/CRTG}; 
+	\addplot[mark=square,only marks,mark options={scale= 1}] table {chapters/ch5/data/CRTH};
+	\addplot[mark=triangle,only marks,mark options={scale= 1}] table {chapters/ch5/data/TwoStageCRTH};
+	\addplot[densely dashdotted] table {chapters/ch5/data/ExcessFractionsG};
+	\addplot[densely dotted] table {chapters/ch5/data/ExcessFractionsH};
+	\addplot[mark=square,mark options={solid}]table {chapters/ch5/data/TowersI};
+	\addplot[solid ,domain=4e-6:7e-2] {x/( 1/2/2 + 1/3/3+ 1/5/5 + 1/7/7 + 1/11/11)};
 	\addplot[loosely dashed ,domain=4e-5:7e-2] {x/( 3/22*3/22 + 17/66*17/66 + 18/77*18/77 + 31/110*31/110 + 1/11/11 )};
 	
-		\legend{Least squares E, Least squares F,  1-stage CRT E, 1-stage CRT F, 2-stage CRT F, EF method E, EF method F, MSE E using \ref{eq:approxwhenwrappingiscorrect}, MSE F using \ref{eq:approxwhenwrappingiscorrect}}
+		\legend{Least squares G, Least squares H,  1-stage CRT G, 1-stage CRT H, 2-stage CRT H, EF method G, EF method H, Beat wavelength I, MSE E using \ref{eq:approxwhenwrappingiscorrect}, MSE F using \ref{eq:approxwhenwrappingiscorrect}}
 		
    \end{axis}  
   \end{tikzpicture}   
- \caption{Sample mean square error of the least squares range estimator, the excess fraction based range estimator~\cite{Falaggis_excess_fractions_2011} and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=5$ wavelenths.}\label{fig:leastsquares_EF_CRT_N5_1}   
+ \caption{Sample mean square error of the least squares range estimator, the excess fraction based range estimator~\cite{Falaggis_excess_fractions_2011}, the beat wavelength estimator~\cite{Towers_frequency_selection_interferometry_2003} and the range estimator based on the single stage and multi-stage CRT algorithms of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014} with $N=5$ wavelenths.}\label{fig:leastsquares_EF_CRT_N5_1}   
 \end{figure} 
 
 %\begin{figure}
@@ -769,8 +784,8 @@ The wavelengths from both sets are contained in the interval $[2,11]$ and $P = \
 %\end{figure} 
 
 %In each simulation the true range $r_0 = 200\pi$ and the phase noise variables $\Phi_1,\dots,\Phi_N$ are wrapped normally distributed, that is, $\Phi_n = \fracpart{X_n}$ where $X_1,\dots,X_N$ are independent and normally distributed with zero mean and variance $\sigma^2$. The number of Monte-Carlo trials used for each value of $\sigma^2$ is $10^5$.  
-The behaviour of the least squares, excess fractions and single-stage CRT estimators is similar for the wavelengths $E$. No benefit is gained by applying the multi-stage CRT estimator with wavelengths $E$.  When the noise variance $\sigma^2$ is small the least squares estimator exhibits slightly smaller mean square error than the excess fractions and CRT estimators.  The threshold for all of the estimators occurs at $\sigma^2 \approx 8 \times 10^{-5}$ with wavelengths $E$.  Different behaviour is exhibited with wavelength $F$.  When the noise variance $\sigma^2$ is small the least squares estimator exhibits slightly smaller mean square error with wavelengths $E$ than with $F$.  However, the threshold with wavelengths $F$ occurs at $\sigma^2 \approx 2\times 10^{-4}$.  Wavelengths $F$ are more accurate than $E$ when $\sigma^2$ is greater than approximately $8\times10^{-5}$. The single-stage CRT estimator performs comparatively poorly with wavelengths $F$. %The threshold occurs at approximately $\sigma^2 \approx 1.5 \times 10^{-8}$ 
-A small improvement is gained by use of the multi-stage CRT estimator by splitting the wavelengths from $F$ into two sets $\{\tfrac{110}{31} , 11\}$ and $\{ \tfrac{22}{3}, \tfrac{66}{17} , \tfrac{77}{18}\}$.  Simulations indicate that this is the best splitting of the wavelengths for the multi-stage CRT estimator in this case. The excess fractions estimator performs very poorly with wavelengths $F$.
+The behaviour of the least squares, excess fractions and single-stage CRT estimators is similar for the wavelengths $F$. No benefit is gained by applying the multi-stage CRT estimator with wavelengths $F$.  When the noise variance $\sigma^2$ is small the least squares estimator exhibits slightly smaller mean square error than the excess fractions and CRT estimators.  The threshold for all of the estimators occurs at $\sigma^2 \approx 8 \times 10^{-5}$ with wavelengths $F$.  Different behaviour is exhibited with wavelength $G$.  When the noise variance $\sigma^2$ is small the least squares estimator exhibits slightly smaller mean square error with wavelengths $F$ than with $G$.  However, the threshold with wavelengths $G$ occurs at $\sigma^2 \approx 2\times 10^{-4}$.  Wavelengths $G$ are more accurate than $F$ when $\sigma^2$ is greater than approximately $8\times10^{-5}$. The single-stage CRT estimator performs comparatively poorly with wavelengths $G$. %The threshold occurs at approximately $\sigma^2 \approx 1.5 \times 10^{-8}$ 
+A small improvement is gained by use of the multi-stage CRT estimator by splitting the wavelengths from $G$ into two sets $\{\tfrac{110}{31} , 11\}$ and $\{ \tfrac{22}{3}, \tfrac{66}{17} , \tfrac{77}{18}\}$.  Simulations indicate that this is the best splitting of the wavelengths for the multi-stage CRT estimator in this case. The excess fractions estimator performs very poorly with wavelengths $G$. The threshold for the beat wavelength method with wavelengths $I$ occurs at approximately the same position as that for the least squares estimator with wavelengths $F$. When the noise variance is small the least squares estimator with wavelengths $G$ performs slightly better than the beat wavelength estimator with wavelengths $I$. However, it should be noted that the separation between the measurement wavelengths for the beat wavelength method is very small which makes it unsuitable for practical applications at long ranges.
 
 
 %It is clear from the simulation results that within the given bandwidth there exist some wavelengths that result in more accurate estimates of the range than the prime and mutually co-prime wavelengths. Wavelength selection algorithm proposed in this paper gives us such wavelengths.
@@ -795,12 +810,15 @@ A small improvement is gained by use of the multi-stage CRT estimator by splitti
       \addplot[mark=*,mark repeat={3},mark options={scale= 0.6}] table {chapters/ch5/data/LeastSquaresBenchmark};
       \addplot[mark=diamond,mark repeat={3}] table {chapters/ch5/data/CRTBenchmark};
       \addplot[densely dashdotted] table {chapters/ch5/data/ExcessMethodBenchmark}; 
-      \legend{Least squares, CRT, Excess Fractions}
+      \addplot[dashdotted] table {chapters/ch5/data/BeatWavelengthBenchmark}; 
+      \legend{Least squares, CRT, Excess fractions, Beat wavelength}
    \end{axis}
   \end{tikzpicture}  
  \caption{Computation time benchmark: Comparison of the least squares estimator, the CRT estimator and the excess fractions estimator.}
  \label{fig:benchmarks}
 \end{figure}
+
+
 
 Figure~\ref{fig:benchmarks} shows the computation time required for the least squares estimator computed using a sphere decoder (\Sec{sec:ch2-lattice-theory}), the single stage CRT estimator of Xiao~et.~al.~\cite{Xiao_multistage_crt_2014}, and the excess fractions based estimator~\cite{Falaggis_excess_fractions_2011} as the number of wavelengths $N$ increases.  The wavelengths are set to integers $\{1,2,3,\dots,N\}$ in each benchmark.   In these benchmarks the least squares estimator is faster than the CRT for $N$ less than 38. However, for large $N$ the least square estimator computed using the sphere decoder becomes prohibitively expensive. The excess fractions estimator is computationally expensive even for a small number of wavelengths. The computational complexity of the excess fractions estimator increases with the ratio between the unambiguous measurement range (UMR) and the smallest wavelength. The complexity can be prohibitive even for three wavelengths if this ratio is large.
 
@@ -809,7 +827,7 @@ From previous chapters we observed that there exists a non trivial relationship 
 
 The relationship between measurement wavelengths and range estimation accuracy is, however, non trivial and this complicates wavelength selection procedures. In this chapter we first make a key realisation that relates the measurement wavelengths to the determinant of the lattice. This observation helped us to exploit the relationship between the measurement wavelengths and the Voronoi cell of the lattice through an upper bound on the volume of the Voronoi cell. 
 
-For the purpose of wavelength selection algorithm, we first defined two approximations for the error of the range estimator in terms of the measurement wavelengths. The first approximates the error in the case that the least squares estimator of the wrapping variables is correct. The second upper bounds the probability that the wrapping variables are correct. Next we formulated an optimisation criterion that aims to minimise the mean square error of the estimator. Based on this optimisation criterion a depth first search algorithm is developed that outputs a set of wavelengths that typically yield smaller mean square error when employed with the least square estimator. Simulations indicate that the wavelengths obtained using this algorithm outperform the existing wavelength selection methods for the excess fractions range estimator and also outperform the CRT based range estimators. 
+For the purpose of wavelength selection algorithm, we first defined two approximations for the error of the range estimator in terms of the measurement wavelengths. The first approximates the error in the case that the least squares estimator of the wrapping variables is correct. The second upper bounds the probability that the wrapping variables are correct. Next we formulated an optimisation criterion that aims to minimise the mean square error of the estimator. Based on this optimisation criterion a depth first search algorithm is developed that outputs a set of wavelengths that typically yield smaller mean square error when employed with the least square estimator. Simulations indicate that the wavelengths obtained using this algorithm outperform the existing wavelength selection methods for the excess fractions range estimator and the beat wavelength method and also outperform the CRT based range estimators. 
 
 % For the least squares estimator this threshold occurs at $\sigma^2 \approx 2\times 10^{-4}$ with wavelengths $A$ and $\sigma^2 \approx 4\times 10^{-4}$ for wavelength $B$.  
 
@@ -1480,7 +1498,7 @@ For the purpose of wavelength selection algorithm, we first defined two approxim
 %
 %To find minimisers of $L_2$, it suffices to check only those integer vectors $\hat{\pbf}$ and $\hat{\qbf}$ with elements satisfying the above two inequalities \ref{eq:pkbound} and \ref{eq:qkbound}.  Because the number of integer vectors satisfying these inequalities is finite this proceedure will terminate in finite time.  The number of candidate solutions that need to be checked can be reduced by incorporating the property $\gcd(\hat{p}_n, \hat{q}_n) = 1$ into the search.  The number of candiates is further reduced by noting that the objective function $L_1$ is unchanged by permutation of the wavelengths $\lambda_2,\dots,\lambda_N$.  Equivalently, $L_2(\pbf,\qbf)$ is unchanged if both arguments $\pbf$ and $\qbf$ undergo the same permutation.  For this reason it is sufficient to suppose that the elements of $\hat{\pbf}$ are in, say, ascending order, that is, $\hat{p}_2 \leq \hat{p}_3 \leq \cdots \leq \hat{p}_N$.  This algorithm becomes computationally expensive if the number of wavelengths are more than four. We can fix $p_1=p_2=\ldots=p_N$ when the number of wavelengths are more than four. In this case the algorithm still provides a best set of wavelengths and terminates in a reasonable time. 
 %
-%Psuedocode describing the search procedure is given in Algorithm~\ref{alg:main}. The algorithm makes use of two functions $\operatorname{psearch}$ and $\operatorname{qsearch}$ that are called recursively. Some of the important conditions tested in these functions are following. Line 1 in $\operatorname{psearch}$ guarantees \ref{eq:pkbound}. Line 1 in $\operatorname{qsearch}$ satisfies \ref{eq:qkbound} whereas line 2 avoids additional search for candidate solutions $\hat{p}_n, \hat{q}_n$. Line 3 in $\operatorname{qsearch}$ ensures that we have not reached at the top of the tree during depth first search. Line 6 checks that two conditions are satisfied. First it checks that the current value of $L_2$ from \ref{eq:objectvefunctionL1} is less than the finite upper bound from \ref{eq:L-tilde} and also satisfies that the lcm condition from \ref{eq:reecondedrangeconst} fulfilled.
+%Psuedocode describing the search procedure is given in Algorithm 1. The algorithm makes use of two functions $\operatorname{psearch}$ and $\operatorname{qsearch}$ that are called recursively. Some of the important conditions tested in these functions are following. Line 1 in $\operatorname{psearch}$ guarantees \ref{eq:pkbound}. Line 1 in $\operatorname{qsearch}$ satisfies \ref{eq:qkbound} whereas line 2 avoids additional search for candidate solutions $\hat{p}_n, \hat{q}_n$. Line 3 in $\operatorname{qsearch}$ ensures that we have not reached at the top of the tree during depth first search. Line 6 checks that two conditions are satisfied. First it checks that the current value of $L_2$ from \ref{eq:objectvefunctionL1} is less than the finite upper bound from \ref{eq:L-tilde} and also satisfies that the lcm condition from \ref{eq:reecondedrangeconst} fulfilled.
 %
 %\begin{algorithm} \label{alg:main}
 %\SetAlCapFnt{\small} 
@@ -1540,7 +1558,7 @@ For the purpose of wavelength selection algorithm, we first defined two approxim
 %\[
 %f_2(\pbf, \qbf) = \frac{\sigma^2 \lambdamax^2}{D(\pbf,\qbf)}
 %\]
-%The weight $\gamma$ controls the importance of the individual objectives. In practice one might wish to adjust $\gamma$ to suit a priori knowledge about a given application. We now provide a simple choice for $\gamma$ that appears to work well. This choice has the added advantage of being independent of $\sigma^2$. To select $\gamma$ we define the minimum values of these objective functions as $f_{1\min}(\pbf, \qbf)$ and $f_{2\min}(\pbf, \qbf)$. $f_{1\min}(\pbf, \qbf)$ is obtained by running Algorithm~\ref{alg:main} with $\gamma=0$ and \[f_{2\min}(\pbf, \qbf)=\frac{\sigma^2 \lambdamax^{2}}{1 + (N-1)\lambdamax^{2}/\lambdamin^{-2}}.\]
+%The weight $\gamma$ controls the importance of the individual objectives. In practice one might wish to adjust $\gamma$ to suit a priori knowledge about a given application. We now provide a simple choice for $\gamma$ that appears to work well. This choice has the added advantage of being independent of $\sigma^2$. To select $\gamma$ we define the minimum values of these objective functions as $f_{1\min}(\pbf, \qbf)$ and $f_{2\min}(\pbf, \qbf)$. $f_{1\min}(\pbf, \qbf)$ is obtained by running Algorithm 1 with $\gamma=0$ and \[f_{2\min}(\pbf, \qbf)=\frac{\sigma^2 \lambdamax^{2}}{1 + (N-1)\lambdamax^{2}/\lambdamin^{-2}}.\]
 %Now the weight $\gamma$ is given as 
 %\[\gamma = \frac{\sigma^2 f_{1\min}}{f_{2\min}} = \frac{ (\lambdamin^{-2} + (N-1)\lambdamax^{2}) f_{1\min}}{\lambdamax^{2} \lambdamin^{-2}}  .
 %\]
@@ -1557,7 +1575,7 @@ For the purpose of wavelength selection algorithm, we first defined two approxim
 %%%\lcm(\lambda_1, \lambda_2, \ldots, \lambda_N) = P,
 %%%\]
 %%%such that $\lambda_1=\lambda_2 = \ldots =\lambda_{N-1} = \lambda_{\max}$ and $\lambda_N < \lambda_{\max}$ is the closest wavelength to $\lambda_{\max}$. 
-%%The minimum value of $f_1$ is obtained by running Algorithm~\ref{alg:main} with $\beta=0$. The minimum value of $f_2$ is given as
+%%The minimum value of $f_1$ is obtained by running Algorithm 1 with $\beta=0$. The minimum value of $f_2$ is given as
 %%\[
 %%f_{2_{\min}} = \frac{\sigma^2}{\sum_{n=1}^N \lambdamin^{-2}}.
 %%\]
@@ -1568,7 +1586,7 @@ For the purpose of wavelength selection algorithm, we first defined two approxim
 %%%\begin{equation}
 %%% f_{1_{\max}} = \frac{1}{\sum_{n=1}^N \lambdamax^{-2}},  \qquad  f_{2_{\max}} = P^2 \sum_{n=1}^N \lambdamax^{-2},   \nonumber
 %%%\end{equation}
-%%Then the weight $\beta = \dfrac{\sigma^2 f_{1_{\min}}}{f_{2_{\min}}} $. This choice of $\beta$ is independent of the noise variance and provides better MSE performance for the range estimator compared to other range estimators. %Algorithm~\ref{alg:main} provides several sets of wavelengths and among these sets the one that gives the longest short vector for the resulting lattice is chosen as the best wavelength set. Simulations show that the wavelengths that result in a lattice with longest short vector are the best wavelengths for range estimation.%***********************************************************************************************************************************************************************************
+%%Then the weight $\beta = \dfrac{\sigma^2 f_{1_{\min}}}{f_{2_{\min}}} $. This choice of $\beta$ is independent of the noise variance and provides better MSE performance for the range estimator compared to other range estimators. %Algorithm 1 provides several sets of wavelengths and among these sets the one that gives the longest short vector for the resulting lattice is chosen as the best wavelength set. Simulations show that the wavelengths that result in a lattice with longest short vector are the best wavelengths for range estimation.%***********************************************************************************************************************************************************************************
 %%                  									 SIMULATION RESULTS
 %%***********************************************************************************************************************************************************************************
 %\section{Simulation Results}\label{sec:sim-results}
@@ -1645,7 +1663,7 @@ For the purpose of wavelength selection algorithm, we first defined two approxim
 %\[
 %C = \{2, 3, 5, 7, 11\}, \;\;\; D = \{\tfrac{2310}{899}, \tfrac{2310}{271}, \tfrac{2310}{227}, \tfrac{2310}{211}, 11\}.
 %\]
-%The wavelengths from both sets are contained in the interval $[2,11]$ and $P = 2310 = \lcm(C) = \lcm(D)$ so that the identifiable range is the same. Wavelengths $C$ are relatively prime integers and are used in~\cite{Li_distance_est_wrapped_phase} for the least squares range estimator. Wavelengths $D$ are obtained using Algorithm~\ref{alg:main}. Algorithm~\ref{alg:main} becomes computationally expensive as the number of wavelengths are increased. However, by setting $p_1=p_2=\ldots=p_N=P$ it terminates in reasonable time and still provides an optimised set of wavelengths. Wavelengths $D$ are obtained by setting $p_1=p_2=\ldots=p_5=P$ in Algorithm~\ref{alg:main}.
+%The wavelengths from both sets are contained in the interval $[2,11]$ and $P = 2310 = \lcm(C) = \lcm(D)$ so that the identifiable range is the same. Wavelengths $C$ are relatively prime integers and are used in~\cite{Li_distance_est_wrapped_phase} for the least squares range estimator. Wavelengths $D$ are obtained using Algorithm 1. Algorithm 1 becomes computationally expensive as the number of wavelengths are increased. However, by setting $p_1=p_2=\ldots=p_N=P$ it terminates in reasonable time and still provides an optimised set of wavelengths. Wavelengths $D$ are obtained by setting $p_1=p_2=\ldots=p_5=P$ in Algorithm 1.
 %
 %\begin{figure}
 %  \centering 

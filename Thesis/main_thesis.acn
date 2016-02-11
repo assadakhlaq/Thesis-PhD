@@ -1,10 +1,13 @@
-\glossaryentry{MEMS?\glossaryentryfield{mems}{\glsnamefont{MEMS}}{Micro Electronic Mechanical Systems}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{WSNs?\glossaryentryfield{wsns}{\glsnamefont{WSNs}}{Wireless Sensor Networks}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{QoS?\glossaryentryfield{qos}{\glsnamefont{QoS}}{Quality of Service}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{SOSUS?\glossaryentryfield{sosus}{\glsnamefont{SOSUS}}{Sound Surveillance System}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{DSN?\glossaryentryfield{dsn}{\glsnamefont{DSN}}{Distributed Sensor Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{DARPA?\glossaryentryfield{darpa}{\glsnamefont{DARPA}}{Defence Advanced Research Project Agency}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{DFT?\glossaryentryfield{dft}{\glsnamefont{DFT}}{Discrete Fourier Transform}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{EED?\glossaryentryfield{eed}{\glsnamefont{EED}}{Expected End-to-end Delay}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{EDR?\glossaryentryfield{edr}{\glsnamefont{EDR}}{Expected Delivery Ratio}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
-\glossaryentry{SLEM?\glossaryentryfield{slem}{\glsnamefont{SLEM}}{Second Largest Eigenvalue Modulus}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{LS?\glossaryentryfield{ls}{\glsnamefont{LS}}{Least Squares}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{GPS?\glossaryentryfield{gps}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{MAP?\glossaryentryfield{map}{\glsnamefont{MAP}}{maximum a posteriori}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{CRT?\glossaryentryfield{crt}{\glsnamefont{CRT}}{Chinese Remainder Theorm}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{MIMO?\glossaryentryfield{mimo}{\glsnamefont{MIMO}}{Multiple input multiple output}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{EF?\glossaryentryfield{ef}{\glsnamefont{EF}}{Excess Fractions}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{NP?\glossaryentryfield{np}{\glsnamefont{NP}}{Non-deterministic Polynomial-time}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{MWI?\glossaryentryfield{mwi}{\glsnamefont{MWI}}{Multi-wavelength Interferometer}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{UMR?\glossaryentryfield{umr}{\glsnamefont{UMR}}{Unambiguous Measurement Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{NICF?\glossaryentryfield{nifc}{\glsnamefont{NICF}}{Nearest Integer Continued Fraction}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{MSE?\glossaryentryfield{mse}{\glsnamefont{MSE}}{Mean Square Error}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{MRI?\glossaryentryfield{mri}{\glsnamefont{MRI}}{Magnetic Resonance Imaging}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{SAR?\glossaryentryfield{sar}{\glsnamefont{SAR}}{Synthetic Aperture Radar}{\relax }|setentrycounter[]{page}\glsnumberformat}{ii}

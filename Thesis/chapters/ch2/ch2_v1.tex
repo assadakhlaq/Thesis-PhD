@@ -121,7 +121,7 @@ where $\Bbf$ is the $m\times n$ matrix with columns $\bbf_1,\dots,\bbf_n$. The m
 
 The \textbf{span} of a lattice $(\Lambda)$ is the linear space spanned by its vectors, that is,
 \[
-\text{span}(\Lambda) = \text{span}(\Bbf) = \{ \Bbf \ybf | \ybf \in \reals^n\}
+\text{span}(\Lambda) = \text{span}(\Bbf) = \{ \Bbf \upsilonbf | \upsilonbf \in \reals^n\}
 \]
 %00000000000000000000000000000000000000000000000000000000000000000000000
 %\textbf{Gram matrix:}
@@ -137,11 +137,11 @@ is called the \textbf{Gram matrix} and $\Bbf^\prime$ denotes the transpose of $\
 %\textbf{Fundamental Parallelepiped:}
 %00000000000000000000000000000000000000000000000000000000000000000000000
 
-The parallelepiped formed by basis vectors $\bbf_1,\dots,\bbf_n$ is called a \textbf{fundamental parallelepiped} of the lattice $\Lambda$. For a lattice with a basis $\Bbf$ the fundamental parallelepiped $\mathcal{P}(B)$ is defined as
+The parallelepiped formed by basis vectors $\bbf_1,\dots,\bbf_n$ is called a \textbf{fundamental parallelepiped} of the lattice $\Lambda$. For a lattice with a basis $\Bbf$ the fundamental parallelepiped $\mathcal{P}(\Bbf)$ is defined as
 \[
-\mathcal{P}(B) = \{\Bbf \xbf | \xbf\in \reals^n, \forall i : 0 \leq x_i < 1 \}
+\mathcal{P}(\Bbf) = \{\Bbf \nubf | \nubf \in \reals^n, \forall i : 0 \leq \nu_i < 1 \}
 \]
-A fundamental parallelepiped has $n$-dimensional volume $\sqrt{\Abf} = \sqrt{\det \Bbf^\prime\Bbf }$ where superscript $^\prime$ denotes the vector or matrix transpose.  This quantity is also called the determinant of the lattice and is denoted by $\det\Lambda$.  The fundamental parallelepiped for a two-dimensional lattice is shown in Figure~\ref{fig:ch2-parallelepiped} as the region covered by the dashed line parallelepiped. $\mathcal{P}(B)$ depends on the basis $\Bbf$. It can be observed that if we place a copy of $\mathcal{P}(B)$ at each lattice point in $\Lambda$ then we obtain tiling of the entire span$(\Lambda)$ as shown in Figure~\ref{fig:ch2-parallelepiped-tiling}.
+A fundamental parallelepiped has $n$-dimensional volume $\sqrt{\Abf} = \sqrt{\det \Bbf^\prime\Bbf }$ where superscript $^\prime$ denotes the vector or matrix transpose.  This quantity is also called the determinant of the lattice and is denoted by $\det\Lambda$.  The fundamental parallelepiped for a two-dimensional lattice is shown in Figure~\ref{fig:ch2-parallelepiped} as the region covered by the dashed line parallelepiped. $\mathcal{P}(\Bbf)$ depends on the basis $\Bbf$. It can be observed that if we place a copy of $\mathcal{P}(\Bbf)$ at each lattice point in $\Lambda$ then we obtain tiling of the entire span$(\Lambda)$ as shown in Figure~\ref{fig:ch2-parallelepiped-tiling}.
 
 \begin{figure}[t]
   \centering
@@ -253,18 +253,18 @@ and $\vor\Lambda$ and a translate $\vor\Lambda + \tbf$ by a lattice point $\tbf 
 This leads to the following simple property that we will find useful.
 
 \begin{remark}\label{remarksimpleintvor}
-If $\tbf \in \Lambda$, $\ubf \in \vor\Lambda$, $\vbf \in \interior\Lambda$, and $\ubf = \vbf + \tbf$, then $\tbf = \zerobf$.
+If $\sbf \in \Lambda$, $\tbf \in \vor\Lambda$, $\ubf \in \interior\Lambda$, and $\tbf = \ubf + \sbf$, then $\sbf = \zerobf$.
 \end{remark}
 
 %\textbf{Hyperballs:}
 
-Let $r$ denote the radius of an n-dimensional \textbf{Euclidean ball}. The volume $V_n$ of this ball is given as
+Let $R$ denote the radius of an n-dimensional \textbf{Euclidean ball}. The volume $V_n$ of this ball is given as
 \[
-V_n = \frac{\pi^{n/2}r^n}{\Gamma(n/2 + 1)} 
+V_n = \frac{\pi^{n/2}R^n}{\Gamma(n/2 + 1)} 
 \]
 where $\Gamma$ is the Gamma function $\Gamma(n)=(n-1)!$ for $n\in \ints^+$. The radius of this ball can be expressed as
 \[
-r =  \dfrac{\left (V_n \Gamma(n/2 + 1)\right)^{1/n}}{\sqrt{\pi}} 
+R =  \dfrac{\left (V_n \Gamma(n/2 + 1)\right)^{1/n}}{\sqrt{\pi}} 
 \]
 
 The probability $P_r(\Lambda, \sigma^2)$ that an independent and identically distributed n-variate Gaussian random variable lies inside the Voronoi cell can be upper bounded by the probability that this n-variate Gaussian random variable lies within a ball of volume equal to that of the Voronoi cell~\cite[Sec.~IV.C]{Hassibi_GPS_1998}, i.e.,
@@ -293,7 +293,7 @@ The \textbf{inradius} or \textbf{packing radius} $\rho = \dmin/2$ is the length 
 
 Let $\Lambda$ be an $n$-dimensional lattice and let $H$ be the $n$-dimensional subspace spanned by its lattice points. The \textbf{dual lattice} of $\Lambda$, denoted $\Lambda^*$, contains those points from $H$ that have integer inner product with all points from $\Lambda$, that is,
 \[
-\Lambda^* = \{ \xbf  \in H \mid \xbf^\prime \ybf \in \ints \text{ for all } \ybf \in \Lambda \}.
+\Lambda^* = \{ \xbf  \in H \mid \xbf^\prime \bar{\xbf} \in \ints \text{ for all } \bar{\xbf} \in \Lambda \}.
 \]
 The determinant of a lattice and its dual are reciprocals, that is, $\det\Lambda = (\det\Lambda^*)^{-1}$~\cite[p. 10]{SPLAG}.  A lattice and its dual have interesting properties when intersected with or projected onto a subspace.  %These properties will be particularly useful for the purpose of range estimation.
 
@@ -341,11 +341,11 @@ and dual lattice
 
 %\textbf{Closest lattice point problem}
 
-Given a vector $\ybf \in \reals^m$, a problem of interest is to find a lattice point $\xbf \in \Lambda$ such that the squared Euclidean norm
+Given a vector $\bbf \in \reals^m$, a problem of interest is to find a lattice point $\xbf \in \Lambda$ such that the squared Euclidean norm
 \[
-\| \ybf - \xbf \|^2 = \sum_{i=1}^m (y_i - x_i)^2 
+\| \bbf - \xbf \|^2 = \sum_{i=1}^m (b_i - x_i)^2 
 \]  
-is minimised.  This is called the \textbf{closest lattice point problem} (or \textbf{closest vector problem}) and a solution is called a \textbf{closest lattice point} (or simply \textbf{closest point}) to $\ybf$ \cite{Agrell2002,McKilliam2009CoxeterLattices,MicciancioVoulgaris_deterministic_jv_2013,McKilliam_closest_point_lattice_first_kind_2014}.  The closest lattice point problem and the Voronoi cell are related in that $\xbf\in\Lambda$ is a closest point to $\ybf$ if and only if $\ybf - \xbf \in \vor\Lambda$.  
+is minimised.  This is called the \textbf{closest lattice point problem} (or \textbf{closest vector problem}) and a solution is called a \textbf{closest lattice point} (or simply \textbf{closest point}) to $\bbf$ \cite{Agrell2002,McKilliam2009CoxeterLattices,MicciancioVoulgaris_deterministic_jv_2013,McKilliam_closest_point_lattice_first_kind_2014}.  The closest lattice point problem and the Voronoi cell are related in that $\xbf\in\Lambda$ is a closest point to $\bbf$ if and only if $\bbf - \xbf \in \vor\Lambda$.  
 
 %\textbf{Short vector}
 %The closest lattice point problem has numerous engineering applications. For example, the closest lattice point corresponds to the minimum distortion point when a lattice is used as a quantiser and it is called lattice decoding when a lattice is used to construct codes~\cite{Conway1983VoronoiCodes,Erex2004_lattice_decoding}. The problem also occurs in communications systems involving multiple antennas~\cite{Wubben_2011} and has also found applications to circular statistics~\cite{McKilliam_mean_dir_est_sq_arc_length2010}, single frequency estimation~\cite{McKilliamFrequencyEstimationByPhaseUnwrapping2009}, and related signal processing problems~\cite{Clarkson2007,McKilliam2009IndentifiabliltyAliasingPolyphase,McKilliam_pps_unwrapping_tsp_2014,McKilliam_fast_sparse_period_est_2015}. In the context of range estimation from phase observations, the closest lattice point problem has been applied by Teunissen~\cite{Teunissen_GPS_1995}, Hassibi and Boyd~\cite{Hassibi_GPS_1998} and more recently Li~et.~al.~\cite{Li_distance_est_wrapped_phase, Li_coloured_range_est_case}.
@@ -393,9 +393,9 @@ Although the problem is NP-hard in general, fast algorithms are known for specif
 %*********************************************************************************************************************************************************************************
 %Common range estimators are based upon received signal strength~\cite{Chitte_RSS_Estimation2009, HingCheung_RSSbasedRangeEstimation2012}, time of flight (or time of arrival)~\cite{XinrongLi_TOA_range_estimation2004, Lanzisera_TOA_range_estimation2011}, and phase of arrival~\cite{Jacobs_ambiguity_resolution_interferometery_1981,Towers_frequency_selection_interferometry_2003,Li_distance_est_wrapped_phase}. This thesis focuses on the least squares estimation of range based on the phase of arrival method that will be discussed in Chapter~\ref{Chapter3}. 
 In this section we describe some important range estimators that employ multiple phase observations to estimate the unknown range.  A good understanding of these methods will be helpful for comparison with the least squares range estimator in later chapters. These range estimators are based upon: (i) the beat wavelength method, (ii) the method of excess fractions, and (iii) the CRT based method. %We first briefly describe the notation used in this work. 
-%Suppose that a multi-wavelength interferometer (MWI) with $N$  measurement wavelengths $\lambda_1, \ldots, \lambda_N$ is used to measure an unknown distance $r_0$. Let $\theta_1,\ldots,\theta_N$ be the corresponding estimated values of the interferometer phases. These phase values lie in the interval $[-\pi, \pi]$. The estimated interferometer phase $\theta_n$ corresponding to the wavelengths $\lambda_n$ can also be related to a so called \emph{fractional fringe value} $e_n$ defined as
+%Suppose that a multi-wavelength interferometer (MWI) with $N$  measurement wavelengths $\lambda_1, \ldots, \lambda_N$ is used to measure an unknown distance $r_0$. Let $\varphi_1,\ldots,\varphi_N$ be the corresponding estimated values of the interferometer phases. These phase values lie in the interval $[-\pi, \pi]$. The estimated interferometer phase $\varphi_n$ corresponding to the wavelengths $\lambda_n$ can also be related to a so called \emph{fractional fringe value} $e_n$ defined as
 %\[
-%\eta_n = \theta_n/2\pi
+%\eta_n = \varphi_n/2\pi
 %\]
 %Suppose that a transmitter sends a signal of the form
 %\begin{equation}\label{eq:xtranssignal}
@@ -403,28 +403,28 @@ In this section we describe some important range estimators that employ multiple
 %\end{equation}
 %of known phase $\phi$ and frequency $f$ in Hertz.  The signal is assumed to propogate by line of sight to a reciever resulting in the signal 
 %\begin{equation}
-%y(t) = \alpha x(t - r_0/c) + w(t) = \alpha \sin (2\pi ft + 2\pi\theta) + w(t)
+%y(t) = \alpha x(t - r_0/c) + w(t) = \alpha \sin (2\pi ft + 2\pi\varphi) + w(t)
 %\end{equation}
 %where $r_0$ is the distance (or range) in meters between receiver and transmitter, $c$ is the speed at which the signal propagates in meters per second, $\alpha$ is the amplitude of the received signal, $w(t)$ represents noise,
 %\begin{equation}
-%\theta = \phi - \dfrac{ f }{c}r_0 = \phi - \dfrac{r_0}{\lambda}
+%\varphi = \phi - \dfrac{ f }{c}r_0 = \phi - \dfrac{r_0}{\lambda}
 %\end{equation}
 %is the phase of the received signal, and $\lambda = c/f$ is the wavelength.  Alternatively, the transmitter and receiver could be in the same location and the receiver obtains the signal after being reflected off a target.  In this case the range of the target would be $r_0/2$.
 %
-%Our aim is to estimate $r_0$ from the signal $y(t)$.  To do this we first calculate an estimate $\hat{\theta}$ of the principal component of the phase $\theta$.  In optical ranging applications $\hat{\theta}$ might be given by an interferometer.  In sonar or radio frequency ranging applications $\hat{\theta}$ might be obtained from the complex argument of the demodulated signal $y(t)e^{-2\pi j f t}$.  Whatever the method of phase estimation, 
-%The range $r_0$ is related to the phase estimates $\hat{\theta}_n$ by the phase differences
+%Our aim is to estimate $r_0$ from the signal $y(t)$.  To do this we first calculate an estimate $\hat{\varphi}$ of the principal component of the phase $\varphi$.  In optical ranging applications $\hat{\varphi}$ might be given by an interferometer.  In sonar or radio frequency ranging applications $\hat{\varphi}$ might be obtained from the complex argument of the demodulated signal $y(t)e^{-2\pi j f t}$.  Whatever the method of phase estimation, 
+%The range $r_0$ is related to the phase estimates $\hat{\varphi}_n$ by the phase differences
 %\begin{equation}
-%Y = \sfracpart{\phi - \hat{\theta}} = \sfracpart{ r_0/\lambda + \Phi }
+%Y = \sfracpart{\phi - \hat{\varphi}} = \sfracpart{ r_0/\lambda + \Phi }
 %\end{equation}
-%where $\Phi$ represents phase noise and $\sfracpart{x} = x - \floor{x + \tfrac{1}{2}}$ where $\floor{x}$ denotes the greatest integer less than or equal to $x$.  %That is, $\fracpart{x}$ is the \emph{centered} fractional part of $x$. %For the purpose of analysis, it is convenient to model the phase noise using the~\emph{wrapped normal distribution}~\cite[p.~50]{Mardia_directional_statistics}\cite[p.~76]{McKilliam2010thesis}\cite[p.~47]{Fisher1993}.  That is, we model the phase noise as $\fracpart{\Phi}$ where $\Phi$ is normally distributed with zero mean. With this assumption $\hat{\theta} = \fracpart{ \theta - \fracpart{\Phi} } = \fracpart{ \theta - \Phi } $ and so, the phase noise may equivalently be modelled as normally distributed \emph{without wrapping} ~\cite{Hassibi98,WenchaoLi2013}.
+%where $\Phi$ represents phase noise and $\sfracpart{x} = x - \floor{x + \tfrac{1}{2}}$ where $\floor{x}$ denotes the greatest integer less than or equal to $x$.  %That is, $\fracpart{x}$ is the \emph{centered} fractional part of $x$. %For the purpose of analysis, it is convenient to model the phase noise using the~\emph{wrapped normal distribution}~\cite[p.~50]{Mardia_directional_statistics}\cite[p.~76]{McKilliam2010thesis}\cite[p.~47]{Fisher1993}.  That is, we model the phase noise as $\fracpart{\Phi}$ where $\Phi$ is normally distributed with zero mean. With this assumption $\hat{\varphi} = \fracpart{ \varphi - \fracpart{\Phi} } = \fracpart{ \varphi - \Phi } $ and so, the phase noise may equivalently be modelled as normally distributed \emph{without wrapping} ~\cite{Hassibi98,WenchaoLi2013}.
 %For all integers $k$, 
 %\begin{equation}
 %Y = \fracpart{ r_0/\lambda + \Phi } = \sfracpart{(r_0 + k\lambda)/\lambda + \Phi}
 %\end{equation}
 %and so the range is identifiable only if $r_0$ is assumed to lie in an interval of length $\lambda$.  A natural choice is the interval $[0, \lambda)$. This poses a problem if the range $r_0$ is larger than the wavelength $\lambda$.  To alleviate this, a common approach is to transmit multiple signals %$x_1(t),\ldots,x_N(t)$
-%$x_n(t) = \sin (2\pi f_nt + 2\pi\phi)$ for $n = 1,\dots,N$, each with a different frequency $f_n$.  Now $N$ phase estimates $\hat{\theta}_1,\dots,\hat{\theta}_N$ are computed along with phase differences 
+%$x_n(t) = \sin (2\pi f_nt + 2\pi\phi)$ for $n = 1,\dots,N$, each with a different frequency $f_n$.  Now $N$ phase estimates $\hat{\varphi}_1,\dots,\hat{\varphi}_N$ are computed along with phase differences 
 %\begin{equation}\label{eq:Yndefn}
-%Y_n = \sfracpart{\phi - \hat{\theta}_n} = \fracpart{ r_0/\lambda_n + \Phi_n} \qquad n = 1,\dots,N
+%Y_n = \sfracpart{\phi - \hat{\varphi}_n} = \fracpart{ r_0/\lambda_n + \Phi_n} \qquad n = 1,\dots,N
 %\end{equation}
 %where $\lambda_n = c/f_n$ is the wavelength of the $n$th signal and $\Phi_1,\dots,\Phi_N$ represent phase noise. 
 %The relationship between the so called \emph{wrapping variables} (or integer fringe orders) $z_n$ that are related to the whole number of wavelengths that occur over the range, the fractional fringe order $\eta_n$ and the unknown range $r_0$ is given by
@@ -432,26 +432,26 @@ In this section we describe some important range estimators that employ multiple
 %r_0 = (z_n + \eta_n)\lambda_n \quad n=1,\ldots,N
 %\end{equation}
 In the following subsections we briefly describe these range estimators. 
-\subsection{The Beat Wavelength Method}
-First we briefly describe the notation used for the beat wavelength method and the method of excess fractions. Suppose that a multi-wavelength interferometer (MWI) with $N$  measurement wavelengths $\lambda_1, \ldots, \lambda_N$ is used to measure an unknown distance $r_0$. Let $\theta_1,\ldots,\theta_N$ be the corresponding estimated values of the interferometer phases. These phase values lie in the interval $[-\pi, \pi]$. The estimated interferometer phase $\theta_n$ corresponding to the wavelengths $\lambda_n$ can also be related to a so called \emph{fractional fringe value} $e_n$ defined as~\cite{Falaggis-generalized-th-of-PU-2012}
+\subsection{Beat Wavelength Method}
+First we briefly describe the notation used for the beat wavelength method and the method of excess fractions. Suppose that a multi-wavelength interferometer (MWI) with $N$  measurement wavelengths $\lambda_1< \lambda_2< \cdots< \lambda_N$ is used to measure an unknown distance $r_0$. Let $\varphi_1,\ldots,\varphi_N$ be the corresponding estimated values of the interferometer phases. These phase values lie in the interval $[-\pi, \pi]$. The estimated interferometer phase $\varphi_n$ corresponding to the wavelengths $\lambda_n$ can also be related to a so called \emph{fractional fringe value} $e_n$ defined as~\cite{Falaggis-generalized-th-of-PU-2012}
 \[
-e_n = \theta_n/2\pi.
+e_n = \varphi_n/2\pi.
 \]
 where $e_n$ is wrapped into the interval $[-0.5, 0.5]$. The relationship between the so called \emph{wrapping variables} (or integer fringe orders) $z_n$ that are related to the whole number of wavelengths that occur over the range, the fractional fringe order $e_n$ and the unknown range $r_0$ is given by
 \begin{equation}\label{eq:r0-zn-yn}
 r_0 = (z_n + e_n)\lambda_n, \qquad n=1,\ldots,N
 \end{equation}
 
-Beat wavelength method introduced by Wyant~\cite{Wyant:71} provides direct calculation of the wrapping variables. The maximum measurable distance using the beat wavelength approach is equal to the largest beat wavelength. 
+The beat wavelength method, introduced by Wyant~\cite{Wyant:71}, provides direct calculation of the wrapping variables. The maximum measurable distance using the beat wavelength approach is equal to the largest beat wavelength. 
 %In the following we describe the two wavelength and multi-wavelength interferometry using the beat wavelength method.
 %\subsubsection{Two Wavelength Interferometry}
-%In two wavelength interferometry two measurement wavelengths $\lambda_1$ and $\lambda_2$ are used to measure the unknown range.  Let $\theta_1$ and $\theta_2$ be the wrapped phases and $z_1$ and $z_2$ be the wrapping variables (or integer fringe orders) at wavelengths $\lambda_1$ and $\lambda_2$. In beat wavelength method, the beat wavelength and the beat phase are defined respectively as
+%In two wavelength interferometry two measurement wavelengths $\lambda_1$ and $\lambda_2$ are used to measure the unknown range.  Let $\varphi_1$ and $\varphi_2$ be the wrapped phases and $z_1$ and $z_2$ be the wrapping variables (or integer fringe orders) at wavelengths $\lambda_1$ and $\lambda_2$. In beat wavelength method, the beat wavelength and the beat phase are defined respectively as
 %\[
 %\Lambda_{12} = \dfrac{\lambda_1\lambda_2}{(\lambda_2 - \lambda_1)}
 %\]
 %and
 %\[
-%\Theta_{12} = \theta_2 - \theta_1,
+%\Theta_{12} = \varphi_2 - \varphi_1,
 %\]
 %which is normally wrapped into the interval $[-\pi, \pi)$ and the fringe order (wrapping variable) is 
 %\[
@@ -459,11 +459,11 @@ Beat wavelength method introduced by Wyant~\cite{Wyant:71} provides direct calcu
 %\] 
 %The maximum measurable distance $r_{\text{max}}$ with conventional beat wavelength method is $r_{\text{max}} \leq \Lambda_{12}$. In this case $Z_{12}=0$ and the unknown range $r_0$ is 
 %\[
-%r_0 = \left( z_1 + \dfrac{\theta_1}{2\pi}  \right)\lambda_1 = \left( z_1 + e_1  \right)\lambda_1 = \left( \dfrac{\Theta_{12}}{2\pi}  \right)\Lambda_{12} = E_{12}\Lambda_{12},
+%r_0 = \left( z_1 + \dfrac{\varphi_1}{2\pi}  \right)\lambda_1 = \left( z_1 + e_1  \right)\lambda_1 = \left( \dfrac{\Theta_{12}}{2\pi}  \right)\Lambda_{12} = E_{12}\Lambda_{12},
 %\]
-%where $E_{12} =  e_2 - e_1 = \frac{\theta_2}{2\pi} - \frac{\theta_1}{2\pi}$. The wrapping variable (or fringe order) at $\lambda_1$ can be found from
+%where $E_{12} =  e_2 - e_1 = \frac{\varphi_2}{2\pi} - \frac{\varphi_1}{2\pi}$. The wrapping variable (or fringe order) at $\lambda_1$ can be found from
 %\[
-%z_1 = \round{\dfrac{\Theta_{12}}{2\pi} \dfrac{\Lambda_{12}}{\lambda_1} - \dfrac{\theta_1}{2\pi}} = \round{E_{12} \dfrac{\Lambda_{12}}{\lambda_1} - e_1}.
+%z_1 = \round{\dfrac{\Theta_{12}}{2\pi} \dfrac{\Lambda_{12}}{\lambda_1} - \dfrac{\varphi_1}{2\pi}} = \round{E_{12} \dfrac{\Lambda_{12}}{\lambda_1} - e_1}.
 %\]
 %The noise present in the phase measurement is amplified due to the fact that the beat phase $\Theta_{12}$ is scaled by $\Lambda_{12}/\lambda_1$. Once $z_1$ is found the range can be calculated using~\ref{eq:r0-zn-yn}.
 %\subsubsection{Multi-wavelength Interferometry}
@@ -471,9 +471,9 @@ When multiple beat wavelengths are used for range estimation, the longest one de
 \[
 r_0 = (Z_{1n} + E_{1n})\Lambda_{1n} \qquad n=1,\ldots, N
 \]
-where $Z_{1n} = z_1 - z_n$, $E_{1n}= e_1 - e_n = \theta_{1}/2\pi - \theta_{n}/2\pi$ and $\Lambda_{1n}$ is called the \term{beat wavelength} defined as
+where $Z_{1n} = z_1 - z_n$, $E_{1n}= e_1 - e_n = \varphi_{1}/2\pi - \varphi_{n}/2\pi$ and $\Lambda_{1n}$ is called the \term{beat wavelength} defined as
 \[
-\Lambda_{1n} = \dfrac{\Lambda_n\Lambda_1}{\Lambda_n - \Lambda_1}
+\Lambda_{1n} = \dfrac{\lambda_n\lambda_1}{\lambda_n - \lambda_1}
 \]
 A series of steps are carried out to calculate the wrapping variable $z_1$ at the smallest wavelength $\lambda_1$. In the first step, $r_0$ is estimated using the information available at the largest synthetic wavelength $\Lambda_{12}$. As the maximum measurable distance cannot be larger than the largest synthetic wavelength, it follows that the wrapping variable $Z_{12}$ at the largest synthetic wavelength is equal to zero. Therefore, we have~\cite{Falaggis-generalized-th-of-PU-2012}
 \[
@@ -512,16 +512,16 @@ In the final step, the wrapping variable at the smallest measurement wavelength 
 \[
 z_1 = \round{(Z_{1N} + E_{1N})\emph{sf}  - e_1 }
 \]
-where $sf$ is so called scaling factor given as
+where $sf$ is so called \emph{scaling factor} given as
 \[
 \emph{sf} = \dfrac{\Lambda_{1N}}{\lambda_1} = \dfrac{\lambda_{N}}{\lambda_{N} - \lambda_1}
 \]
 %The coefficients $\alpha_n$ and \emph{sf} are introduced to simplify and generalise the problem without referring to the wavelengths. Several sets of wavelengths may generate the same values of $\alpha_n$ and \emph{sf}. In the presence of noise, the actual values of the coefficients $\alpha_n$ and \emph{sf} determine the measurement reliability of the multi-wavelength interferometer. The coefficients $\alpha_n$ and \emph{sf} can be adjusted to choose an optimised set of wavelengths for an optimised performance of the interferometer. Hierarchical approaches~\cite{Wagner2000, Nadeborn1996, Towers:04_generalised_frequency_selection, Huntley1997131, Burke2002} are one class of optimum wavelengths selection for multiple beat wavelength interferometry. 
 
-The length of the beat wavelength is inversely proportional to the wavelength separation, and hence to measure a longer distance the two measurement wavelengths must be very close to each other. For example, a wavelength separation of approximately 2 pico meters generates a beat wavelength of 1 meter in $C$ band~\cite{Falaggis:09}. This small separation represents a limitation for practical systems and hence the beat wavelength method is not applicable to long range metrology. Therefore, extended beat wavelength methods~\cite{deGroot_94, Falaggis:09, Towers2011} have been developed to increase the unambiguous measurement range. 
+The length of the beat wavelength is inversely proportional to the wavelength separation, and hence to measure a longer distance the two measurement wavelengths must be very close to each other. For example, a wavelength separation of approximately 2 pico meters generates a beat wavelength of 1 meter in $C$ band~\cite{Falaggis:09}. This small separation represents a limitation for practical systems and hence the beat wavelength method is not applicable to long range metrology. Therefore, extended beat wavelength methods~\cite{deGroot_94, Falaggis:09, Towers2011} have been developed to increase the unambiguous measurement range (UMR). 
 
 
-\subsection{The Method of Excess Fractions}
+\subsection{Method of Excess Fractions}
 Another popular method to estimate the wrapping variables, and hence the range, is the Michelson-Benoit's method of Excess Fractions (EF)~\cite{Falaggis_excess_fractions_2011}. It consists of a comparison of the measured phases at each wavelength to estimate the unknown distance $r_0$. The relation between the unknown wrapping variables $z_n$, the fractional fringe value $e_n$ and the unknown range $r_0$ is given by~\ref{eq:r0-zn-yn}. The wrapping variable at the smallest wavelength $z_1$ must lie within the interval $[0, m_{1\text{max}}]$, with $m_{1\text{max}} = \round{\text{UMR}/\lambda_1 -1}$. It is possible to represent~\ref{eq:r0-zn-yn} as
 \[
 r_0 = (Z_{1n} + E_{1n})\Lambda_{1n},
@@ -576,19 +576,19 @@ This is called the classical CRT. If any pair of moduli $\lambda_i$ have gcd $G$
 
 Let
 \[
-\Gamma_n = \lambda_n/G, \quad n=1,2,\ldots,N.
+\Psi_n = \lambda_n/G, \quad n=1,2,\ldots,N.
 \]
-Then $\Gamma_n$, for $n=1,2,\ldots,N$, are co-prime, i.e. the gcd of any pair $\Gamma_m$ and $\Gamma_n$ for $m\neq n$ is 1. Define 
+Then $\Psi_n$, for $n=1,2,\ldots,N$, are co-prime, i.e. the gcd of any pair $\Psi_m$ and $\Psi_n$ for $m\neq n$ is 1. Define 
 \[
-\Gamma = \Gamma_1\Gamma_2 \cdots \Gamma_N
+\Psi = \Psi_1\Psi_2 \cdots \Psi_N
 \]
 and let
 \[
-\gamma_n = \Gamma_1 \cdots \Gamma_{n-1} \Gamma_{n+1} \cdots \Gamma_N = \Gamma/\Gamma_n.
+\Psi_n = \Psi_1 \cdots \Psi_{n-1} \Psi_{n+1} \cdots \Psi_N = \Psi/\Psi_n.
 \]
-Obviously, $\Gamma_n$ and $\gamma_n$ are co-prime. So the modular multiplicative inverse of $\gamma_n$ and $\Gamma_n$ exists. Denote it by $\bar{\gamma}_n$, i.e., 
+Obviously, $\Psi_n$ and $\Psi_n$ are co-prime. So the modular multiplicative inverse of $\Psi_n$ and $\Psi_n$ exists. Denote it by $\bar{\Psi}_n$, i.e., 
 \[
-\bar{\gamma}_n \gamma_n \equiv 1 \;\; \text{mod} \;\; \Gamma_n  \quad \text{or} \;\; \bar{\gamma}_n \gamma_n + k\Gamma_n =1, 
+\bar{\Psi}_n \Psi_n \equiv 1 \;\; \text{mod} \;\; \Psi_n  \quad \text{or} \;\; \bar{\Psi}_n \Psi_n + k\Psi_n =1, 
 \]
 where $k \in \ints$. Let 
 \[
@@ -602,9 +602,9 @@ where $c = r_0\; \text{mod}\; G$ is the common remainder of $r_n$ modulo $G$ for
 \[
 R_0  \triangleq \floor{r_0/G}.
 \]
-Then using results from the classical CRT, we have following conclusion. If $0 \leq R_0 \leq \Gamma$, $R_0$ can be constructed as
+Then using results from the classical CRT, we have following conclusion. If $0 \leq R_0 \leq \Psi$, $R_0$ can be constructed as
 \[
-R_0 = \sum_{n=1}^N \bar{\gamma}_n \gamma_n q_n \; \text{mod} \; \Gamma.
+R_0 = \sum_{n=1}^N \bar{\Psi}_n \Psi_n q_n \; \text{mod} \; \Psi.
 \]
 Therefore, $r_0$ can be uniquely reconstructed by
 \[
@@ -614,7 +614,7 @@ However, it is well known that the CRT is not robust, i.e., a small error from a
 \[
 \hat{r}_n \triangleq r_n + \Delta r_n 
 \]
-where $\Delta r_n$ denotes the error or noise and it is assumed that $|\Delta r_n | \leq \tau$, where $\tau$ is the maximum error level or remainder error bound. According to~\cite{Xia2007} the reconstruction of $r_0$ is robust if the remainder error bound $\tau$ is less than a quarter of the gcd $G$ of the measurement wavelengths i.e. $\tau < G/4$. Algorithm provided in~\cite{Xiaowei_Li_robust_CRT_2009} reduces the computational complexity of the algorithm provided in~\cite{Xia2007}. Motivated from the results in~\cite{Xia2007, Xiaowei_Li_robust_CRT_2009}, a closed form robust CRT algorithm and a necessary and sufficient condition on the remainder errors is also provided in~\cite{W.Wang_closed_form_crt_2010}. However, these robust CRT algorithms are only valid for the special case when the gcd of all the moduli (wavelengths) is more than one and the remaining integers after division by these wavelengths are co-prime. Recently, a single-stage and a multi-stage CRT~\cite{Xiao_multistage_crt_2014} is proposed that removes the constraint used in~\cite{Xia2007, Xiaowei_Li_robust_CRT_2009, W.Wang_closed_form_crt_2010}, i.e., this CRT algorithm is valid for a general set of integer wavelengths and is more appealing for practical applications. 
+where $\Delta r_n$ denotes the error or noise and it is assumed that $|\Delta r_n | \leq \tauls$, where $\tauls$ is the maximum error level or remainder error bound. According to~\cite{Xia2007} the reconstruction of $r_0$ is robust if the remainder error bound $\tauls$ is less than a quarter of the gcd $G$ of the measurement wavelengths i.e. $\tauls < G/4$. Algorithm provided in~\cite{Xiaowei_Li_robust_CRT_2009} reduces the computational complexity of the algorithm provided in~\cite{Xia2007}. Motivated from the results in~\cite{Xia2007, Xiaowei_Li_robust_CRT_2009}, a closed form robust CRT algorithm and a necessary and sufficient condition on the remainder errors is also provided in~\cite{W.Wang_closed_form_crt_2010}. However, these robust CRT algorithms are only valid for the special case when the gcd of all the moduli (wavelengths) is more than one and the remaining integers after division by these wavelengths are co-prime. Recently, a single-stage and a multi-stage CRT~\cite{Xiao_multistage_crt_2014} is proposed that removes the constraint used in~\cite{Xia2007, Xiaowei_Li_robust_CRT_2009, W.Wang_closed_form_crt_2010}, i.e., this CRT algorithm is valid for a general set of integer wavelengths and is more appealing for practical applications. 
 
 
 
@@ -631,9 +631,9 @@ where $\Delta r_n$ denotes the error or noise and it is assumed that $|\Delta r_
 
 
 %\subsection{The Lest Squares Range Estimator}
-%Given $N$ phase estimates $\hat{\theta}_1,\dots,\hat{\theta}_N$ along with phase differences
+%Given $N$ phase estimates $\hat{\varphi}_1,\dots,\hat{\varphi}_N$ along with phase differences
 %\begin{equation}\label{eq:Yndefn2}
-%Y_n = \sfracpart{\phi - \hat{\theta}_n} = \fracpart{ r_0/\lambda_n + \Phi_n} \qquad n = 1,\dots,N
+%Y_n = \sfracpart{\phi - \hat{\varphi}_n} = \fracpart{ r_0/\lambda_n + \Phi_n} \qquad n = 1,\dots,N
 %\end{equation}
 %the least squares estimator of the range $r_0$ is the minimiser of the function
 %\begin{align*}
@@ -647,25 +647,25 @@ where $\Delta r_n$ denotes the error or noise and it is assumed that $|\Delta r_
 The accuracy of all the range estimators strongly depends upon the measurement wavelengths. In fact, there exists a nontrivial relationship between the measurement wavelengths, the phase noise, and the accuracy of the measured range. It is indispensable to exploit this nontrivial relationship to select wavelengths that can maximise the accuracy of these range estimators. Wavelengths selection methods for the beat wavelength method and the method of excess fractions have been developed in the literature. However, no such methods have been found in the literature for the least squares and CRT based range estimators. In this section we provide a brief overview of the most popular wavelengths selection methods for the beat wavelength and excess fractions method. In~\Chap{Chapter5} we will compare the performance of our proposed wavelengths selection algorithm for the least squares range estimator with these methods.
 
 \subsection{Wavelengths Selection for the Beat Wavelength Method}
-A frequency (or wavelength) selection strategy for the beat wavelength method is provided in~\cite{Towers_frequency_selection_interferometry_2003}. This method is based upon an optimisation criterion that results in geometric series of wavelengths. This method is not only more efficient in terms of extending the range but also results in more reliable range estimates. The method is first developed for two wavelengths and then generalised to $N$ wavelengths. Here, we provide a brief overview of this wavelengths selection method.
+A frequency (or wavelength) selection strategy for the beat wavelength method is provided in~\cite{Towers_frequency_selection_interferometry_2003}. This method is based upon an optimisation criterion that results in geometric series of wavelengths. This method is not only efficient in terms of extending the range but also results in more reliable range estimates. The method is first developed for two wavelengths and then generalised to $N$ wavelengths. Here, we provide a brief overview of this wavelengths selection method.
 
 In two-frequency interferometry with two wavelengths $\lambda_1$ and $\lambda_2$ with $\lambda_1 < \lambda_2$, the relationships between the phase and the unknown distance (also called optical path difference in optical metrology) $r_0$ are given by
 \[
-\theta_1 = \frac{2\pi r_0}{\lambda_1} \qquad \theta_2 = \frac{2\pi r_0}{\lambda_2}.
+\varphi_1 = \frac{2\pi r_0}{\lambda_1} \qquad \varphi_2 = \frac{2\pi r_0}{\lambda_2}.
 \]
-The phase difference between $\theta_1$ and $\theta_2$ is, therefore,
+The phase difference between $\varphi_1$ and $\varphi_2$ is, therefore,
 \[
-\Theta_{12} = \theta_1 - \theta_2 = 2\pi r_0 \left(  \frac{\lambda_2 - \lambda_1}{\lambda_2\lambda_1}   \right)= \frac{2\pi r_0}{\Lambda_{12}}
+\Theta_{12} = \varphi_1 - \varphi_2 = 2\pi r_0 \left(  \frac{\lambda_2 - \lambda_1}{\lambda_2\lambda_1}   \right)= \frac{2\pi r_0}{\Lambda_{12}}
 \]
-where $\Lambda_{12}$ is the synthetic or beat wavelength generated, $\lambda_1 < \lambda_2 <\Lambda_{12}$, and $L \leq \Lambda_{12}$. It should be noted that the measurement sensitivity is reduced when one considers measurement at the beat wavelength $\Lambda_{12}$ compared with that on $\lambda_1$. Therefore, the \emph{dynamic range} can be maximised by combining unambiguous range given by $\Lambda_{12}$ with the increased sensitivity gained at $\lambda_1$. The ratio $\Lambda_{12}/\lambda_1$ defines a normalised unambiguous range. The upper limit for this ratio is determined by the standard deviation noise, $\sqrt{2}\sigma_{\theta}$, present in $\Theta_{12}$, where $\sigma_{\theta}$ represents the standard deviation of the phase noise in each value of the wrapped phase. In order to determine the wrapping variables (or interference order) with $6\sigma$ reliability, the normalised unambiguous range is limited by~\cite{Towers_frequency_selection_interferometry_2003}
+where $\Lambda_{12}$ is the synthetic or beat wavelength generated, $\lambda_1 < \lambda_2 <\Lambda_{12}$, and $r_0\leq \Lambda_{12}$. It should be noted that the measurement sensitivity is reduced when one considers measurement at the beat wavelength $\Lambda_{12}$ compared with that on $\lambda_1$. Therefore, the \emph{dynamic range} can be maximised by combining unambiguous range given by $\Lambda_{12}$ with the increased sensitivity gained at $\lambda_1$. The ratio $\Lambda_{12}/\lambda_1$ defines a normalised unambiguous range. The upper limit for this ratio is determined by the standard deviation noise, $\sqrt{2}\sigma_{\varphi}$, present in $\Theta_{12}$, where $\sigma_{\varphi}$ represents the standard deviation of the phase noise in each value of the wrapped phase. In order to determine the wrapping variables (or interference order) with $6\sigma$ reliability, the normalised unambiguous range is limited by~\cite{Towers_frequency_selection_interferometry_2003}
 \begin{equation}\label{norml-range-2-freq}
-\frac{\Lambda_{12}}{\lambda_2} \leq \dfrac{2 \pi}{6\sqrt{2}\sigma_{\theta}}.
+\frac{\Lambda_{12}}{\lambda_2} \leq \dfrac{2 \pi}{6\sqrt{2}\sigma_{\varphi}}.
 \end{equation}
 The dynamic range is defined as the ratio of unabmiguous measurement range to the resolution. For two frequencies the dynamic range is given as~\cite{Towers_frequency_selection_interferometry_2003}
 \[
-\frac{2\pi \Lambda_{12}}{\lambda_1\sigma_{\theta}},
+\frac{2\pi \Lambda_{12}}{\lambda_1\sigma_{\varphi}},
 \]
-which is insufficient for many range engineering applications~\cite{Towers_frequency_selection_interferometry_2003}. To extend this range a third frequency with wavelength $\lambda_3$ is introduced to generate another beat wavelength
+which is insufficient for many engineering applications~\cite{Towers_frequency_selection_interferometry_2003}. To extend this range a third frequency with wavelength $\lambda_3$ is introduced to generate another beat wavelength
 \[
 \Lambda_{13} = \frac{\lambda_1\lambda_3}{\lambda_3 - \lambda_1}.
 \]
@@ -675,9 +675,9 @@ Now two normalised measurement ranges $\Lambda_{12}/\Lambda_{13}$ and $\Lambda_{
 \]
 The reliability in both normalised measurement ranges must be equal to maximise the reliability of estimating the wrapping variables. Hence, for optimum frequency selection in three frequency interferometry $\Lambda_{12}/\Lambda_{13} = \Lambda_{13}/\lambda_1 = \sqrt{r_0/\lambda_1}$ and the normalised measurement range for $6\sigma$ reliability is
 \begin{equation}\label{norml-range-3-freq}
-\sqrt{\frac{r_0}{\lambda_1}} \leq \frac{2\pi}{6\sqrt{2}\sigma_{\theta}}.
+\sqrt{\frac{r_0}{\lambda_1}} \leq \frac{2\pi}{6\sqrt{2}\sigma_{\varphi}}.
 \end{equation}
-It can be observed from~\ref{norml-range-2-freq} and~\ref{norml-range-3-freq} that the unambiguous measurement range with optimum three frequencies is square of that for two frequencies. Inequalities~\ref{norml-range-2-freq} and~\ref{norml-range-3-freq} are then used to derive a general expression that relates the wavelengths at $N$ frequencies. The general optimisation  criterion for optimum noise immunity is defined as
+It can be observed from~\ref{norml-range-2-freq} and~\ref{norml-range-3-freq} that the unambiguous measurement range with optimum three frequencies is square of that for two frequencies. Inequalities~\ref{norml-range-2-freq} and~\ref{norml-range-3-freq} are then used to derive a general expression that relates the wavelengths at $N$ frequencies. The general optimisation  criterion for optimum noise immunity is defined as~\cite{Towers_frequency_selection_interferometry_2003}
 \begin{equation}\label{general-optim-criterion}
 \Lambda_{12}/\Lambda_{13} = \Lambda_{13}/\Lambda_{14} = \dots = \Lambda_{1N}/\lambda_{1}.
 \end{equation}
@@ -685,7 +685,7 @@ A number of wavelengths selection expression can satisfy this criterion but the 
 \begin{equation}
 \frac{1}{\lambda_n} = \frac{1}{\lambda_1} - \left( \frac{1}{\lambda_1} \right)^{(n-2)/(N-1)}\left(\frac{1}{r_0} \right)^{(N-n+1)/(N-1)}, \qquad i=2, \ldots, N,
 \end{equation}
-where $N$ is the number of wavelengths, $\lambda_1$ is the smallest available wavelength, and $\lambda_n$ is the wavelength at the $n$th frequency. However, it should be noted that the beat wavelength method is only limited to measure very small distances due to the fact that the maximum measurable distance is limited to the beat wavelength. To measure a long distance, long beat wavelengths must be generated. The generation of longer beat wavelengths requires very small separation among the measurement frequencies, which makes it unsuitable for practical application. 
+where $N$ is the number of wavelengths, $\lambda_1$ is the smallest available wavelength, and $\lambda_n$ is the wavelength at the $n$th frequency. However, it should be noted that the beat wavelength method is only limited to measure very small distances due to the fact that the maximum measurable distance is limited to the beat wavelength. To measure a long distance, long beat wavelengths must be generated. The generation of longer beat wavelengths requires very small separation among the measurement frequencies, which makes it unsuitable for long range applications. 
 
 \subsection{Wavelengths Selection for the Excess Fractions Method}
 
@@ -695,13 +695,13 @@ As the phase noise is often assumed to be Guassian, the noise in the fractional 
 \begin{equation}\label{eq:noise-criterion-ef}
 \sigma_R \leq \sqrt{   (N-1)\sigma_{e_1}^2 + \frac{1}{R^2} \sum_{n=1}^{N} (r_i(e_1, e_n))^2 \sigma_{e_n}^2      }
 \end{equation}
-The absolute values of two dimensionless quantities $\delta$ and $\psi_{sf}$ are defined as~\cite{Falaggis_excess_fractions_2011, Falaggis_excess_fractions_2012}
+The absolute values of two dimensionless quantities $\delta$ and $\psi_{sf}$ are introduced in~\cite{Falaggis_excess_fractions_2011, Falaggis_excess_fractions_2012} as
 \[
 \delta = \frac{1}{sf}\sqrt{1 + \sum_{n=2}^{N-1}(1 - \alpha_i)^2},
 \]
 and
 \begin{equation}\label{eq:psi-NICF}
-\psi_{sf} = \abs{\frac{1}{T_{sf}}}
+\psi_{sf} = \abs{\frac{1}{T_{sf}}},
 \end{equation}
 where the parameters $0 < \alpha_{N-1} < \alpha_{N-2} < \cdots < \alpha_1 < 1$ and $T_{sf}$ is obtained by nearest integer continued fraction (NICF) of $1/sf$, as
 \[
@@ -745,7 +745,7 @@ where $1/T_{\alpha}$ and $1/T_{\beta}$ are also obtained from the NICF in the sa
 \]
 where the upper bound for $\sigma_R$ can be obtained from~\ref{eq:noise-criterion-ef}.
 
-Among many solution, one generic solution for optimum wavelengths selection is given by~\cite{Falaggis_excess_fractions_2012}
+Among many solutions, one generic solution for optimum wavelengths selection is given as~\cite{Falaggis_excess_fractions_2012}
 \[
 (1 - \alpha_{N-1}) = \beta_{(N-2)} = \ldots = \beta_n = \beta_2 = \beta,
 \]

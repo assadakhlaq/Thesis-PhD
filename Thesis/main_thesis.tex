@@ -191,13 +191,12 @@
 %\usepackage[ruled,vlined]{algorithm2e} % for pseudocode typing
 \usepackage{longtable}
 \usepackage{nomencl}
-\usepackage[nonumberlist,acronym]{glossaries}
+\usepackage[nopostdot, nonumberlist,acronym]{glossaries}
 \usepackage{algorithmic}
 \usepackage{color}
-\usepackage{algorithm}
+%\usepackage{algorithm}
 \usepackage{enumerate}
 \usepackage{datatool}
-\usepackage{glossaries}
 %\usepackage{minitoc} %%%%%% Added by me in order to have mini table of contents for each chapter (useful in reviewing each chapter)
 %\usepackage{cite}
 %\usepackage[usenames,dvipsnames]{xcolor} %%%%%%%% added by me for colorful fonts %%%%%%%%%%%%%
@@ -218,25 +217,122 @@
 %\input{texfiles/macros.tex}
 %\input{texfiles/Glossary_v1.tex}
 
+%\usepackage{glossaries}
+%\usepackage[nopostdot]{glossaries}
+
 \makeglossaries
-\makenomenclature
 
 %%%%%%%%% Acronyms %%%%%%%%%%%%%%%%%%%
-\newacronym{mems}{MEMS}{Micro Electronic Mechanical Systems}
-\newacronym{wsns}{WSNs}{Wireless Sensor Networks}
-\newacronym{qos}{QoS}{Quality of Service}
-\newacronym{sosus}{SOSUS}{Sound Surveillance System}
-\newacronym{dsn}{DSN}{Distributed Sensor Network}
-\newacronym{darpa}{DARPA}{Defence Advanced Research Project Agency}
-\newacronym{dft}{DFT}{Discrete Fourier Transform}
-\newacronym{eed}{EED}{Expected End-to-end Delay}
-\newacronym{edr}{EDR}{Expected Delivery Ratio}
-\newacronym{slem}{SLEM}{Second Largest Eigenvalue Modulus}
-%%%%%%%%% List of Symbols %%%%%%%%%%%%%%%%%%%
-\nomenclature{$\sigma^2_{I_R}$}{Variance of PD Current}
-\nomenclature{$V_{in}$}{Applied Voltage}
-\nomenclature{$\psi$}{Incidence Angle}
+\newacronym{ls}{LS}{Least Squares}
+\newacronym{gps}{GPS}{Global Positioning System}
+\newacronym{map}{MAP}{maximum a posteriori}
+\newacronym{crt}{CRT}{Chinese Remainder Theorm}
+\newacronym{mimo}{MIMO}{Multiple input multiple output}
+\newacronym{ef}{EF}{Excess Fractions}
+\newacronym{np}{NP}{Non-deterministic Polynomial-time}
+\newacronym{mwi}{MWI}{Multi-wavelength Interferometer}
+\newacronym{umr}{UMR}{Unambiguous Measurement Range}
+\newacronym{nifc}{NICF}{Nearest Integer Continued Fraction}
+\newacronym{mse}{MSE}{Mean Square Error}
+\newacronym{mri}{MRI}{Magnetic Resonance Imaging}
+\newacronym{sar}{SAR}{Synthetic Aperture Radar}
 
+
+\makenomenclature
+%%%%%%%%% List of Symbols %%%%%%%%%%%%%%%%%%%
+\nomenclature{$\round{x}$}{Nearest integer to $x$ with half integer rounded up}
+\nomenclature{$\fracpart{x}$}{the (centred) fractional part of its argument, that is, $\fracpart{x} = x - \round{x}$}
+\nomenclature{$\reals$}{Set of real numbers}
+\nomenclature{$\ints$}{Set of integers (also called integer lattice)}
+\nomenclature{$\reals^m$}{m-dimensional Euclidean space consisting of real values}
+\nomenclature{$\Lambda$}{The set of vectors i.e. a lattice}
+\nomenclature{$\Lambda^*$}{Dual lattice of the lattice $\Lambda$}
+\nomenclature{$\xbf$}{A lattice point}
+\nomenclature{$\hat{\xbf}$}{An estimated lattice point}
+\nomenclature{$\Bbf$}{Basis or generator matrix of a lattice}
+\nomenclature{$\bbf_n$}{$n$th column of the basis matrix $Bbf$}
+\nomenclature{$\ubf$}{Vector of integers}
+\nomenclature{$u_n$}{$n$th element of $\ubf$}
+\nomenclature{$\Ubf$}{$n\times n$ matrix of integers with determinant one, called a unimodular matrix}
+\nomenclature{$\Ibf$}{$n\times n$ identity matrix}
+\nomenclature{$\upsilonbf$}{Vector of real elements}
+\nomenclature{$\nubf$}{Vector of real elements with each element $0 \leq \nu_i < 1$}
+\nomenclature{$\Abf$}{Gram matrix, i.e., $\Abf = \Bbf^{\prime}\Bbf$}
+\nomenclature{$\mathcal{P}(\Bbf)$}{Fundamental parallelepiped formed by the basis matrix $\Bbf$}
+\nomenclature{$ \vor$}{Voronoi cell of the lattice}
+\nomenclature{$\interior \Lambda$}{Interior of the Voronoi cell of the lattice $\Lambda$}
+\nomenclature{$\rho$}{Inradius of a lattice}
+\nomenclature{$d_{\min}$}{Short vector of a lattice}
+\nomenclature{$R$}{Radius of an Euclidean ball}
+\nomenclature{$R$}{Volume  of an Euclidean ball}
+\nomenclature{$\varphi_n$}{Estimated interferometer phase at the $n$th wavelength}
+\nomenclature{$e_n$}{Fractional fringe value}
+\nomenclature{$\Lambda_{1n}$}{Beat wavelength}
+\nomenclature{$Z_{1n}$}{Wrapping variable at the beat wavelength}
+\nomenclature{$E_{1n}$}{Fractional fringe value at the beat wavelength}
+\nomenclature{$R(\cdot)$}{Residual error}
+\nomenclature{$G$}{Greatest common divisor}
+
+% Chapter 3
+\nomenclature{$N$}{Number of wavelengths used for range estimation}
+\nomenclature{$x(t)$}{Sinusoidal signal transmitted from a transmitter}
+\nomenclature{$y(t)$}{Sinusoidal signal received at the receiver}
+\nomenclature{$w(t)$}{Noise present in the received signal}
+\nomenclature{$\sigma$}{Standard deviation of the noise}
+\nomenclature{$f$}{Frequency of the sinusoidal signal}
+\nomenclature{$\lambda$}{Wavelength of the sinusoidal signal}
+\nomenclature{$\lambda_{\max}$}{Maximum wavelength value}
+\nomenclature{$\lambda_{\min}$}{Minimum wavelength value}
+\nomenclature{$\phi$}{Phase of the transmitted signal}
+\nomenclature{$\theta$}{Phase of the received signal}
+\nomenclature{$\hat{\theta}$}{Phase estimate}
+\nomenclature{$r_0$}{True distance or range between a transmitter and receiver}
+\nomenclature{$\hat{r}$}{Least squares estimate of the range $r_0$}
+\nomenclature{$L$}{Number of samples acquired by the receiver}
+\nomenclature{$T$}{Sample period in seconds}
+\nomenclature{$e^{2\pi j f t}$}{Complex valued signal}
+\nomenclature{$a$}{A complex number computed by a phase estimator}
+\nomenclature{$\angle$}{Complex argument}
+\nomenclature{$\Phi$}{Wrapped normally distributed phase noise}
+\nomenclature{$\Phi_n$}{$n$th element of the phase noise $\Phi$}
+\nomenclature{$\epsilon$}{Normally distributed random variable}
+\nomenclature{$\epsilonbf$}{Vector of normally distributed random variables}
+\nomenclature{$\epsilon_n$}{$n$the element of the vector $\epsilonbf$}
+\nomenclature{$Y$}{Phase difference i.e. $Y = \sfracpart{\phi - \hat{\theta}}$}
+\nomenclature{$\ybf$}{Column vector consisting of phase differences i.e. $\ybf = (Y_1,\ldots,Y_N)^{\prime}$}
+\nomenclature{$LS(r)$}{Least squares estimator of the range $r$}
+\nomenclature{$P$}{Smallest positive real number i.e. $P = \lcm(\lambda_1,\dots,\lambda_N)$}
+\nomenclature{$\beta$}{A real number in the interval $[0,1)$}
+\nomenclature{$v_n$}{$v_n = P/\lambda_n$}
+\nomenclature{$\vbf$}{Column vector of integers $v_n$ i.e. $\vbf = (v_1,\ldots,v_N)^{\prime}$}
+\nomenclature{$\hat{\beta}$}{A real number that is a multiple of $\beta$}
+\nomenclature{$z_n$}{Integer wrapping variables}
+\nomenclature{$\zbf$}{Column vector of wrapping variables i.e. $\zbf = (z_1,\ldots,z_N)^{\prime}$. Also called a lattice of the integer lattice.}
+\nomenclature{$\Qbf$}{Orthogonal projection matrix onto the $N-1$ dimensional subspace orthogonal to $\vbf$}
+\nomenclature{$H$}{Subspace orthogonal to $\Qbf$}
+\nomenclature{$\zeta_n$}{True or correct wrapping variable at the $n$th wavelength/frequency}
+\nomenclature{$\zetabf$}{True or correct wrapping variables}
+\nomenclature{$\hat{\zetabf}$}{Estimate of the wrapping variables}
+\nomenclature{$c$}{A real number}
+\nomenclature{$A_k$}{An $N\times N$ matrix of integers}
+\nomenclature{$A_{kmn}$}{$(m,n)$th element of the matrix $A$}
+\nomenclature{$I_{mn}$}{$(m,n)$th element of $A_k$}
+\nomenclature{$g_n$}{An integer number for $n= 1, \ldots,N$}
+\nomenclature{$a_k$}{An integer number}
+\nomenclature{$b_k$}{An integer number}
+\nomenclature{$\tauls$}{An upper bound on phase measurement errors for the least squares estimator}
+\nomenclature{$\taucrt$}{An upper bound on phase measurement errors for the CRT estimator}
+\nomenclature{$w_n$}{Reciprocal of the $n$th wavelength}
+\nomenclature{$\wbf$}{A column vector the reciprocal of wavelengths}
+\nomenclature{$P(h)$}{Probability of an event $h$}
+\nomenclature{$\Gamma$}{Gamma function}
+\nomenclature{$r_{\max}$}{Maximum range that cab be unambiguously estimated}
+\nomenclature{$\pbf$}{Vector of integers}
+\nomenclature{$\qbf$}{Vector of integers}
+% Chapter 4
+
+
+% Chapter 5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\includeonly{front/title,texfiles/6_Resiliency_v4}
@@ -284,7 +380,7 @@
 \newpage
 
 %\addcontentsline{toc}{chapter}{List of Tables}
-\listoftables
+%\listoftables
 \newpage
 
 \chapter*{Summary}% for the actual unnumbered heading
@@ -303,7 +399,7 @@
 \newpage
 
 \chapter*{Acknowledgements}% for the actual unnumbered heading
-%\input{texfiles/Acknowledgements_v1}
+\input{chapters/Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \newpage
 \cleardoublepage
