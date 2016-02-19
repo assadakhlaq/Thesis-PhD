@@ -4,52 +4,45 @@ The top-level auxiliary file: main_thesis.aux
 The style file: IEEEbib.bst
 A level-1 auxiliary file: title.aux
 A level-1 auxiliary file: copyright.aux
-Illegal, another \bibstyle command---line 405 of file main_thesis.aux
- : \bibstyle
- :          {IEEEtran}
-I'm skipping whatever remains of this command
 Database file #1: bib.bib
-Warning--empty booktitle in Falaggis-generalized-th-of-PU-2012
-Warning--empty booktitle in Towers2011
 You've used 76 entries,
             1838 wiz_defined-function locations,
             1100 strings with 19015 characters,
-and the built_in function-call counts, 18541 in all, are:
-= -- 1711
+and the built_in function-call counts, 18167 in all, are:
+= -- 1669
 > -- 667
-< -- 11
+< -- 7
 + -- 254
 - -- 178
-* -- 1682
-:= -- 2855
+* -- 1678
+:= -- 2837
 add.period$ -- 77
 call.type$ -- 76
 change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 78
-duplicate$ -- 722
-empty$ -- 1839
+cite$ -- 76
+duplicate$ -- 686
+empty$ -- 1807
 format.name$ -- 178
-if$ -- 4201
+if$ -- 4089
 int.to.chr$ -- 0
 int.to.str$ -- 76
 missing$ -- 78
 newline$ -- 383
 num.names$ -- 76
-pop$ -- 141
+pop$ -- 131
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 261
+skip$ -- 213
 stack$ -- 0
-substring$ -- 1672
-swap$ -- 171
-text.length$ -- 11
+substring$ -- 1646
+swap$ -- 139
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 156
+warning$ -- 0
+while$ -- 154
 width$ -- 78
 write$ -- 835
-(There was 1 error message)

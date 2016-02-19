@@ -250,21 +250,21 @@
 \nomenclature{$\xbf$}{A lattice point}
 \nomenclature{$\hat{\xbf}$}{An estimated lattice point}
 \nomenclature{$\Bbf$}{Basis or generator matrix of a lattice}
-\nomenclature{$\bbf_n$}{$n$th column of the basis matrix $Bbf$}
-\nomenclature{$\ubf$}{Vector of integers}
-\nomenclature{$u_n$}{$n$th element of $\ubf$}
+\nomenclature{$\bbf_n$}{$n$th column of the basis matrix $\Bbf$}
+%\nomenclature{$\ubf$}{Vector of integers}
+%\nomenclature{$u_n$}{$n$th element of $\ubf$}
 \nomenclature{$\Ubf$}{$n\times n$ matrix of integers with determinant one, called a unimodular matrix}
 \nomenclature{$\Ibf$}{$n\times n$ identity matrix}
 \nomenclature{$\upsilonbf$}{Vector of real elements}
 \nomenclature{$\nubf$}{Vector of real elements with each element $0 \leq \nu_i < 1$}
-\nomenclature{$\Abf$}{Gram matrix, i.e., $\Abf = \Bbf^{\prime}\Bbf$}
+\nomenclature{$\Abf$}{Gram matrix}
 \nomenclature{$\mathcal{P}(\Bbf)$}{Fundamental parallelepiped formed by the basis matrix $\Bbf$}
 \nomenclature{$ \vor$}{Voronoi cell of the lattice}
 \nomenclature{$\interior \Lambda$}{Interior of the Voronoi cell of the lattice $\Lambda$}
 \nomenclature{$\rho$}{Inradius of a lattice}
 \nomenclature{$d_{\min}$}{Short vector of a lattice}
 \nomenclature{$R$}{Radius of an Euclidean ball}
-\nomenclature{$R$}{Volume  of an Euclidean ball}
+\nomenclature{$V$}{Volume  of an Euclidean ball}
 \nomenclature{$\varphi_n$}{Estimated interferometer phase at the $n$th wavelength}
 \nomenclature{$e_n$}{Fractional fringe value}
 \nomenclature{$\Lambda_{1n}$}{Beat wavelength}
@@ -281,50 +281,44 @@
 \nomenclature{$\sigma$}{Standard deviation of the noise}
 \nomenclature{$f$}{Frequency of the sinusoidal signal}
 \nomenclature{$\lambda$}{Wavelength of the sinusoidal signal}
-\nomenclature{$\lambda_{\max}$}{Maximum wavelength value}
-\nomenclature{$\lambda_{\min}$}{Minimum wavelength value}
+\nomenclature{$\lambda_{\max}$}{Maximum wavelength}
+\nomenclature{$\lambda_{\min}$}{Minimum wavelength}
 \nomenclature{$\phi$}{Phase of the transmitted signal}
 \nomenclature{$\theta$}{Phase of the received signal}
 \nomenclature{$\hat{\theta}$}{Phase estimate}
 \nomenclature{$r_0$}{True distance or range between a transmitter and receiver}
 \nomenclature{$\hat{r}$}{Least squares estimate of the range $r_0$}
-\nomenclature{$L$}{Number of samples acquired by the receiver}
+%\nomenclature{$L$}{Number of samples acquired by the receiver}
 \nomenclature{$T$}{Sample period in seconds}
-\nomenclature{$e^{2\pi j f t}$}{Complex valued signal}
-\nomenclature{$a$}{A complex number computed by a phase estimator}
+%\nomenclature{$e^{2\pi j f t}$}{Complex valued signal}
 \nomenclature{$\angle$}{Complex argument}
 \nomenclature{$\Phi$}{Wrapped normally distributed phase noise}
 \nomenclature{$\Phi_n$}{$n$th element of the phase noise $\Phi$}
 \nomenclature{$\epsilon$}{Normally distributed random variable}
 \nomenclature{$\epsilonbf$}{Vector of normally distributed random variables}
 \nomenclature{$\epsilon_n$}{$n$the element of the vector $\epsilonbf$}
-\nomenclature{$Y$}{Phase difference i.e. $Y = \sfracpart{\phi - \hat{\theta}}$}
+\nomenclature{$Y$}{Phase difference}
 \nomenclature{$\ybf$}{Column vector consisting of phase differences i.e. $\ybf = (Y_1,\ldots,Y_N)^{\prime}$}
 \nomenclature{$LS(r)$}{Least squares estimator of the range $r$}
 \nomenclature{$P$}{Smallest positive real number i.e. $P = \lcm(\lambda_1,\dots,\lambda_N)$}
 \nomenclature{$\beta$}{A real number in the interval $[0,1)$}
-\nomenclature{$v_n$}{$v_n = P/\lambda_n$}
 \nomenclature{$\vbf$}{Column vector of integers $v_n$ i.e. $\vbf = (v_1,\ldots,v_N)^{\prime}$}
-\nomenclature{$\hat{\beta}$}{A real number that is a multiple of $\beta$}
+%\nomenclature{$v_n$}{$n$th element of the vector $\vbf$}
+%\nomenclature{$\hat{\beta}$}{A real number that is a multiple of $\beta$}
 \nomenclature{$z_n$}{Integer wrapping variables}
-\nomenclature{$\zbf$}{Column vector of wrapping variables i.e. $\zbf = (z_1,\ldots,z_N)^{\prime}$. Also called a lattice of the integer lattice.}
-\nomenclature{$\Qbf$}{Orthogonal projection matrix onto the $N-1$ dimensional subspace orthogonal to $\vbf$}
+\nomenclature{$\zbf$}{Column vector of wrapping variables}
+\nomenclature{$\Qbf$}{Orthogonal projection matrix}
 \nomenclature{$H$}{Subspace orthogonal to $\Qbf$}
 \nomenclature{$\zeta_n$}{True or correct wrapping variable at the $n$th wavelength/frequency}
-\nomenclature{$\zetabf$}{True or correct wrapping variables}
+\nomenclature{$\zetabf$}{A column vector of correct wrapping variables}
 \nomenclature{$\hat{\zetabf}$}{Estimate of the wrapping variables}
-\nomenclature{$c$}{A real number}
 \nomenclature{$A_k$}{An $N\times N$ matrix of integers}
 \nomenclature{$A_{kmn}$}{$(m,n)$th element of the matrix $A$}
-\nomenclature{$I_{mn}$}{$(m,n)$th element of $A_k$}
-\nomenclature{$g_n$}{An integer number for $n= 1, \ldots,N$}
-\nomenclature{$a_k$}{An integer number}
-\nomenclature{$b_k$}{An integer number}
 \nomenclature{$\tauls$}{An upper bound on phase measurement errors for the least squares estimator}
 \nomenclature{$\taucrt$}{An upper bound on phase measurement errors for the CRT estimator}
 \nomenclature{$w_n$}{Reciprocal of the $n$th wavelength}
-\nomenclature{$\wbf$}{A column vector the reciprocal of wavelengths}
-\nomenclature{$P(h)$}{Probability of an event $h$}
+\nomenclature{$\wbf$}{A column vector containing the reciprocal of wavelengths}
+\nomenclature{$P_r(h)$}{Probability of an event $h$}
 \nomenclature{$\Gamma$}{Gamma function}
 \nomenclature{$r_{\max}$}{Maximum range that cab be unambiguously estimated}
 \nomenclature{$\pbf$}{Vector of integers}
@@ -356,8 +350,33 @@
 \setcounter{page}{1}
 \pagenumbering{roman}
 %\dominitoc
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Declaration}% for the actual unnumbered heading
+\input{chapters/Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\newpage
+
+\chapter*{Abstract}% for the actual unnumbered heading
+\addcontentsline{toc}{chapter}{Abstract}
+\input{chapters/Summary}
+\newpage
+
+\chapter*{Publications}% for the actual unnumbered heading
+\addcontentsline{toc}{chapter}{Publications}
+\input{chapters/Publications}
+\newpage
+
+\chapter*{Acknowledgements}% for the actual unnumbered heading
+\input{chapters/Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \tableofcontents
 
+\newpage
 \renewcommand{\acronymname}{List of Acronyms}
 \glossarystyle{long}
 \renewcommand*{\glsgroupskip}{}
@@ -368,40 +387,45 @@
 \renewcommand*{\arraystretch}{1}
 \addcontentsline{toc}{chapter}{\acronymname}
 
+%\newpage
 \newpage
+%\cleardoublepage
 \renewcommand{\nomname}{List of Symbols}
-\markboth{\nomname}{\nomname}
+%\markboth{\nomname}{\nomname}
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\nomname}
 \printnomenclature[30mm]
-\addcontentsline{toc}{chapter}{\nomname}
-\newpage
 
+
+
+
+\newpage
 %\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
 \newpage
 
 %\addcontentsline{toc}{chapter}{List of Tables}
 %\listoftables
-\newpage
+%\newpage
 
-\chapter*{Summary}% for the actual unnumbered heading
-\input{chapters/Summary}
-\addcontentsline{toc}{chapter}{Summary}
-\newpage
-
-\chapter*{Publications}% for the actual unnumbered heading
-\addcontentsline{toc}{chapter}{Publications}
-\input{chapters/Publications}
-\newpage
-
-\chapter*{Declaration}% for the actual unnumbered heading
-\input{chapters/Declaration}
-\addcontentsline{toc}{chapter}{Declaration}
-\newpage
-
-\chapter*{Acknowledgements}% for the actual unnumbered heading
-\input{chapters/Acknowledgements}
-\addcontentsline{toc}{chapter}{Acknowledgements}
-\newpage
+%\chapter*{Summary}% for the actual unnumbered heading
+%\addcontentsline{toc}{chapter}{Summary}
+%\input{chapters/Summary}
+%\newpage
+%
+%\chapter*{Publications}% for the actual unnumbered heading
+%\addcontentsline{toc}{chapter}{Publications}
+%\input{chapters/Publications}
+%\newpage
+%
+%\chapter*{Declaration}% for the actual unnumbered heading
+%\input{chapters/Declaration}
+%\addcontentsline{toc}{chapter}{Declaration}
+%\newpage
+%
+%\chapter*{Acknowledgements}% for the actual unnumbered heading
+%\input{chapters/Acknowledgements}
+%\addcontentsline{toc}{chapter}{Acknowledgements}
+%\newpage
 \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%% Chapter 1 - Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -478,7 +502,7 @@
 
 \normalspaced
 
-\bibliographystyle{IEEEtran}
+%\bibliographystyle{IEEEtran}
 %\bibliographystyle{IEEEbib}
 \begin{footnotesize}
     \bibliography{bib}

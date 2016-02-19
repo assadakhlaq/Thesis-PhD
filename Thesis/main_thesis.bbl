@@ -169,8 +169,7 @@ B.~Yang, W.~Wang, X.~G. Xia, and Q.~Y. Yin,
 A.~Hassibi and S.~P. Boyd,
 \newblock ``Integer parameter estimation in linear models with applications to
   {GPS},''
-\newblock {\em IEEE Trans. Sig. Process.}, vol. 46, no. 11, pp. 2938--2952, Nov
-  1998.
+\newblock {\em ieeetsp}, vol. 46, no. 11, pp. 2938--2952, Nov 1998.
 
 \bibitem{Li_distance_est_wrapped_phase}
 W.~Li, X.~Wang, X.~Wang, and B.~Moran,
@@ -361,7 +360,7 @@ Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
 \newblock ``Generalised theory of phase unwrapping: approaches and optimal
   wavelength selection strategies for multi-wavelength interferometric
   techniques,''
-\newblock 2012, vol. 8493, pp. 84930O--84930O--11.
+\newblock {\em Proc. SPIE}, vol. 8493, pp. 84930O--84930O--11, 2012.
 
 \bibitem{Wyant:71}
 J.~C. Wyant,
@@ -381,7 +380,7 @@ Peter~J. de~Groot,
 \bibitem{Towers2011}
 Catherine~E. Towers, David~P. Towers, and K.~Falaggis,
 \newblock ``Extended range metrology: an age old problem,''
-\newblock 2011, vol. 8082, pp. 80821P--80821P--9.
+\newblock {\em Proc. SPIE}, vol. 8082, pp. 80821P--80821P--9, 2011.
 
 \bibitem{Xiaowei_Li_robust_CRT_2009}
 X.~Li, H.~Liang, and X.~G. Xia,

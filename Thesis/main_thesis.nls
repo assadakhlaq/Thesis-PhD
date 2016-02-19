@@ -2,13 +2,12 @@
 
  \nomgroup{A}
 
-  \item [{$\Abf$}]\begingroup Gram matrix, i.e., $\Abf = \Bbf^{\prime}\Bbf$\nomeqref {0}
-		\nompageref{1}
+  \item [{$\Abf$}]\begingroup Gram matrix\nomeqref {0}\nompageref{1}
   \item [{$\angle$}]\begingroup Complex argument\nomeqref {0}
 		\nompageref{1}
   \item [{$\Bbf$}]\begingroup Basis or generator matrix of a lattice\nomeqref {0}
 		\nompageref{1}
-  \item [{$\bbf_n$}]\begingroup $n$th column of the basis matrix $Bbf$\nomeqref {0}
+  \item [{$\bbf_n$}]\begingroup $n$th column of the basis matrix $\Bbf$\nomeqref {0}
 		\nompageref{1}
   \item [{$\beta$}]\begingroup A real number in the interval $[0,1)$\nomeqref {0}
 		\nompageref{1}
@@ -21,8 +20,6 @@
   \item [{$\fracpart{x}$}]\begingroup the (centred) fractional part of its argument, that is, $\fracpart{x} = x - \round{x}$\nomeqref {0}
 		\nompageref{1}
   \item [{$\Gamma$}]\begingroup Gamma function\nomeqref {0}
-		\nompageref{1}
-  \item [{$\hat{\beta}$}]\begingroup A real number that is a multiple of $\beta$\nomeqref {0}
 		\nompageref{1}
   \item [{$\hat{\theta}$}]\begingroup Phase estimate\nomeqref {0}
 		\nompageref{1}
@@ -46,9 +43,9 @@
 		\nompageref{1}
   \item [{$\Lambda_{1n}$}]\begingroup Beat wavelength\nomeqref {0}
 		\nompageref{1}
-  \item [{$\lambda_{\max}$}]\begingroup Maximum wavelength value\nomeqref {0}
+  \item [{$\lambda_{\max}$}]\begingroup Maximum wavelength\nomeqref {0}
 		\nompageref{1}
-  \item [{$\lambda_{\min}$}]\begingroup Minimum wavelength value\nomeqref {0}
+  \item [{$\lambda_{\min}$}]\begingroup Minimum wavelength\nomeqref {0}
 		\nompageref{1}
   \item [{$\mathcal{P}(\Bbf)$}]\begingroup Fundamental parallelepiped formed by the basis matrix $\Bbf$\nomeqref {0}
 		\nompageref{1}
@@ -62,7 +59,7 @@
 		\nompageref{1}
   \item [{$\Phi_n$}]\begingroup $n$th element of the phase noise $\Phi$\nomeqref {0}
 		\nompageref{1}
-  \item [{$\Qbf$}]\begingroup Orthogonal projection matrix onto the $N-1$ dimensional subspace orthogonal to $\vbf$\nomeqref {0}
+  \item [{$\Qbf$}]\begingroup Orthogonal projection matrix\nomeqref {0}
 		\nompageref{1}
   \item [{$\qbf$}]\begingroup Vector of integers\nomeqref {0}
 		\nompageref{1}
@@ -84,8 +81,6 @@
 		\nompageref{1}
   \item [{$\Ubf$}]\begingroup $n\times n$ matrix of integers with determinant one, called a unimodular matrix\nomeqref {0}
 		\nompageref{1}
-  \item [{$\ubf$}]\begingroup Vector of integers\nomeqref {0}
-		\nompageref{1}
   \item [{$\upsilonbf$}]\begingroup Vector of real elements\nomeqref {0}
 		\nompageref{1}
   \item [{$\varphi_n$}]\begingroup Estimated interferometer phase at the $n$th wavelength\nomeqref {0}
@@ -94,32 +89,23 @@
 		\nompageref{1}
   \item [{$ \vor$}]\begingroup Voronoi cell of the lattice\nomeqref {0}
 		\nompageref{1}
-  \item [{$\wbf$}]\begingroup A column vector the reciprocal of wavelengths\nomeqref {0}
+  \item [{$\wbf$}]\begingroup A column vector containing the reciprocal of wavelengths\nomeqref {0}
 		\nompageref{1}
   \item [{$\xbf$}]\begingroup A lattice point\nomeqref {0}
 		\nompageref{1}
   \item [{$\ybf$}]\begingroup Column vector consisting of phase differences i.e. $\ybf = (Y_1,\ldots,Y_N)^{\prime}$\nomeqref {0}
 		\nompageref{1}
-  \item [{$\zbf$}]\begingroup Column vector of wrapping variables i.e. $\zbf = (z_1,\ldots,z_N)^{\prime}$. Also called a lattice of the integer lattice.\nomeqref {0}
+  \item [{$\zbf$}]\begingroup Column vector of wrapping variables\nomeqref {0}
 		\nompageref{1}
   \item [{$\zeta_n$}]\begingroup True or correct wrapping variable at the $n$th wavelength/frequency\nomeqref {0}
 		\nompageref{1}
-  \item [{$\zetabf$}]\begingroup True or correct wrapping variables\nomeqref {0}
-		\nompageref{1}
-  \item [{$a$}]\begingroup A complex number computed by a phase estimator\nomeqref {0}
+  \item [{$\zetabf$}]\begingroup A column vector of correct wrapping variables\nomeqref {0}
 		\nompageref{1}
   \item [{$A_k$}]\begingroup An $N\times N$ matrix of integers\nomeqref {0}
 		\nompageref{1}
-  \item [{$a_k$}]\begingroup An integer number\nomeqref {0}
-		\nompageref{1}
   \item [{$A_{kmn}$}]\begingroup $(m,n)$th element of the matrix $A$\nomeqref {0}
 		\nompageref{1}
-  \item [{$b_k$}]\begingroup An integer number\nomeqref {0}
-		\nompageref{1}
-  \item [{$c$}]\begingroup A real number\nomeqref {0}\nompageref{1}
   \item [{$d_{\min}$}]\begingroup Short vector of a lattice\nomeqref {0}
-		\nompageref{1}
-  \item [{$e^{2\pi j f t}$}]\begingroup Complex valued signal\nomeqref {0}
 		\nompageref{1}
   \item [{$e_n$}]\begingroup Fractional fringe value\nomeqref {0}
 		\nompageref{1}
@@ -129,13 +115,7 @@
 		\nompageref{1}
   \item [{$G$}]\begingroup Greatest common divisor\nomeqref {0}
 		\nompageref{1}
-  \item [{$g_n$}]\begingroup An integer number for $n= 1, \ldots,N$\nomeqref {0}
-		\nompageref{1}
   \item [{$H$}]\begingroup Subspace orthogonal to $\Qbf$\nomeqref {0}
-		\nompageref{1}
-  \item [{$I_{mn}$}]\begingroup $(m,n)$th element of $A_k$\nomeqref {0}
-		\nompageref{1}
-  \item [{$L$}]\begingroup Number of samples acquired by the receiver\nomeqref {0}
 		\nompageref{1}
   \item [{$LS(r)$}]\begingroup Least squares estimator of the range $r$\nomeqref {0}
 		\nompageref{1}
@@ -143,11 +123,9 @@
 		\nompageref{1}
   \item [{$P$}]\begingroup Smallest positive real number i.e. $P = \lcm(\lambda_1,\dots,\lambda_N)$\nomeqref {0}
 		\nompageref{1}
-  \item [{$P(h)$}]\begingroup Probability of an event $h$\nomeqref {0}
+  \item [{$P_r(h)$}]\begingroup Probability of an event $h$\nomeqref {0}
 		\nompageref{1}
   \item [{$R$}]\begingroup Radius of an Euclidean ball\nomeqref {0}
-		\nompageref{1}
-  \item [{$R$}]\begingroup Volume  of an Euclidean ball\nomeqref {0}
 		\nompageref{1}
   \item [{$R(\cdot)$}]\begingroup Residual error\nomeqref {0}
 		\nompageref{1}
@@ -157,9 +135,7 @@
 		\nompageref{1}
   \item [{$T$}]\begingroup Sample period in seconds\nomeqref {0}
 		\nompageref{1}
-  \item [{$u_n$}]\begingroup $n$th element of $\ubf$\nomeqref {0}
-		\nompageref{1}
-  \item [{$v_n$}]\begingroup $v_n = P/\lambda_n$\nomeqref {0}
+  \item [{$V$}]\begingroup Volume  of an Euclidean ball\nomeqref {0}
 		\nompageref{1}
   \item [{$w(t)$}]\begingroup Noise present in the received signal\nomeqref {0}
 		\nompageref{1}
@@ -167,8 +143,7 @@
 		\nompageref{1}
   \item [{$x(t)$}]\begingroup Sinusoidal signal transmitted from a transmitter\nomeqref {0}
 		\nompageref{1}
-  \item [{$Y$}]\begingroup Phase difference i.e. $Y = \sfracpart{\phi - \hat{\theta}}$\nomeqref {0}
-		\nompageref{1}
+  \item [{$Y$}]\begingroup Phase difference\nomeqref {0}\nompageref{1}
   \item [{$y(t)$}]\begingroup Sinusoidal signal received at the receiver\nomeqref {0}
 		\nompageref{1}
   \item [{$z_n$}]\begingroup Integer wrapping variables\nomeqref {0}

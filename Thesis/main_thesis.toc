@@ -1,44 +1,44 @@
-\contentsline {chapter}{List of Acronyms}{iii}{table.5}
-\contentsline {chapter}{List of Symbols}{viii}{chapter*.6}
-\contentsline {chapter}{List of Figures}{ix}{chapter*.7}
-\contentsline {chapter}{Summary}{xii}{chapter*.8}
-\contentsline {chapter}{Publications}{xiii}{chapter*.9}
-\contentsline {chapter}{Declaration}{xv}{chapter*.10}
-\contentsline {chapter}{Acknowledgements}{xvii}{chapter*.11}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}
-\contentsline {section}{\numberline {1.1}Introduction}{1}{section.13}
-\contentsline {section}{\numberline {1.2}Thesis Outline and Contributions}{3}{section.15}
-\contentsline {chapter}{\numberline {2}Background Overview}{7}{chapter.21}
-\contentsline {section}{\numberline {2.1}Lattice Theory}{7}{section.22}
-\contentsline {section}{\numberline {2.2}Range Estimation Techniques}{15}{section.34}
-\contentsline {subsection}{\numberline {2.2.1}Beat Wavelength Method}{15}{subsection.35}
-\contentsline {subsection}{\numberline {2.2.2}Method of Excess Fractions}{17}{subsection.37}
-\contentsline {subsection}{\numberline {2.2.3}The CRT Based Method}{19}{subsection.42}
-\contentsline {section}{\numberline {2.3}Optimal Wavelengths Selection for Range Estimators}{22}{section.43}
-\contentsline {subsection}{\numberline {2.3.1}Wavelengths Selection for the Beat Wavelength Method}{22}{subsection.44}
-\contentsline {subsection}{\numberline {2.3.2}Wavelengths Selection for the Excess Fractions Method}{24}{subsection.49}
-\contentsline {section}{\numberline {2.4}Summary}{27}{section.56}
-\contentsline {chapter}{\numberline {3}Basis Construction for the Least Square Range Estimator}{29}{chapter.57}
-\contentsline {section}{\numberline {3.1}Introduction}{29}{section.58}
-\contentsline {section}{\numberline {3.2}System Model}{30}{section.59}
-\contentsline {section}{\numberline {3.3}Range estimation and the closest lattice point problem}{35}{section.73}
-\contentsline {section}{\numberline {3.4}Basis Construction Method}{37}{section.75}
-\contentsline {section}{\numberline {3.5}Numerical Results}{40}{section.81}
-\contentsline {section}{\numberline {3.6}Summary}{44}{section.83}
-\contentsline {chapter}{\numberline {4}Robustness of the Least Squares Range Estimator}{45}{chapter.84}
-\contentsline {section}{\numberline {4.1}Introduction}{45}{section.85}
-\contentsline {section}{\numberline {4.2}Concept of Correct Wrapping Variables}{46}{section.86}
-\contentsline {section}{\numberline {4.3}Bound for the least squares range estimator}{49}{section.92}
-\contentsline {section}{\numberline {4.4}Numerical Results}{51}{section.94}
-\contentsline {section}{\numberline {4.5}Summary}{56}{section.99}
-\contentsline {chapter}{\numberline {5}Selecting Wavelengths for Least Squares Estimation of Range}{59}{chapter.100}
-\contentsline {section}{\numberline {5.1}Introduction}{59}{section.101}
-\contentsline {section}{\numberline {5.2}Bound on the Correctness of Wrapping Variables}{61}{section.102}
-\contentsline {section}{\numberline {5.3}Approximating range error}{64}{section.108}
-\contentsline {section}{\numberline {5.4}Selecting wavelengths for range estimation}{67}{section.111}
-\contentsline {section}{\numberline {5.5}Numerical Results}{74}{section.155}
-\contentsline {section}{\numberline {5.6}Conclusion}{80}{section.160}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{83}{chapter.161}
-\contentsline {section}{\numberline {6.1}Conclusions}{83}{section.162}
-\contentsline {section}{\numberline {6.2}Future Work}{85}{section.163}
-\contentsline {chapter}{Bibliography}{89}{chapter*.168}
+\contentsline {chapter}{Declaration}{i}{chapter*.2}
+\contentsline {chapter}{Abstract}{iii}{chapter*.3}
+\contentsline {chapter}{Publications}{v}{chapter*.4}
+\contentsline {chapter}{Acknowledgements}{vii}{chapter*.5}
+\contentsline {chapter}{List of Acronyms}{xiii}{table.9}
+\contentsline {chapter}{List of Symbols}{xv}{section*.10}
+\contentsline {chapter}{List of Figures}{xix}{chapter*.12}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.13}
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.14}
+\contentsline {section}{\numberline {1.2}Thesis Outline and Contributions}{3}{section.16}
+\contentsline {chapter}{\numberline {2}Background Overview}{7}{chapter.22}
+\contentsline {section}{\numberline {2.1}Lattice Theory}{7}{section.23}
+\contentsline {section}{\numberline {2.2}Range Estimation Techniques}{15}{section.35}
+\contentsline {subsection}{\numberline {2.2.1}Beat Wavelength Method}{15}{subsection.36}
+\contentsline {subsection}{\numberline {2.2.2}Method of Excess Fractions}{17}{subsection.38}
+\contentsline {subsection}{\numberline {2.2.3}The CRT Based Method}{19}{subsection.43}
+\contentsline {section}{\numberline {2.3}Optimal Wavelengths Selection for Range Estimators}{22}{section.44}
+\contentsline {subsection}{\numberline {2.3.1}Wavelengths Selection for the Beat Wavelength Method}{22}{subsection.45}
+\contentsline {subsection}{\numberline {2.3.2}Wavelengths Selection for the Excess Fractions Method}{24}{subsection.50}
+\contentsline {section}{\numberline {2.4}Summary}{27}{section.57}
+\contentsline {chapter}{\numberline {3}Basis Construction for the Least Square Range Estimator}{29}{chapter.58}
+\contentsline {section}{\numberline {3.1}Introduction}{29}{section.59}
+\contentsline {section}{\numberline {3.2}System Model}{30}{section.60}
+\contentsline {section}{\numberline {3.3}Range estimation and the closest lattice point problem}{35}{section.74}
+\contentsline {section}{\numberline {3.4}Basis Construction Method}{37}{section.76}
+\contentsline {section}{\numberline {3.5}Numerical Results}{40}{section.82}
+\contentsline {section}{\numberline {3.6}Summary}{44}{section.84}
+\contentsline {chapter}{\numberline {4}Robustness of the Least Squares Range Estimator}{45}{chapter.85}
+\contentsline {section}{\numberline {4.1}Introduction}{45}{section.86}
+\contentsline {section}{\numberline {4.2}Concept of Correct Wrapping Variables}{46}{section.87}
+\contentsline {section}{\numberline {4.3}Bound for the least squares range estimator}{49}{section.93}
+\contentsline {section}{\numberline {4.4}Numerical Results}{51}{section.95}
+\contentsline {section}{\numberline {4.5}Summary}{56}{section.100}
+\contentsline {chapter}{\numberline {5}Selecting Wavelengths for Least Squares Estimation of Range}{59}{chapter.101}
+\contentsline {section}{\numberline {5.1}Introduction}{59}{section.102}
+\contentsline {section}{\numberline {5.2}Bound on the Correctness of Wrapping Variables}{61}{section.103}
+\contentsline {section}{\numberline {5.3}Approximating range error}{64}{section.109}
+\contentsline {section}{\numberline {5.4}Selecting wavelengths for range estimation}{67}{section.112}
+\contentsline {section}{\numberline {5.5}Numerical Results}{74}{section.156}
+\contentsline {section}{\numberline {5.6}Conclusion}{80}{section.161}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{83}{chapter.162}
+\contentsline {section}{\numberline {6.1}Conclusions}{83}{section.163}
+\contentsline {section}{\numberline {6.2}Future Work}{85}{section.164}
+\contentsline {chapter}{Bibliography}{89}{chapter*.169}
