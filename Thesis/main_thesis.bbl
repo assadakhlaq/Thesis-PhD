@@ -1,28 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Xiao_multistage_crt_2014}
-Li~Xiao, Xiang-Gen Xia, and Wenjie Wang,
-\newblock ``Multi-stage robust {C}hinese {R}emainder {T}heorem,''
-\newblock {\em IEEE Trans. Sig. Process.}, vol. 62, no. 18, pp. 4772--4785,
-  Sept 2014.
-
-\bibitem{Falaggis_excess_fractions_2011}
-Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
-\newblock ``Method of excess fractions with application to absolute distance
-  metrology: theoretical analysis,''
-\newblock {\em Appl. Opt.}, vol. 50, no. 28, pp. 5484--5498, Oct 2011.
-
-\bibitem{Towers_frequency_selection_interferometry_2003}
-C.~E. Towers, D.~P. Towers, and J.~D.~C. Jones,
-\newblock ``Optimum frequency selection in multifrequency interferometry,''
-\newblock {\em Optics Letters}, vol. 28, pp. 887--889, 2003.
-
-\bibitem{Falaggis_algebraic_solution_2014}
-Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
-\newblock ``Algebraic solution for phase unwrapping problems in multiwavelength
-  interferometry,''
-\newblock {\em Appl. Opt.}, vol. 53, no. 17, pp. 3737--3747, Jun 2014.
-
 \bibitem{Teunissen_GPS_LAMBDA_2006}
 P.~J.~G. Teunissen,
 \newblock ``The {LAMBDA} method for the {GNSS} compass,''
@@ -103,10 +80,21 @@ N.~I. Fisher,
 \newblock {\em {Statistical analysis of circular data}},
 \newblock Cambridge University Press, 1993.
 
+\bibitem{Towers_frequency_selection_interferometry_2003}
+C.~E. Towers, D.~P. Towers, and J.~D.~C. Jones,
+\newblock ``Optimum frequency selection in multifrequency interferometry,''
+\newblock {\em Optics Letters}, vol. 28, pp. 887--889, 2003.
+
 \bibitem{Towers:04_generalised_frequency_selection}
 Catherine~E. Towers, David~P. Towers, and Julian D.~C. Jones,
 \newblock ``Generalized frequency selection in multifrequency interferometry,''
 \newblock {\em Opt. Lett.}, vol. 29, no. 12, pp. 1348--1350, Jun 2004.
+
+\bibitem{Falaggis_excess_fractions_2011}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Method of excess fractions with application to absolute distance
+  metrology: theoretical analysis,''
+\newblock {\em Appl. Opt.}, vol. 50, no. 28, pp. 5484--5498, Oct 2011.
 
 \bibitem{Falaggis_excess_fractions_2012}
 K.~Falaggis, David~P. Towers, and Catherine~E. Towers,
@@ -119,6 +107,12 @@ Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
 \newblock ``Method of excess fractions with application to absolute distance
   metrology: analytical solution,''
 \newblock {\em Appl. Opt.}, vol. 52, no. 23, pp. 5758--5765, Aug 2013.
+
+\bibitem{Falaggis_algebraic_solution_2014}
+Konstantinos Falaggis, David~P. Towers, and Catherine~E. Towers,
+\newblock ``Algebraic solution for phase unwrapping problems in multiwavelength
+  interferometry,''
+\newblock {\em Appl. Opt.}, vol. 53, no. 17, pp. 3737--3747, Jun 2014.
 
 \bibitem{Oystein_Ore_general_chinese_Remainder_1952}
 O.~Ore,
@@ -164,6 +158,12 @@ B.~Yang, W.~Wang, X.~G. Xia, and Q.~Y. Yin,
   {C}hinese {R}emainder {T}heorem,''
 \newblock {\em Science China Information Sciences}, vol. 57, no. 2, pp. 1--9,
   2014.
+
+\bibitem{Xiao_multistage_crt_2014}
+Li~Xiao, Xiang-Gen Xia, and Wenjie Wang,
+\newblock ``Multi-stage robust {C}hinese {R}emainder {T}heorem,''
+\newblock {\em IEEE Trans. Sig. Process.}, vol. 62, no. 18, pp. 4772--4785,
+  Sept 2014.
 
 \bibitem{Hassibi_GPS_1998}
 A.~Hassibi and S.~P. Boyd,

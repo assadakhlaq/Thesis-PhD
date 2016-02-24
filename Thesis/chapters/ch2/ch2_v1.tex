@@ -245,9 +245,9 @@ The (closed) \textbf{Voronoi cell}, denoted $\vor\Lambda$, of an $n$-dimensional
 
 The Voronoi cell $\vor\Lambda$ tessellates $\reals^N$ in the sense that
 \[
-\reals^N = \bigcup_{\xbf \in \Lambda} (\vor\Lambda + \tbf)
+\reals^N = \bigcup_{\xbf \in \Lambda} (\vor\Lambda + \sbf)
 \]
-and $\vor\Lambda$ and a translate $\vor\Lambda + \tbf$ by a lattice point $\tbf \in \Lambda\backslash  \{\zerobf\}$ intersect at most on the boundary of $\vor\Lambda$.  The set $\Lambda \backslash  \{\zerobf\}$ denotes those lattice points from $\Lambda$ not equal to the origin $\zerobf$.  In particular, if $\interior\Lambda$ denotes the interior of the Voronoi cell, then the intersection of $\interior\Lambda$ and $\vor \Lambda + \tbf$ is empty for all $\tbf \in \Lambda \backslash  \{\zerobf\}$.  % Equivalently, if $\tbf \in \Lambda$, $\wbf \in \vor\Lambda$, and $\ybf \int\Lambda$, and
+and $\vor\Lambda$ and a translate $\vor\Lambda + \sbf$ by a lattice point $\sbf \in \Lambda\backslash  \{\zerobf\}$ intersect at most on the boundary of $\vor\Lambda$.  The set $\Lambda \backslash  \{\zerobf\}$ denotes those lattice points from $\Lambda$ not equal to the origin $\zerobf$.  In particular, if $\interior\Lambda$ denotes the interior of the Voronoi cell, then the intersection of $\interior\Lambda$ and $\vor \Lambda + \sbf$ is empty for all $\sbf \in \Lambda \backslash  \{\zerobf\}$.  % Equivalently, if $\tbf \in \Lambda$, $\wbf \in \vor\Lambda$, and $\ybf \int\Lambda$, and
 % \[
 % \]
 This leads to the following simple property that we will find useful.
@@ -293,7 +293,7 @@ The \textbf{inradius} or \textbf{packing radius} $\rho = \dmin/2$ is the length 
 
 Let $\Lambda$ be an $n$-dimensional lattice and let $H$ be the $n$-dimensional subspace spanned by its lattice points. The \textbf{dual lattice} of $\Lambda$, denoted $\Lambda^*$, contains those points from $H$ that have integer inner product with all points from $\Lambda$, that is,
 \[
-\Lambda^* = \{ \xbf  \in H \mid \xbf^\prime \bar{\xbf} \in \ints \text{ for all } \bar{\xbf} \in \Lambda \}.
+\Lambda^* = \{ \xbf^* \in H \mid {\xbf^*}^\prime \xbf \in \ints \text{ for all } \xbf \in \Lambda \}.
 \]
 The determinant of a lattice and its dual are reciprocals, that is, $\det\Lambda = (\det\Lambda^*)^{-1}$~\cite[p. 10]{SPLAG}.  A lattice and its dual have interesting properties when intersected with or projected onto a subspace.  %These properties will be particularly useful for the purpose of range estimation.
 
@@ -584,11 +584,11 @@ Then $\Psi_n$, for $n=1,2,\ldots,N$, are co-prime, i.e. the gcd of any pair $\Ps
 \]
 and let
 \[
-\Psi_n = \Psi_1 \cdots \Psi_{n-1} \Psi_{n+1} \cdots \Psi_N = \Psi/\Psi_n.
+\psi_n = \Psi_1 \cdots \Psi_{n-1} \Psi_{n+1} \cdots \Psi_N = \Psi/\Psi_n.
 \]
-Obviously, $\Psi_n$ and $\Psi_n$ are co-prime. So the modular multiplicative inverse of $\Psi_n$ and $\Psi_n$ exists. Denote it by $\bar{\Psi}_n$, i.e., 
+Obviously, $\psi_n$ and $\Psi_n$ are co-prime. So the modular multiplicative inverse of $\psi_n$ and $\Psi_n$ exists. Denote it by $\bar{\psi}_n$, i.e., 
 \[
-\bar{\Psi}_n \Psi_n \equiv 1 \;\; \text{mod} \;\; \Psi_n  \quad \text{or} \;\; \bar{\Psi}_n \Psi_n + k\Psi_n =1, 
+\bar{\psi}_n \psi_n \equiv 1 \;\; \text{mod} \;\; \Psi_n  \quad \text{or} \;\; \bar{\psi}_n \psi_n + k\Psi_n =1, 
 \]
 where $k \in \ints$. Let 
 \[
@@ -604,7 +604,7 @@ R_0  \triangleq \floor{r_0/G}.
 \]
 Then using results from the classical CRT, we have following conclusion. If $0 \leq R_0 \leq \Psi$, $R_0$ can be constructed as
 \[
-R_0 = \sum_{n=1}^N \bar{\Psi}_n \Psi_n q_n \; \text{mod} \; \Psi.
+R_0 = \sum_{n=1}^N \bar{\psi}_n \psi_n q_n \; \text{mod} \; \Psi.
 \]
 Therefore, $r_0$ can be uniquely reconstructed by
 \[
@@ -689,19 +689,19 @@ where $N$ is the number of wavelengths, $\lambda_1$ is the smallest available wa
 
 \subsection{Wavelengths Selection for the Excess Fractions Method}
 
-The reliability of excess fractions based range estimators also depends upon the phase noise and the nontrivial relationship between the measurement wavelengths and the measured range. A wavelengths selection procedure for the excess fractions based range estimator is provided in~\cite{Falaggis_excess_fractions_2012} based on the results obtained in~\cite{Falaggis_excess_fractions_2011}. An overview of there approach is as follows:
+The reliability of excess fractions based range estimators also depends upon the phase noise and the nontrivial relationship between the measurement wavelengths and the measured range. A wavelengths selection procedure for the excess fractions based range estimator is provided in~\cite{Falaggis_excess_fractions_2012} based on the results obtained in~\cite{Falaggis_excess_fractions_2011}. An overview of their approach is as follows:
 
 As the phase noise is often assumed to be Guassian, the noise in the fractional fringe orders $e_0$ and $e_n$ can respectively be described with standard deviations $\sigma_{e_1}$ and $\sigma_{e_n}$. It is shown in~\cite{Falaggis_excess_fractions_2011} that an upper bound on the uncertainty in the overall residual error $R$ is given by
 \begin{equation}\label{eq:noise-criterion-ef}
 \sigma_R \leq \sqrt{   (N-1)\sigma_{e_1}^2 + \frac{1}{R^2} \sum_{n=1}^{N} (r_i(e_1, e_n))^2 \sigma_{e_n}^2      }
 \end{equation}
-The absolute values of two dimensionless quantities $\delta$ and $\psi_{sf}$ are introduced in~\cite{Falaggis_excess_fractions_2011, Falaggis_excess_fractions_2012} as
+The absolute values of two dimensionless quantities $\delta$ and $\Upsilon_{sf}$ are introduced in~\cite{Falaggis_excess_fractions_2011, Falaggis_excess_fractions_2012} as
 \[
 \delta = \frac{1}{sf}\sqrt{1 + \sum_{n=2}^{N-1}(1 - \alpha_i)^2},
 \]
 and
-\begin{equation}\label{eq:psi-NICF}
-\psi_{sf} = \abs{\frac{1}{T_{sf}}},
+\begin{equation}\label{eq:Upsilon-NICF}
+\Upsilon_{sf} = \abs{\frac{1}{T_{sf}}},
 \end{equation}
 where the parameters $0 < \alpha_{N-1} < \alpha_{N-2} < \cdots < \alpha_1 < 1$ and $T_{sf}$ is obtained by nearest integer continued fraction (NICF) of $1/sf$, as
 \[
@@ -719,7 +719,7 @@ T &= p_{k+1}/x_0, \qquad V = +\infty \qquad W = 0 \qquad \text{for}\;\; \fracpar
 \end{align}
 where the parameters $Q$, $S$, $T$, and $W$ describe the properties of the two-wavelength interferometer. The coefficients $x_k$ are derived from NICF of $1/sf$ and are defined in Appendix A of~\cite{Falaggis_excess_fractions_2011}. It should be noted that the noise limit  in~\ref{eq:noise-limit-ef2} determines the unambiguous measurement range (UMR) of the interferometer.
 
-The parameters $\psi_{\alpha(N-1)}, \psi_{\beta(N-2)}, \ldots, \psi_{\beta_1}$ for the case of three or more wavelengths are derived in~\cite{Falaggis_excess_fractions_2011} as
+The parameters $\Upsilon_{\alpha(N-1)}, \Upsilon_{\beta(N-2)}, \ldots, \Upsilon_{\beta_1}$ for the case of three or more wavelengths are derived in~\cite{Falaggis_excess_fractions_2011} as
 %\begin{align}
 %sf_{\alpha} &= \fracpart{(1 - \alpha_{N-1})S_{sf}}, \\
 %sf_{\beta(N-2)} &= \fracpart{\beta_{(N-2)S_{\alpha}}}, \\
@@ -729,19 +729,19 @@ The parameters $\psi_{\alpha(N-1)}, \psi_{\beta(N-2)}, \ldots, \psi_{\beta_1}$ f
 %\end{align}
 %as,
 \[
-\psi_{\alpha} = \frac{1}{T_{\alpha}} \frac{1}{\sqrt{1 + (1 - \alpha_{N-1})^2}}
+\Upsilon_{\alpha} = \frac{1}{T_{\alpha}} \frac{1}{\sqrt{1 + (1 - \alpha_{N-1})^2}}
 \]
 and
 \[
-\psi_{\beta} = \frac{1}{T_{\beta_n}} \frac{1}{\sqrt{1 + (\beta_n)^2}}
+\Upsilon_{\beta} = \frac{1}{T_{\beta_n}} \frac{1}{\sqrt{1 + (\beta_n)^2}}
 \]
 with
 \[
 \beta_n = \frac{1 - \alpha_n}{1 - \alpha_{n+1}}
 \]
-where $1/T_{\alpha}$ and $1/T_{\beta}$ are also obtained from the NICF in the same way as described in~\ref{eq:psi-NICF}. Reliable measurements are obtained if the corresponding values of $\delta$ and $\psi$ satisfy the noise criterion
+where $1/T_{\alpha}$ and $1/T_{\beta}$ are also obtained from the NICF in the same way as described in~\ref{eq:Upsilon-NICF}. Reliable measurements are obtained if the corresponding values of $\delta$ and $\Upsilon$ satisfy the noise criterion
 \[
-\text{min} \{   \delta, \psi_{sf}, \psi_{\alpha(N-1)}, \psi_{\alpha(N-2)} , \ldots, \psi_{\beta_2}  \} \geq 6\sigma_R,
+\text{min} \{   \delta, \Upsilon_{sf}, \Upsilon_{\alpha(N-1)}, \Upsilon_{\alpha(N-2)} , \ldots, \Upsilon_{\beta_2}  \} \geq 6\sigma_R,
 \]
 where the upper bound for $\sigma_R$ can be obtained from~\ref{eq:noise-criterion-ef}.
 
@@ -751,7 +751,7 @@ Among many solutions, one generic solution for optimum wavelengths selection is 
 \]
 so that,
 \[
-\psi_{\alpha(N-1)} = \psi_{\beta(N-2)} = \ldots = \psi_{\beta_2} = \psi_{\beta},
+\Upsilon_{\alpha(N-1)} = \Upsilon_{\beta(N-2)} = \ldots = \Upsilon_{\beta_2} = \Upsilon_{\beta},
 \]
 and
 \[
